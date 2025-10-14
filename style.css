@@ -3,6 +3,9 @@
   --creme: #f5e9d7;
   --taupe: #8a7363;
   --taupe-dark: #6c584b;
+  --duration: 2500ms;
+  --delay: 300ms;
+  --curtain-img: url('curtain.webp');
 }
 
 * {
@@ -19,25 +22,30 @@ html, body {
   font-family: "Georgia", serif;
 }
 
-/* SECTION 1 - BISOU */
-#intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+/* --- Rideau --- */
+  .curtain {
+    position:fixed;
+    top:0; bottom:0;
+    width:50%;
+    z-index:1000;
+    background-image: var(--curtain-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(0);
+    transition: transform var(--duration) ease-in-out;
+    will-change: transform;
+  }
 
-.bisou {
-  width: 120px;
-  opacity: 0;
-  transform: scale(0.5);
-  animation: drawBisou 2s ease forwards;
-}
+  .curtain.left  { left:0;  transform-origin:left;  }
+  .curtain.right { right:0; transform-origin:right; }
 
-@keyframes drawBisou {
-  0% { opacity: 0; transform: scale(0.5); filter: blur(10px); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0); }
-}
+  .curtain.open.left  { transform: translateX(-105%); }
+  .curtain.open.right { transform: translateX(105%);  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .curtain, .curtain.open { transition:none!important; transform:none!important; display:none; }
+  }
 
 /* SECTION 2 - LOGO */
 #logo-screen {

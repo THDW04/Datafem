@@ -1,12 +1,15 @@
-// Étape 1 : transition bisou -> logo
-window.addEventListener('load', () => {
-  // attendre que l'animation du bisou soit terminée
-  setTimeout(() => {
-    document.getElementById('intro').style.display = 'none';
-    const logoScreen = document.getElementById('logo-screen');
-    logoScreen.classList.add('show');
-  }, 3200); // légèrement augmenté pour laisser l'animation finir
-});
+// Étape 1 : l'animation du rideau
+document.addEventListener('DOMContentLoaded', () => {
+    const left = document.getElementById('curtain-left');
+    const right = document.getElementById('curtain-right');
+
+    function openCurtain() {
+      left.classList.add('open');
+      right.classList.add('open');
+    }
+
+    const delay = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--delay')) || 300;
+    setTimeout(openCurtain, delay);})
 
 // Étape 2 : passer à l'accueil
 document.getElementById('enter-btn').addEventListener('click', () => {
