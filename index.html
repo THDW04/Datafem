@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Datafem</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Écran 1 : animation bisou -->
+  <section id="intro">
+    <img src="assets/bisou.png" alt="Bisou" class="bisou">
+  </section>
+
+  <!-- Écran 2 : logo + bouton entrer -->
+  <section id="logo-screen">
+    <img src="logo final.png" alt="Logo Datafem" class="logo">
+    <button id="enter-btn">ENTER</button>
+  </section>
+
+  <!-- Écran 3 : page d'accueil -->
+  <section id="home">
+    <header>
+      <img src="logo final.png" alt="Logo Datafem" class="mini-logo">
+      <div class="icons">
+        <div class="icon icon-graphe"></div>
+        <div class="icon icon-temps"></div>
+        <div class="icon icon-coeur"></div>
+      </div>
+    </header>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <video src="marilyn.mp4" autoplay muted loop></video>
+        <video src="freda.mp4" autoplay muted loop></video>
+        <video src="beyonce.mp4" autoplay muted loop></video>
+      </div>
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
