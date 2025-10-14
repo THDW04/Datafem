@@ -5,7 +5,7 @@
   --taupe-dark: #6c584b;
   --duration: 2500ms;
   --delay: 300ms;
-  --curtain-img: url('curtain.webp');
+  --curtain-img: url('curtain.png');
 }
 
 * {
@@ -49,18 +49,11 @@ html, body {
 
 /* SECTION 2 - LOGO */
 #logo-screen {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-#logo-screen.show {
-  display: flex;
-  opacity: 1;
 }
 
 #logo-screen .logo {

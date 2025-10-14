@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const delay = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--delay')) || 300;
     setTimeout(openCurtain, delay);})
 
+
 // Étape 2 : passer à l'accueil
 document.getElementById('enter-btn').addEventListener('click', () => {
   document.getElementById('logo-screen').style.display = 'none';
