@@ -1,0 +1,222 @@
+[
+  {
+    "decennie": 1800,
+    "sexe": "femme",
+    "count": 507
+  },
+  {
+    "decennie": 1800,
+    "sexe": "homme",
+    "count": 3735
+  },
+  {
+    "decennie": 1810,
+    "sexe": "femme",
+    "count": 665
+  },
+  {
+    "decennie": 1810,
+    "sexe": "homme",
+    "count": 3784
+  },
+  {
+    "decennie": 1820,
+    "sexe": "femme",
+    "count": 907
+  },
+  {
+    "decennie": 1820,
+    "sexe": "homme",
+    "count": 4003
+  },
+  {
+    "decennie": 1830,
+    "sexe": "femme",
+    "count": 1242
+  },
+  {
+    "decennie": 1830,
+    "sexe": "homme",
+    "count": 4280
+  },
+  {
+    "decennie": 1840,
+    "sexe": "femme",
+    "count": 1528
+  },
+  {
+    "decennie": 1840,
+    "sexe": "homme",
+    "count": 5124
+  },
+  {
+    "decennie": 1850,
+    "sexe": "femme",
+    "count": 1974
+  },
+  {
+    "decennie": 1850,
+    "sexe": "homme",
+    "count": 6117
+  },
+  {
+    "decennie": 1860,
+    "sexe": "femme",
+    "count": 2289
+  },
+  {
+    "decennie": 1860,
+    "sexe": "homme",
+    "count": 7746
+  },
+  {
+    "decennie": 1870,
+    "sexe": "femme",
+    "count": 2432
+  },
+  {
+    "decennie": 1870,
+    "sexe": "homme",
+    "count": 8574
+  },
+  {
+    "decennie": 1880,
+    "sexe": "femme",
+    "count": 2654
+  },
+  {
+    "decennie": 1880,
+    "sexe": "homme",
+    "count": 10321
+  },
+  {
+    "decennie": 1890,
+    "sexe": "femme",
+    "count": 3272
+  },
+  {
+    "decennie": 1890,
+    "sexe": "homme",
+    "count": 11010
+  },
+  {
+    "decennie": 1900,
+    "sexe": "femme",
+    "count": 4463
+  },
+  {
+    "decennie": 1900,
+    "sexe": "homme",
+    "count": 14416
+  },
+  {
+    "decennie": 1910,
+    "sexe": "femme",
+    "count": 3870
+  },
+  {
+    "decennie": 1910,
+    "sexe": "homme",
+    "count": 12710
+  },
+  {
+    "decennie": 1920,
+    "sexe": "femme",
+    "count": 5387
+  },
+  {
+    "decennie": 1920,
+    "sexe": "homme",
+    "count": 17816
+  },
+  {
+    "decennie": 1930,
+    "sexe": "femme",
+    "count": 6172
+  },
+  {
+    "decennie": 1930,
+    "sexe": "homme",
+    "count": 19628
+  },
+  {
+    "decennie": 1940,
+    "sexe": "femme",
+    "count": 9569
+  },
+  {
+    "decennie": 1940,
+    "sexe": "homme",
+    "count": 23356
+  },
+  {
+    "decennie": 1950,
+    "sexe": "femme",
+    "count": 11296
+  },
+  {
+    "decennie": 1950,
+    "sexe": "homme",
+    "count": 23188
+  },
+  {
+    "decennie": 1960,
+    "sexe": "femme",
+    "count": 10899
+  },
+  {
+    "decennie": 1960,
+    "sexe": "homme",
+    "count": 18844
+  },
+  {
+    "decennie": 1970,
+    "sexe": "femme",
+    "count": 9823
+  },
+  {
+    "decennie": 1970,
+    "sexe": "homme",
+    "count": 13331
+  },
+  {
+    "decennie": 1980,
+    "sexe": "femme",
+    "count": 6527
+  },
+  {
+    "decennie": 1980,
+    "sexe": "homme",
+    "count": 5956
+  },
+  {
+    "decennie": 1990,
+    "sexe": "femme",
+    "count": 2262
+  },
+  {
+    "decennie": 1990,
+    "sexe": "homme",
+    "count": 1522
+  },
+  {
+    "decennie": 2000,
+    "sexe": "femme",
+    "count": 709
+  },
+  {
+    "decennie": 2000,
+    "sexe": "homme",
+    "count": 813
+  },
+  {
+    "decennie": 2010,
+    "sexe": "femme",
+    "count": 5
+  },
+  {
+    "decennie": 2010,
+    "sexe": "homme",
+    "count": 8
+  }
+]

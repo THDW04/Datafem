@@ -5,7 +5,7 @@
   --taupe-dark: #6c584b;
   --duration: 2500ms;
   --delay: 300ms;
-  --curtain-img: url('curtain.png');
+  --curtain-img: url('../medias/curtain.png');
 }
 
 * {
@@ -14,38 +14,59 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   background: var(--background);
-  overflow: hidden;
+
+  color: #f5e9d7;
   font-family: "Georgia", serif;
 }
 
 /* --- Rideau --- */
-  .curtain {
-    position:fixed;
-    top:0; bottom:0;
-    width:50%;
-    z-index:1000;
-    background-image: var(--curtain-img);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: translateX(0);
-    transition: transform var(--duration) ease-in-out;
-    will-change: transform;
+.curtain {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 1000;
+  background-image: var(--curtain-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(0);
+  transition: transform var(--duration) ease-in-out;
+  will-change: transform;
+}
+
+.curtain.left {
+  left: 0;
+  transform-origin: left;
+}
+
+.curtain.right {
+  right: 0;
+  transform-origin: right;
+}
+
+.curtain.open.left {
+  transform: translateX(-105%);
+}
+
+.curtain.open.right {
+  transform: translateX(105%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .curtain,
+  .curtain.open {
+    transition: none !important;
+    transform: none !important;
+    display: none;
   }
-
-  .curtain.left  { left:0;  transform-origin:left;  }
-  .curtain.right { right:0; transform-origin:right; }
-
-  .curtain.open.left  { transform: translateX(-105%); }
-  .curtain.open.right { transform: translateX(105%);  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .curtain, .curtain.open { transition:none!important; transform:none!important; display:none; }
-  }
+}
 
 /* SECTION 2 - LOGO */
 #logo-screen {
@@ -68,70 +89,72 @@ html, body {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 30px;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 #enter-btn:hover {
   background: var(--taupe-dark);
 }
 
+header, main, footer{
+    display: none;
+}
+
 /* SECTION 3 - ACCUEIL */
-#home {
+/*#home {
   display: none;
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-}
+}*/
 
 header {
-  display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 15px;
-  align-items: center;
 }
 
 .mini-logo {
-  width: 100px;
+  width: 70px;
 }
 
 .icons {
   display: flex;
   gap: 70px;
-  transform: translateX(-10%); /* ✅ repositionne les icônes légèrement vers le centre */
+  transform: translateX(-10%);
 }
 
 .icon {
   width: 50px;
   height: 50px;
   background-color: var(--creme);
-  background-size: 30%;         
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 🖼️ Images dans les icônes */
-.icon-graphe {
-  background-image: url("assets/graphe.png");
+.icon img {
+  width: 45px;
 }
 
-.icon-temps {
-  background-image: url("assets/temps.png");
-}
-
-.icon-coeur {
-  background-image: url("assets/coeur.png");
-}
-
-/* 🪄 Effets hover et clic */
+/* Effets hover et clic */
 .icon:hover {
-  background-color: var(--taupe);
+  background-color: #f5e9d7c7;
+  animation: rotate 0.6s ease forwards;
+}
+
+@keyframes rotate {
+  to {
+    transform: scale(1.1) rotate(359deg);
+  }
 }
 
 .icon:active {
-  background-color: var(--taupe-dark);
+  background-color: #ffe8c5;
 }
 
 /* Scrollbar */
@@ -150,46 +173,93 @@ header {
 
 /* CAROUSEL */
 .carousel {
-  flex: 0 0 60%;   
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  max-height: 800px;
+  width: 90%;
+  margin: 0 auto 50px;
+  background-color: #ffe8c5;
+  border-radius: 10px;
+  border: #f5e9d7 solid 5px;
+}
+
+.container {
+  position: relative;
+  width: 300%;
+  display: flex;
+  transition: all 1s ease;
+
+  animation: slide 20s infinite;
+}
+
+.slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -100%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
+
+section:not(.carousel) {
+  min-height: 100vh;
+}
+
+/* GRAPHIQUE */
+.graphique {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  flex-direction: column;
+  gap: 35px;
 }
 
-.carousel-inner {
-  display: flex;
-  transition: transform 1s ease;
-  height: 100%;
+#graph-contain {
+  background-color: rgb(15, 15, 15);
+  padding: 20px;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.185);
 }
 
-.carousel video {
-  width: 115%;
-  height: 115%;
-  object-fit: contain;
-  height: 100%;
+.graphique button {
+  padding: 5px 15px;
+  margin: 0 10px;
+  border-radius: 15px;
+  border: none;
+  text-transform: uppercase;
+  background-color: #84191E;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 1rem;
+
+  transition: all 0.3s ease-in-out;
 }
 
-.dots {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: var(--creme);
-  border-radius: 50%;
+.graphique button:hover {
   cursor: pointer;
-  transition: background .3s;
+  transform: translateY(5px);
+  background-color: #da4e55;
+  color: #160001;
 }
 
-.dot.active {
-  background: var(--taupe);
+.graphique button.active {
+  background-color: #ffb6c1;
+  color: #160001;
+  font-weight: bold;
 }
-
-
-

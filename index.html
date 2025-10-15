@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datafem</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <!-- Animation du rideau -->
-    <div class="curtain left"  id="curtain-left"></div>
-    <div class="curtain right" id="curtain-right"></div>
+  <!-- Animation du rideau -->
+  <div class="curtain left" id="curtain-left"></div>
+  <div class="curtain right" id="curtain-right"></div>
 
   <!-- Écran 2 : logo + bouton entrer -->
   <section id="logo-screen">
-    <img src="logo final.png" alt="Logo Datafem" class="logo">
-    <button id="enter-btn">ENTER</button>
+    <img src="/medias/logo-final.png" alt="Logo Datafem" class="logo">
+    <button id="enter-btn">ENTRER</button>
   </section>
 
   <!-- Écran 3 : page d'accueil -->
-  <section id="home">
-    <header>
-      <img src="logo final.png" alt="Logo Datafem" class="mini-logo">
-      <div class="icons">
-        <div class="icon icon-graphe"></div>
-        <div class="icon icon-temps"></div>
-        <div class="icon icon-coeur"></div>
-      </div>
-    </header>
-
-    <div class="carousel">
-      <div class="carousel-inner">
-        <video src="marilyn.mp4" autoplay muted loop></video>
-        <video src="freda.mp4" autoplay muted loop></video>
-        <video src="beyonce.mp4" autoplay muted loop></video>
-      </div>
-      <div class="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-      </div>
+  <header>
+    <img src="medias/logo-final.png" alt="Logo Datafem" class="mini-logo">
+    <div class="icons">
+      <a href="#graph" class="icon icon-graphe">
+        <img src="medias/graphe.png" alt="Voir le graphique">
+      </a>
+      <a href="" class="icon icon-temps">
+        <img src="/medias/frise.webp" alt="Voir la frise chronologique">
+      </a>
+      <a href="" class="icon icon-coeur">
+        <img src="medias/recommendation.webp" alt="Voir nos recommendations">
+      </a>
     </div>
-  </section>
+  </header>
+
+  <main>
+
+    <section class="carousel">
+      <div class="carousel-inner container">
+        <video src="/medias/marilyn.mp4" autoplay muted loop class="slide"></video>
+        <video src="/medias/freda.mp4" autoplay muted loop class="slide"></video>
+        <video src="medias/beyonce.mp4" autoplay muted loop class="slide"></video>
+      </div>
+    </section>
+
+
+    <div class="texte">
+      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.
+      </p>
+      <p>Quelques-unes ont percé le silence, devenant des symboles malgré un chemin bien plus rude que celui des
+        hommes.
+        Leur lumière a souvent été filtrée, détournée, réduite à une image qui les dépassait.</p>
+      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces
+        créatrices la place qu’elles méritent. Parce que connaître leurs histoires, c’est aussi réapprendre à regarder
+        l’Histoire autrement.</p>
+    </div>
+
+    <section class="graphique" id="graph">
+      <div id="graph-contain"></div>
+
+      <div class="btns">
+        <button id="actrice">Actrices</button>
+        <button id="autrice">Autrices</button>
+        <button id="chanteuse">Chanteuse</button>
+        <button id="peintre">Peintres</button>
+      </div>
+    </section>
+
+  </main>
 
   <script src="script.js"></script>
+  <script type="module" src="data.js"></script>
 </body>
+
 </html>
-
-
