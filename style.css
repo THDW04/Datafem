@@ -5,7 +5,7 @@
   --taupe-dark: #6c584b;
   --duration: 2500ms;
   --delay: 300ms;
-  --curtain-img: url('../medias/curtain.png');
+  --curtain-img: url('medias/curtain.png');
 }
 
 * {
@@ -22,6 +22,7 @@ body {
 
   color: #f5e9d7;
   font-family: "Georgia", serif;
+  scroll-behavior: smooth;
 }
 
 /* --- Rideau --- */
@@ -180,7 +181,6 @@ header {
   max-height: 800px;
   width: 90%;
   margin: 0 auto 50px;
-  background-color: #ffe8c5;
   border-radius: 10px;
   border: #f5e9d7 solid 5px;
 }
