@@ -7,8 +7,8 @@
         "annee": "1900",
         "citation": "Je rêve de peindre et puis je peins mon rêve.",
         "description": "Vincent van Gogh est l'un des peintres les plus célèbres et influents de l'histoire de l'art occidental. Son style unique fait de coups de pinceau expressifs et de couleurs intenses a marqué le postimpressionnisme. Bien qu'il ait vécu dans la pauvreté et l'incompréhension, ses œuvres comme La Nuit étoilée et Les Tournesols sont aujourd'hui mondialement admirées. Sa vie tragique en a fait une figure romantique de l'artiste maudit.",
-        "photo": "vangogh.jpg",
-        "signature": "signaturevincent.png",
+        "photo": "medias/vangogh.jpg",
+        "signature": "medias/signaturevincent.png",
         "categorie": "Peintre"
       },
       {
@@ -17,8 +17,8 @@
         "annee": "1870",
         "citation": "Je voudrais peindre comme la nature parle.",
         "description": "Claude Monet est considéré comme le père de l'impressionnisme, mouvement qui a révolutionné la peinture au XIXᵉ siècle. Il s'est attaché à capturer les effets de lumière et les changements atmosphériques sur les paysages. Ses séries de Nymphéas et sa maison de Giverny sont devenues mythiques. Son approche a ouvert la voie à l'art moderne et influencé d'innombrables artistes.",
-        "photo": "claudemonet.jpg",
-        "signature": "signaturemonet.png",
+        "photo": "medias/claudemonet.jpg",
+        "signature": "medias/signaturemonet.png",
         "categorie": "Peintre"
       },
       {
@@ -27,8 +27,8 @@
         "annee": "1910",
         "citation": "Tout ce que vous pouvez imaginer est réel.",
         "description": "Pablo Picasso est une figure centrale de l'art moderne et l'un des artistes les plus célèbres du XXᵉ siècle. Co-fondateur du cubisme, il a exploré de nombreux styles tout au long de sa vie, créant plus de 50 000 œuvres. Des tableaux comme Les Demoiselles d'Avignon ou Guernica sont devenus des symboles artistiques et politiques. Son génie créatif et sa personnalité ont fait de lui une légende vivante de son temps.",
-        "photo": "picasso.jpg",
-        "signature": "picassosignature.png",
+        "photo": "medias/picasso.jpg",
+        "signature": "medias/picassosignature.png",
         "categorie": "Peintre"
       },
       {
@@ -37,8 +37,8 @@
         "annee": "1930",
         "citation": "Le seul différence entre un fou et moi, c’est que je ne suis pas fou.",
         "description": "Salvador Dalí est le peintre surréaliste le plus célèbre au monde, reconnaissable à sa moustache excentrique et à son imagination débordante. Ses œuvres, comme La Persistance de la mémoire, mêlent rêve, symbolisme et précision technique. Il a brouillé les frontières entre art et spectacle, devenant une véritable icône médiatique. Son univers étrange et fascinant continue de captiver le public.",
-        "photo": "dali.jpg",
-        "signature": "dalisignature.png",
+        "photo": "medias/dali.jpg",
+        "signature": "medias/dalisignature.png",
         "categorie": "Peintre"
       },
       {
@@ -47,8 +47,8 @@
         "annee": "1960",
         "citation": "Dans le futur, chacun sera célèbre pendant 15 minutes.",
         "description": "Andy Warhol est le chef de file du pop art, mouvement qui a intégré la culture populaire et la société de consommation dans l'art. Ses œuvres emblématiques, comme les portraits de Marilyn Monroe ou les Campbell's Soup Cans, ont redéfini la notion d'œuvre d'art. Il a joué avec les codes des médias, de la publicité et de la célébrité. Son influence dépasse largement le monde de la peinture, touchant la mode, la musique et la culture contemporaine.",
-        "photo": "andy.jpg",
-        "signature": "andysignature.png",
+        "photo": "medias/andy.jpg",
+        "signature": "medias/andysignature.png",
         "categorie": "Peintre"
       }
     ],
@@ -59,8 +59,8 @@
         "annee": "1940",
         "citation": "Je peins ma propre réalité, même si elle est douloureuse",
         "description": "Frida Kahlo est une peintre mexicaine mondialement célèbre pour ses autoportraits intenses et symboliques. Son œuvre explore la douleur, l'identité, le corps et la culture mexicaine avec une sincérité bouleversante. Elle a refusé les normes de beauté et de genre de son époque, s'affirmant comme une femme libre et indépendante. Elle est devenue une icône féministe car elle a représenté sans filtre le vécu féminin, la souffrance et la puissance personnelle.",
-        "photo": "frida.jpg",
-        "signature": "fridasignature.png",
+        "photo": "medias/frida.jpg",
+        "signature": "medias/fridasignature.png",
         "categorie": "Peintre"
       },
       {
@@ -69,8 +69,8 @@
         "annee": "1920",
         "citation": "Je trouve de la beauté dans ce que les autres considèrent comme ordinaire.",
         "description": "Georgia O'Keeffe est considérée comme la \"mère de l'art moderne américain\". Elle est célèbre pour ses grandes toiles de fleurs, de paysages et de formes organiques d'une grande sensualité. Elle a imposé sa vision artistique dans un milieu largement masculin, en refusant d'être réduite au rôle de muse. Figure féministe, elle a incarné l'indépendance créative et l'émancipation des femmes artistes.",
-        "photo": "georgia.webp",
-        "signature": "georgiasignature.png",
+        "photo": "medias/georgia.webp",
+        "signature": "medias/georgiasignature.png",
         "categorie": "Peintre"
       },
       {
@@ -79,8 +79,8 @@
         "annee": "1960",
         "citation": "Mon obsession est mon pouvoir. Mon art est ma liberté.",
         "description": "Yayoi Kusama est une artiste contemporaine japonaise connue pour ses installations immersives, ses pois obsessionnels et ses salles à miroirs infinies. Elle a brisé les conventions sociales et artistiques japonaises dès les années 1960 pour s'imposer à l'international. Elle a toujours affirmé sa liberté artistique et personnelle, y compris face à des institutions qui tentaient de la marginaliser. Elle est vue comme une figure féministe pour son courage à s'exprimer en dehors des normes patriarcales et à revendiquer la place des femmes dans l'art contemporain.",
-        "photo": "kusama.webp",
-        "signature": "kasamasignature.png",
+        "photo": "medias/kusama.webp",
+        "signature": "medias/kasamasignature.png",
         "categorie": "Peintre"
       },
       {
@@ -89,8 +89,8 @@
         "annee": "1930",
         "citation": "Une femme doit être audacieuse, élégante et maîtresse de son destin.",
         "description": "Tamara de Lempicka est une figure emblématique de l'Art déco, célèbre pour ses portraits élégants et sensuels. Elle a cultivé une image de femme libre, sophistiquée et indépendante, à contre-courant des codes féminins de son époque. Elle a maîtrisé son image publique autant que son art, devenant une véritable icône de modernité. Elle est considérée comme une figure féministe car elle incarnait une féminité assumée, puissante et libérée des normes sociales.",
-        "photo": "tamara.png",
-        "signature": "tamarasignature.png",
+        "photo": "medias/tamara.png",
+        "signature": "medias/tamarasignature.png",
         "categorie": "Peintre"
       },
       {
@@ -99,8 +99,8 @@
         "annee": "1990",
         "citation": "Je veux peindre la chair des femmes telle qu'elle est vraiment",
         "description": "Jenny Saville est une artiste contemporaine britannique reconnue pour ses grands portraits réalistes de corps féminins. Elle bouscule les standards de beauté en représentant des corps nus, imparfaits, forts et puissants. Son travail est une réponse directe au regard masculin traditionnel dans l'histoire de l'art. Elle est perçue comme une figure féministe car elle redonne aux femmes la maîtrise de leur image et de leur corps, en dehors des canons imposés.",
-        "photo": "saville.webp",
-        "signature": "savillesignature.png",
+        "photo": "medias/saville.webp",
+        "signature": "medias/savillesignature.png",
         "categorie": "Peintre"
       }
     ]
@@ -113,8 +113,8 @@
         "annee": "1960",
         "citation": "Lorsque je chante, je parle à mon cœur, et j’espère que le vôtre écoute.",
         "description": "Elvis Presley, surnommé The King of Rock and Roll, est l'un des artistes les plus influents du XXᵉ siècle. Avec sa voix puissante, son charisme et son style provocateur, il a popularisé le rock auprès du grand public. Ses tubes comme Can't Help Falling in Love ou Jailhouse Rock ont marqué des générations. Véritable icône culturelle, il a ouvert la voie à une nouvelle ère musicale et scénique.",
-        "photo": "elvis.jpg",
-        "signature": "elvissignature.png",
+        "photo": "medias/elvis.jpg",
+        "signature": "medias/elvissignature.png",
         "categorie": "Chanteur"
       },
       {
@@ -123,8 +123,8 @@
         "annee": "1980",
         "citation": "La musique est une lumière qui guide nos cœurs dans l’obscurité.",
         "description": "Michael Jackson, surnommé The King of Pop, a révolutionné la musique, la danse et la culture populaire mondiale. Son album Thriller est l'un des plus vendus de tous les temps et ses clips ont redéfini l'industrie musicale. Il a popularisé des mouvements légendaires comme le moonwalk. Artiste visionnaire, il reste une figure incontournable de la pop et de la scène mondiale.",
-        "photo": "jackson.jpg",
-        "signature": "jacksonsignature.png",
+        "photo": "medias/jackson.jpg",
+        "signature": "medias/jacksonsignature.png",
         "categorie": "Chanteur"
       },
       {
@@ -133,8 +133,8 @@
         "annee": "1940",
         "citation": "La musique et la vie, c’est tout ce qui compte.",
         "description": "Frank Sinatra est une légende de la chanson américaine, reconnu pour sa voix chaude et élégante. Avec des titres intemporels comme My Way ou Fly Me to the Moon, il a conquis plusieurs générations. En plus de sa carrière musicale exceptionnelle, il a également été acteur à succès. Charismatique et raffiné, il incarne le glamour de l'âge d'or de la musique et du cinéma.",
-        "photo": "sinatra.jpg",
-        "signature": "sinatrasignature.png",
+        "photo": "medias/sinatra.jpg",
+        "signature": "medias/sinatrasignature.png",
         "categorie": "Chanteur"
       },
       {
@@ -143,8 +143,8 @@
         "annee": "1990",
         "citation": "Je préfère vivre comme un lion un jour que comme un mouton toute ma vie",
         "description": "Freddie Mercury, chanteur du groupe Queen, est considéré comme l'une des plus grandes voix de l'histoire du rock. Avec son charisme flamboyant et son talent scénique unique, il a marqué la musique avec des hymnes comme Bohemian Rhapsody, We Are the Champions ou Somebody to Love. Son style théâtral et son audace ont brisé de nombreux codes. Il reste une icône culturelle et musicale incontournable.",
-        "photo": "freddy.jpg",
-        "signature": "freddysignature.png",
+        "photo": "medias/freddy.jpg",
+        "signature": "medias/freddysignature.png",
         "categorie": "Chanteur"
       },
       {
@@ -153,8 +153,8 @@
         "annee": "1970",
         "citation": "La musique peut rendre les hommes libres.",
         "description": "Bob Marley est une figure légendaire de la musique reggae et un symbole mondial de paix, d'unité et de liberté. Avec des chansons comme No Woman No Cry, One Love et Redemption Song, il a porté la voix de la Jamaïque sur la scène internationale. Au-delà de la musique, il a incarné une philosophie spirituelle et politique. Son héritage dépasse les frontières musicales, faisant de lui une véritable icône universelle.",
-        "photo": "bob.jpg",
-        "signature": "bobsignature.png",
+        "photo": "medias/bob.jpg",
+        "signature": "medias/bobsignature.png",
         "categorie": "Chanteur"
       }
     ],
@@ -165,8 +165,8 @@
         "annee": "1950",
         "citation": "Il faut oser être soi-même pour toucher les autres.",
         "description": "Maria Callas est l'une des plus grandes sopranos de l'histoire de l'opéra, célèbre pour la puissance dramatique et la précision technique de sa voix. Elle a redéfini le chant lyrique en mêlant virtuosité vocale et intensité émotionnelle. Véritable star internationale, elle a imposé son image et sa carrière dans un milieu très masculin. Elle est considérée comme une figure féministe car elle a ouvert la voie à des femmes artistes puissantes, indépendantes et capables de maîtriser leur destin artistique.",
-        "photo": "maria.jpg",
-        "signature": "mariasignature.png",
+        "photo": "medias/maria.jpg",
+        "signature": "medias/mariasignature.png",
         "categorie": "Chanteuse"
       },
       {
@@ -175,8 +175,8 @@
         "annee": "1940",
         "citation": "Même dans la douleur, une femme peut chanter et inspirer le monde.",
         "description": "Édith Piaf, surnommée la Môme, est une icône de la chanson française grâce à sa voix unique et à l'émotion brute qu'elle transmettait. Des titres comme La Vie en rose ou Non, je ne regrette rien ont traversé les générations. Issue d'un milieu modeste, elle a construit seule une carrière exceptionnelle. Elle incarne une figure féministe car elle a brisé les barrières sociales et imposé une présence féminine forte dans un univers dominé par les hommes.",
-        "photo": "edith.webp",
-        "signature": "edithsignature.png",
+        "photo": "medias/edith.webp",
+        "signature": "medias/edithsignature.png",
         "categorie": "Chanteuse"
       },
       {
@@ -185,8 +185,8 @@
         "annee": "1990",
         "citation": "La musique est ma voix, et ma voix est mon pouvoir.",
         "description": "Whitney Houston est l'une des plus grandes voix de la pop et du R&B, connue pour ses performances vocales légendaires et son charisme. Des chansons comme I Will Always Love You ou Greatest Love of All ont fait d'elle une star mondiale. Elle a ouvert la voie à de nombreuses chanteuses afro-américaines dans une industrie souvent discriminante. Elle est perçue comme une figure féministe car elle a incarné la force, la dignité et le pouvoir de la voix féminine noire à l'échelle mondiale.",
-        "photo": "houston.jpg",
-        "signature": "houstonsignature.png",
+        "photo": "medias/houston.jpg",
+        "signature": "medias/houstonsignature.png",
         "categorie": "Chanteuse"
       },
       {
@@ -195,8 +195,8 @@
         "annee": "1980",
         "citation": "Je suis mon propre instrument de révolution.",
         "description": "Madonna, surnommée The Queen of Pop, a révolutionné la musique et la culture populaire dès les années 1980. Elle a constamment repoussé les limites des codes de genre, de la sexualité et de la liberté d'expression à travers ses chansons, ses clips et ses performances scéniques. Elle a bâti un empire en contrôlant sa carrière avec une rare indépendance. Figure féministe majeure, elle a inspiré des générations de femmes à s'affirmer et à revendiquer leur liberté artistique et personnelle.",
-        "photo": "madonna.webp",
-        "signature": "madonnasignature.png",
+        "photo": "medias/madonna.webp",
+        "signature": "medias/madonnasignature.png",
         "categorie": "Chanteuse"
       },
       {
@@ -205,8 +205,8 @@
         "annee": "2000",
         "citation": "Le pouvoir d’une femme est infini quand elle croit en elle.",
         "description": "Beyoncé est une superstar mondiale, connue pour sa voix puissante, ses performances spectaculaires et son sens aigu de l'image et de la scène. À travers des albums comme Lemonade, elle célèbre la force des femmes, l'identité afro-américaine et l'émancipation individuelle. Elle a construit sa carrière en gardant le contrôle artistique et entrepreneurial de son image. Elle est vue comme une icône féministe moderne, incarnant empowerment, indépendance et fierté féminine.",
-        "photo": "beyonce.jpg",
-        "signature": "beyoncesignature.png",
+        "photo": "medias/beyonce.jpg",
+        "signature": "medias/beyoncesignature.png",
         "categorie": "Chanteuse"
       }
     ]
@@ -219,8 +219,8 @@
         "annee": "1910",
         "citation": "Un jour sans rire est un jour perdu.",
         "description": "Charlie Chaplin est une légende du cinéma muet, célèbre pour son personnage iconique Le Vagabond. Il a marqué l'histoire du cinéma grâce à son humour, sa sensibilité et sa capacité à mêler comédie et critique sociale. Des films comme Les Temps modernes et Le Kid restent des chefs-d'œuvre universels. Son influence sur le cinéma et la comédie perdure encore aujourd'hui.",
-        "photo": "chaplin.jpg",
-        "signature": "chaplinsignature.png",
+        "photo": "medias/chaplin.jpg",
+        "signature": "medias/chaplinsignature.png",
         "categorie": "Acteur"
       },
       {
@@ -229,8 +229,8 @@
         "annee": "1950",
         "citation": "Le travail d’un acteur consiste à se mettre à nu, à montrer l’âme humaine.",
         "description": "Marlon Brando est considéré comme l'un des acteurs les plus influents du XXᵉ siècle, connu pour son approche réaliste et intense du jeu d'acteur. Ses rôles dans Sur les quais, Le Parrain ou Apocalypse Now ont révolutionné le cinéma américain. Il a popularisé la méthode d'acteur, centrée sur l'émotion et l'authenticité. Son charisme et sa puissance dramatique en ont fait une icône mondiale.",
-        "photo": "brando.jpg",
-        "signature": "brandosignature.png",
+        "photo": "medias/brando.jpg",
+        "signature": "medias/brandosignature.png",
         "categorie": "Acteur"
       },
       {
@@ -239,8 +239,8 @@
         "annee": "1970",
         "citation": "La vérité d’un rôle se trouve dans les détails les plus simples.",
         "description": "Robert De Niro est un acteur américain de renom, célèbre pour ses transformations physiques et son engagement dans chacun de ses rôles. Il a marqué le cinéma avec des films comme Taxi Driver, Raging Bull et Goodfellas. Sa carrière s'étend sur plusieurs décennies et il est reconnu pour la profondeur psychologique qu'il apporte à ses personnages. Il est considéré comme l'un des plus grands acteurs de sa génération.",
-        "photo": "deniro.jpg",
-        "signature": "denirosignature.png",
+        "photo": "medias/deniro.jpg",
+        "signature": "medias/denirosignature.png",
         "categorie": "Acteur"
       },
       {
@@ -249,8 +249,8 @@
         "annee": "2000",
         "citation": "On ne peut changer le monde qu’en commençant par soi-même.",
         "description": "Leonardo DiCaprio est un acteur contemporain mondialement célèbre, connu pour sa polyvalence et son engagement écologique. Ses performances dans Titanic, Inception et The Revenant lui ont valu reconnaissance critique et prix prestigieux. Il est aussi un producteur engagé, utilisant sa notoriété pour soutenir des causes environnementales. Son charisme et son talent font de lui une figure majeure du cinéma moderne.",
-        "photo": "dicaprio.jpg",
-        "signature": "dicapriosignature.png",
+        "photo": "medias/dicaprio.jpg",
+        "signature": "medias/dicapriosignature.png",
         "categorie": "Acteur"
       },
       {
@@ -259,8 +259,8 @@
         "annee": "1990",
         "citation": "Le plus important est d’être honnête avec soi-même et avec le public.",
         "description": "Tom Hanks est un acteur américain adoré pour ses rôles chaleureux et authentiques, ainsi que pour sa grande polyvalence. Il a marqué le cinéma avec des films comme Forrest Gump, Philadelphia et Saving Private Ryan. Son style naturel et humain lui a valu une immense popularité et plusieurs Oscars. Il incarne souvent \"l'homme ordinaire\" héroïque, touchant le public de toutes générations.",
-        "photo": "hanks.jpg",
-        "signature": "hankssignature.png",
+        "photo": "medias/hanks.jpg",
+        "signature": "medias/hankssignature.png",
         "categorie": "Acteur"
       }
     ],
@@ -271,8 +271,8 @@
         "annee": "1950",
         "citation": "Rien n'est impossible, le mot lui-même dit 'Je suis possible'",
         "description": "Audrey Hepburn est une icône du cinéma et de l'élégance, célèbre pour ses rôles dans Breakfast at Tiffany's et My Fair Lady. Son style unique et sa grâce naturelle ont marqué l'histoire du cinéma. Au-delà de son image glamour, elle s'est engagée comme ambassadrice de l'UNICEF, mettant en avant la compassion et l'autonomie des femmes. Elle est vue comme une figure féministe pour son indépendance, sa force tranquille et sa capacité à combiner carrière artistique et engagement humanitaire.",
-        "photo": "hepburn.jpg",
-        "signature": "hepburnsignature.png",
+        "photo": "medias/hepburn.jpg",
+        "signature": "medias/hepburnsignature.png",
         "categorie": "Actrice"
       },
       {
@@ -281,8 +281,8 @@
         "annee": "1960",
         "citation": "Je suis très intelligente, mais je choisis d’être libre.",
         "description": "Marilyn Monroe est une légende hollywoodienne, connue pour son charme, son humour et ses rôles iconiques dans Some Like It Hot et The Seven Year Itch. Elle a su transformer son image de blonde glamour en symbole de liberté et d'émancipation féminine. Elle est considérée comme une figure féministe pour avoir revendiqué le contrôle sur sa carrière, son image et sa sexualité dans une industrie dominée par les hommes, inspirant des générations de femmes à s'affirmer.",
-        "photo": "marilyn.jpg",
-        "signature": "marilynsignature.png",
+        "photo": "medias/marilyn.jpg",
+        "signature": "medias/marilynsignature.png",
         "categorie": "Actrice"
       },
       {
@@ -291,8 +291,8 @@
         "annee": "1980",
         "citation": "Il faut toujours défendre ce en quoi l’on croit, surtout en tant que femme.",
         "description": "Meryl Streep est souvent considérée comme la plus grande actrice vivante, avec une carrière exceptionnelle allant de Kramer vs. Kramer à The Iron Lady. Son talent polyvalent et son engagement dans des rôles complexes lui ont valu une reconnaissance mondiale. Elle est une figure féministe dans le cinéma pour avoir incarné des personnages puissants et indépendants, et pour avoir ouvert la voie à des rôles féminins plus profonds et diversifiés.",
-        "photo": "streep.webp",
-        "signature": "streepsignature.png",
+        "photo": "medias/streep.webp",
+        "signature": "medias/streepsignature.png",
         "categorie": "Actrice"
       },
       {
@@ -301,8 +301,8 @@
         "annee": "1990",
         "citation": "Croire en soi est le premier pas pour changer le monde.",
         "description": "Julia Roberts est devenue une star mondiale grâce à des films comme Pretty Woman, Erin Brockovich et Notting Hill. Son charisme et sa capacité à interpréter des femmes fortes et déterminées lui ont permis de devenir un modèle pour de nombreuses spectatrices. Elle est vue comme une figure féministe pour ses rôles qui célèbrent l'autonomie, la confiance et la résilience des femmes, en dehors des clichés romantiques classiques.",
-        "photo": "roberts.jpg",
-        "signature": "robertssignature.png",
+        "photo": "medias/roberts.jpg",
+        "signature": "medias/robertssignature.png",
         "categorie": "Actrice"
       },
       {
@@ -311,8 +311,8 @@
         "annee": "2000",
         "citation": "Je veux des rôles qui reflètent la vraie puissance féminine.",
         "description": "Scarlett Johansson est une actrice polyvalente, célèbre pour ses rôles dans Lost in Translation, Marriage Story et la saga Avengers. Elle a su combiner blockbuster et films d'auteur, s'imposant comme une figure majeure d'Hollywood contemporain. Elle est perçue comme une figure féministe pour avoir revendiqué la parité salariale et des rôles de femmes fortes, tout en contribuant à faire évoluer la représentation des héroïnes à l'écran.",
-        "photo": "scarlet.jpg",
-        "signature": "scarletsignature.png",
+        "photo": "medias/scarlet.jpg",
+        "signature": "medias/scarletsignature.png",
         "categorie": "Actrice"
       }
     ]
@@ -325,8 +325,8 @@
         "annee": "1830",
         "citation": "La musique, c'est du bruit qui pense",
         "description": "Victor Hugo est l'un des plus grands écrivains français, célèbre pour ses romans, poésies et pièces de théâtre. Ses œuvres emblématiques comme Les Misérables et Notre-Dame de Paris explorent la justice sociale, l'amour et la condition humaine. En plus de son œuvre littéraire, il s'est engagé politiquement pour les droits humains et la liberté. Son influence sur la littérature et la culture française est immense et traverse les générations.",
-        "photo": "hugo.jpg",
-        "signature": "hugosignature.png",
+        "photo": "medias/hugo.jpg",
+        "signature": "medias/hugosignature.png",
         "categorie": "Auteur"
       },
       {
@@ -335,8 +335,8 @@
         "annee": "1840",
         "citation": "Nous forgeons les chaînes que nous portons dans la vie",
         "description": "Charles Dickens est un romancier britannique incontournable du XIXᵉ siècle, connu pour ses portraits réalistes de la société victorienne. Ses romans comme Oliver Twist, David Copperfield et A Christmas Carol mêlent critique sociale, humour et émotion. Il a donné voix aux pauvres et aux opprimés, attirant l'attention sur les inégalités de son époque. Sa capacité à créer des personnages vivants et mémorables a fait de lui un auteur mondialement reconnu.",
-        "photo": "charles.jpg",
-        "signature": "charlessignature.png",
+        "photo": "medias/charles.jpg",
+        "signature": "medias/charlessignature.png",
         "categorie": "Auteur"
       },
       {
@@ -345,8 +345,8 @@
         "annee": "1870",
         "citation": "Tous pensent à changer le monde, mais personne ne pense à se changer soi-même",
         "description": "Léon Tolstoï est un écrivain et philosophe russe célèbre pour ses romans monumentaux et ses réflexions sur la vie et la morale. Des œuvres comme Guerre et Paix et Anna Karénine sont considérées comme des chefs-d'œuvre de la littérature mondiale. Il a profondément exploré la psychologie humaine et les dilemmes sociaux et moraux de son temps. Son influence dépasse la littérature, touchant la philosophie et la pensée sociale.",
-        "photo": "leon.jpg",
-        "signature": "leonsignature.png",
+        "photo": "medias/leon.jpg",
+        "signature": "medias/leonsignature.png",
         "categorie": "Auteur"
       },
       {
@@ -355,8 +355,8 @@
         "annee": "1950",
         "citation": "En temps de tromperie universelle, dire la vérité est un acte révolutionnaire",
         "description": "George Orwell est un écrivain britannique célèbre pour ses romans et essais engagés politiquement. Ses œuvres majeures, 1984 et La Ferme des animaux, critiquent le totalitarisme et l'injustice sociale. Sa capacité à combiner fiction et réflexion politique a fait de lui un auteur incontournable du XXᵉ siècle. Son travail reste d'une grande actualité et continue d'influencer la pensée critique et la littérature.",
-        "photo": "orwell.jpg",
-        "signature": "orwellsignature.png",
+        "photo": "medias/orwell.jpg",
+        "signature": "medias/orwellsignature.png",
         "categorie": "Auteur"
       },
       {
@@ -365,8 +365,8 @@
         "annee": "1940",
         "citation": "Au milieu de l'hiver, j'ai découvert en moi un invincible été",
         "description": "Albert Camus est un écrivain, philosophe et journaliste français, célèbre pour son exploration de l'absurde et de la condition humaine. Ses romans comme L'Étranger et La Peste, ainsi que ses essais philosophiques, ont marqué la pensée existentialiste et humaniste. Lauréat du prix Nobel de littérature, il a combiné engagement intellectuel et création littéraire. Ses œuvres continuent de questionner la morale, la liberté et la responsabilité individuelle.",
-        "photo": "camus.jpg",
-        "signature": "camussignature.png",
+        "photo": "medias/camus.jpg",
+        "signature": "medias/camussignature.png",
         "categorie": "Auteur"
       }
     ],
@@ -377,8 +377,8 @@
         "annee": "1810",
         "citation": "Il n’y a pas de limite aux esprits qui osent penser par eux-mêmes.",
         "description": "Jane Austen est une romancière anglaise célèbre pour ses œuvres comme Orgueil et Préjugés et Emma, qui décrivent avec finesse la société et les relations amoureuses de son époque. Son humour subtil et son observation sociale ont révolutionné le roman réaliste. Elle est considérée comme une figure féministe car elle a donné voix aux pensées, aux désirs et à l'autonomie des femmes dans une société dominée par les hommes, inspirant des générations de lectrices et d'écrivaines.",
-        "photo": "jane.webp",
-        "signature": "janesignature.png",
+        "photo": "medias/jane.webp",
+        "signature": "medias/janesignature.png",
         "categorie": "Auteure"
       },
       {
@@ -387,8 +387,8 @@
         "annee": "1820",
         "citation": "Je revendique le droit de créer et d’imaginer, même dans un monde qui doute de moi.",
         "description": "Mary Shelley est l'autrice de Frankenstein, œuvre fondatrice de la science-fiction moderne. Elle a su mêler imagination, philosophie et critique sociale, explorant des thèmes comme la création, la responsabilité et la condition humaine. Elle est vue comme une figure féministe pour avoir brisé les barrières intellectuelles et littéraires de son époque, démontrant que les femmes pouvaient exceller dans des genres dominés par les hommes.",
-        "photo": "shelley.webp",
-        "signature": "shelleysignature.png",
+        "photo": "medias/shelley.webp",
+        "signature": "medias/shelleysignature.png",
         "categorie": "Auteure"
       },
       {
@@ -397,8 +397,8 @@
         "annee": "1920",
         "citation": "Une femme peut être brillante et indépendante tout en captivant le monde.",
         "description": "Agatha Christie est la reine incontestée du roman policier, connue pour ses personnages emblématiques comme Hercule Poirot et Miss Marple. Ses romans, tels que Le Meurtre de Roger Ackroyd et Dix Petits Nègres, ont été traduits et lus dans le monde entier. Elle est considérée comme une figure féministe car elle a construit une carrière littéraire internationale, réussissant dans un domaine longtemps perçu comme masculin et en créant des héroïnes fortes et intelligentes.",
-        "photo": "agatha.jpg",
-        "signature": "agathasignature.png",
+        "photo": "medias/agatha.jpg",
+        "signature": "medias/agathasignature.png",
         "categorie": "Auteure"
       },
       {
@@ -407,8 +407,8 @@
         "annee": "1950",
         "citation": "On ne naît pas femme, on le devient",
         "description": "Simone de Beauvoir était philosophe, romancière et essayiste, connue pour Le Deuxième Sexe, un texte fondateur du féminisme moderne. Ses romans et essais ont exploré la condition des femmes et la nécessité de leur émancipation sociale et intellectuelle. Elle est une figure féministe majeure, ayant influencé la pensée sur l'égalité des sexes et l'autonomie féminine, en combinant engagement intellectuel et créativité littéraire.",
-        "photo": "simone.png",
-        "signature": "simonesignature.png",
+        "photo": "medias/simone.png",
+        "signature": "medias/simonesignature.png",
         "categorie": "Auteure"
       },
       {
@@ -417,8 +417,8 @@
         "annee": "2000",
         "citation": "Ce sont nos choix qui montrent ce que nous sommes vraiment, bien plus que nos capacités",
         "description": "J.K. Rowling est l'autrice de la saga Harry Potter, devenue un phénomène mondial, traduite dans des dizaines de langues et adaptée au cinéma. Ses histoires mêlent imagination, valeurs morales et exploration de thèmes sociaux. Elle est vue comme une figure féministe contemporaine pour avoir créé des personnages féminins forts, indépendants et diversifiés, et pour avoir inspiré des millions de lectrices à travers le monde à croire en leur pouvoir et en leur autonomie.",
-        "photo": "rowling.png",
-        "signature": "rowlingsignature.png",
+        "photo": "medias/rowling.png",
+        "signature": "medias/rowlingsignature.png",
         "categorie": "Auteure"
       }
     ]
