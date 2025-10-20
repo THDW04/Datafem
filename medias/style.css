@@ -1,0 +1,194 @@
+:root {
+  --background: #2c0000;
+  --creme: #f5e9d7;
+  --taupe: #8a7363;
+  --taupe-dark: #6c584b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: var(--background);
+  overflow: hidden;
+  font-family: "Georgia", serif;
+}
+
+/* SECTION 1 - BISOU */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bisou {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: drawBisou 2s ease forwards;
+}
+
+@keyframes drawBisou {
+  0% { opacity: 0; transform: scale(0.5); filter: blur(10px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+/* SECTION 2 - LOGO */
+#logo-screen {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#logo-screen.show {
+  display: flex;
+  opacity: 1;
+}
+
+#logo-screen .logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+#enter-btn {
+  background: var(--taupe);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background .3s;
+}
+
+#enter-btn:hover {
+  background: var(--taupe-dark);
+}
+
+/* SECTION 3 - ACCUEIL */
+#home {
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+.mini-logo {
+  width: 100px;
+}
+
+.icons {
+  display: flex;
+  gap: 70px;
+  transform: translateX(-10%); /* ✅ repositionne les icônes légèrement vers le centre */
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--creme);
+  background-size: 30%;         
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+/* 🖼️ Images dans les icônes */
+.icon-graphe {
+  background-image: url("assets/graphe.png");
+}
+
+.icon-temps {
+  background-image: url("assets/temps.png");
+}
+
+.icon-coeur {
+  background-image: url("assets/coeur.png");
+}
+
+/* 🪄 Effets hover et clic */
+.icon:hover {
+  background-color: var(--taupe);
+}
+
+.icon:active {
+  background-color: var(--taupe-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--taupe);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--taupe-dark);
+}
+
+/* CAROUSEL */
+.carousel {
+  flex: 0 0 60%;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease;
+  height: 100%;
+}
+
+.carousel video {
+  width: 115%;
+  height: 115%;
+  object-fit: contain;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--creme);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.dot.active {
+  background: var(--taupe);
+}
+
+
+
