@@ -222,10 +222,6 @@ header {
   }
 }
 
-section:not(.carousel) {
-  min-height: 100vh;
-}
-
 /* GRAPHIQUE */
 .graphique {
   display: flex;
@@ -460,6 +456,7 @@ footer small {
 
 footer {
   font-family: 'Jost', sans-serif;
+  display: none;
 }
 
 .footer-container {
