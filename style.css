@@ -393,6 +393,7 @@ header {
 /* FOOTER */
 footer {
   background-color: #1b1b1b;
+  font-family: 'Jost', sans-serif;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -452,11 +453,6 @@ footer small {
   display: block;
   margin: 0 auto 15px auto;
   border-radius: 5px;
-}
-
-footer {
-  font-family: 'Jost', sans-serif;
-  display: none;
 }
 
 .footer-container {
