@@ -271,13 +271,6 @@ section:not(.carousel) {
   font-weight: bold;
 }
 
-body {
-  margin: 0;
-  font-family: 'Jost', sans-serif;
-  background-color: #fdfaf5;
-  color: #2c2c2c;
-}
-
 /* SECTION ROUGE */
 .section-red {
   background-color: #791c17;
