@@ -112,7 +112,6 @@ header, main, footer{
 header {
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
 }
 
 .mini-logo {
@@ -132,7 +131,6 @@ header {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
-
   display: flex;
   justify-content: center;
   align-items: center;
