@@ -112,17 +112,22 @@ header, main, footer{
 header {
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+
 }
 
 .mini-logo {
-  width: 100%;
+  width: 20%;
+  margin-top: -70px;
+  margin-bottom: -70px;
 }
 
 .icons {
   display: flex;
   gap: 70px;
   transform: translateX(-10%);
+  margin-top: -100px;
+  margin-bottom: -70px;
+  margin-right: 100px;
 }
 
 .icon {
