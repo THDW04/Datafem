@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('enter-btn').addEventListener('click', async () => {
   document.getElementById('logo-screen').style.display = 'none';
   document.querySelector('main').style.display = 'block';
+  document.querySelector('footer').style.display = 'flex';
   document.querySelector('header').style.display = 'flex';
 
 });
