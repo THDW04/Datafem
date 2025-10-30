@@ -78,7 +78,7 @@ body {
   height: 100vh;
 }
 
-#logo-screen .logo {
+#logo-screen .logo1 {
   width: 200px;
   margin-bottom: 20px;
 }
@@ -294,6 +294,7 @@ header {
   line-height: 1.9;
   max-width: 90%;
   text-align: left;
+  font-family: 'Jost', sans-serif;
 }
 
 /* SECTION NOIRE */
@@ -324,12 +325,14 @@ header {
   max-width: 90%;
   margin-left: auto;
   text-align: right;
+  font-family: 'Jost', sans-serif;
 }
 
 /* SECTION BEIGE */
 .section-beige {
   background-color: #f4efe5;
   padding: 70px 10%;
+  color: #000;
   text-align: center;
 }
 
@@ -372,6 +375,7 @@ header {
 .card p {
   font-size: 0.95rem;
   text-align: left;
+  font-family: 'Jost', sans-serif;
 }
 
 .card a {
@@ -392,13 +396,15 @@ header {
 
 /* FOOTER */
 footer {
-  background-color: #1b1b1b;
-  color: #fff;
-  display: flex;
+  background-color: #ffffff;
+  color: #000;
   justify-content: space-between;
-  padding: 50px 10%;
+  padding: 0;
   flex-wrap: wrap;
+  font-family: 'Jost', sans-serif;
+  display: none;
 }
+
 
 .footer-left,
 .footer-right {
@@ -545,14 +551,13 @@ footer {
   text-align: center;
 }
 
-.logo {
-  width: 200px;
-  height: 200px;
+.logo_footer {
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 170px;
-  margin-top: -60px;
+  margin-left: 130px;
+  margin-top: -50px;
 }
 
 
@@ -618,4 +623,9 @@ footer {
 
 .copyright {
   color: #ccc;
+}
+
+.btns {
+  margin-top: 20px;
+  margin-bottom: 70px;
 }
