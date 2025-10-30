@@ -388,6 +388,7 @@ header {
   margin-top: 15px;
   font-weight: bold;
   transition: background 0.3s;
+  font-family: 'Jost', sans-serif;
 }
 
 .card a:hover {
@@ -628,4 +629,17 @@ footer {
 .btns {
   margin-top: 20px;
   margin-bottom: 70px;
+}
+
+.texte {
+  font-family: 'Jost', sans-serif;
+  margin: 60px;
+  margin-bottom: 100px;
+  font-size: 1.3rem;
+}
+
+.titre-graph {
+  font-family: "Judson", serif;
+  font-size: 1.8rem;
+text-transform: uppercase;
 }
