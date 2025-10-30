@@ -396,15 +396,8 @@ header {
 
 /* FOOTER */
 footer {
-<<<<<<< HEAD
   background-color: #ffffff;
   color: #000;
-=======
-  background-color: #1b1b1b;
-  font-family: 'Jost', sans-serif;
-  color: #fff;
-  display: flex;
->>>>>>> c7d33c8be30b913a44f3f6d829ea22e84701a5be
   justify-content: space-between;
   padding: 0;
   flex-wrap: wrap;
@@ -465,6 +458,11 @@ footer small {
   display: block;
   margin: 0 auto 15px auto;
   border-radius: 5px;
+}
+
+footer {
+  font-family: 'Jost', sans-serif;
+  display: none;
 }
 
 .footer-container {
