@@ -19,13 +19,12 @@ body {
   height: 100%;
   width: 100%;
   background: var(--background);
-
   color: #f5e9d7;
   font-family: "Georgia", serif;
   scroll-behavior: smooth;
 }
 
-/* --- Rideau --- */
+/* Animation du rideau */
 .curtain {
   position: fixed;
   top: 0;
@@ -41,26 +40,30 @@ body {
   will-change: transform;
 }
 
+/* Rideau gauche */
 .curtain.left {
   left: 0;
   transform-origin: left;
 }
 
+/* Rideau droite */
 .curtain.right {
   right: 0;
   transform-origin: right;
 }
 
+/* Animation d'ouverture rideau gauche */
 .curtain.open.left {
   transform: translateX(-105%);
 }
 
+/* Animation d'ouverture rideau droite */
 .curtain.open.right {
   transform: translateX(105%);
 }
 
+/* Supprimer animations pour utilisateurs sensibles */
 @media (prefers-reduced-motion: reduce) {
-
   .curtain,
   .curtain.open {
     transition: none !important;
@@ -69,7 +72,7 @@ body {
   }
 }
 
-/* SECTION 2 - LOGO */
+/* Écran d’intro : logo + bouton "Entrer" */
 #logo-screen {
   display: flex;
   flex-direction: column;
@@ -97,32 +100,30 @@ body {
   background: var(--taupe-dark);
 }
 
+/* Masquer header, main et footer sur la page d'intro */
 header,
 main,
 footer {
   display: none;
 }
 
-/* SECTION 3 - ACCUEIL */
-/*#home {
-  display: none;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-}*/
+/* --- PAGE PRINCIPALE --- */
+
+/* -- HEADER -- */
 
 header {
   align-items: center;
   justify-content: space-between;
-
 }
 
+/* Logo dans le header */
 .mini-logo {
   width: 20%;
   margin-top: -70px;
   margin-bottom: -70px;
 }
 
+/* Icônes du header */
 .icons {
   display: flex;
   gap: 70px;
@@ -139,7 +140,6 @@ header {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,7 +149,7 @@ header {
   width: 45px;
 }
 
-/* Effets hover et clic */
+/* Animation des icônes du header */
 .icon:hover {
   background-color: #f5e9d7c7;
   animation: rotate 0.6s ease forwards;
@@ -165,7 +165,7 @@ header {
   background-color: #ffe8c5;
 }
 
-/* Scrollbar */
+/* Scrollbar personnalisée */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -179,12 +179,12 @@ header {
   background: var(--taupe-dark);
 }
 
-/* CAROUSEL */
+/* -- CARROUSEL -- */
+
 .carousel {
   display: flex;
   overflow: hidden;
   position: relative;
-
   max-height: 800px;
   width: 90%;
   margin: 0 auto 50px;
@@ -197,7 +197,6 @@ header {
   width: 300%;
   display: flex;
   transition: all 1s ease;
-
   animation: slide 20s infinite;
 }
 
@@ -208,21 +207,36 @@ header {
   object-fit: cover;
 }
 
+/* Animation du carousel (défilement des vidéos) */
 @keyframes slide {
   0% {
     left: 0;
   }
-
   50% {
     left: -100%;
   }
-
   100% {
     left: -200%;
   }
 }
 
-/* GRAPHIQUE */
+/* Texte d'intro */
+.texte {
+  font-family: 'Jost', sans-serif;
+  margin: 60px;
+  margin-bottom: 100px;
+  font-size: 1.1rem;
+}
+
+/* -- GRAPHIQUE -- */
+
+/* Titre graphique */
+.titre-graph {
+  font-family: "Judson", serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
 .graphique {
   display: flex;
   justify-content: center;
@@ -240,6 +254,7 @@ header {
   box-shadow: 2px 2px 15px rgba(255, 139, 139, 0.609);
 }
 
+/* Boutons du graphique */
 .graphique button {
   padding: 5px 15px;
   margin: 0 10px;
@@ -251,11 +266,19 @@ header {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 1rem;
-box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
+  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   transition: all 0.3s ease-in-out;
   font-family: 'Oswald', sans-serif;
 }
 
+.btns {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  display: flex;
+  gap: 35px;
+}
+
+/* Animation des boutons du graphique */
 .graphique button:hover {
   cursor: pointer;
   transform: translateY(5px);
@@ -269,7 +292,9 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   font-weight: bold;
 }
 
-/* SECTION ROUGE */
+/* --- SECTION TEXTE ET RECOMMANDATION --- */
+
+/* Section rouge */
 .section-red {
   background-color: #791c17;
   color: #fff;
@@ -281,7 +306,6 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   font-family: 'Playfair Display', serif;
   font-size: 2.3rem;
   text-transform: uppercase;
-  margin: 0;
 }
 
 .section-red .divider {
@@ -289,6 +313,12 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   height: 2px;
   background-color: #fff;
   margin: 15px 0 30px 0;
+}
+
+.section-red p::first-letter {
+  font-family: 'Kapakana', sans-serif;
+  font-size: 3.2rem;
+  line-height: 0.5;
 }
 
 .section-red p {
@@ -299,11 +329,11 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   font-family: 'Jost', sans-serif;
 }
 
-/* SECTION NOIRE */
+/* Section noire */
 .section-black {
   background-color: #111;
   color: #fff;
-  padding: 130px 10%;
+  padding: 100px 10%;
   text-align: right;
 }
 
@@ -321,6 +351,12 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   margin: 15px 0 30px auto;
 }
 
+.section-black p::first-letter {
+  font-family: 'Kapakana', sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.5;
+}
+
 .section-black p {
   font-size: 1rem;
   line-height: 1.9;
@@ -330,7 +366,7 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   font-family: 'Jost', sans-serif;
 }
 
-/* SECTION BEIGE */
+/* Section beige avec recommandations */
 .section-beige {
   background-color: #f4efe5;
   padding: 70px 10%;
@@ -345,6 +381,7 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   margin-bottom: 50px;
 }
 
+/* Cartes qui contiennent les recommandations + liens vers celles-ci */
 .cards {
   display: flex;
   justify-content: space-around;
@@ -356,10 +393,17 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   background: #fff;
   border: 1px solid #b78c6c;
   border-radius: 10px;
-  width: 280px;
-  padding: 20px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 290px;
+  height: 630px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 
 .card h4 {
   text-transform: uppercase;
@@ -397,75 +441,16 @@ box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   background: #550f0c;
 }
 
-/* FOOTER */
+/* --- FOOTER --- */
+
 footer {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #ffffff;
   color: #000;
-  justify-content: space-between;
+  font-family: 'Jost', sans-serif;
   padding: 0;
-  flex-wrap: wrap;
-  font-family: 'Jost', sans-serif;
-  display: none;
-}
-
-
-.footer-left,
-.footer-right {
-  width: 45%;
-  min-width: 280px;
-}
-
-footer h5 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-footer p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-footer small {
-  display: block;
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #aaa;
-}
-
-.socials {
-  margin-top: 10px;
-}
-
-.socials a img {
-  width: 30px;
-  margin-right: 10px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.2s;
-}
-
-.socials a img:hover {
-  transform: scale(1.1);
-}
-
-.center-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.petit {
-  width: 70%;
-  display: block;
-  margin: 0 auto 15px auto;
-  border-radius: 5px;
-}
-
-footer {
-  font-family: 'Jost', sans-serif;
-  display: none;
 }
 
 .footer-container {
@@ -483,66 +468,81 @@ footer {
   gap: 60px;
 }
 
-.footer-left {
+/* Footer divisé en 3 parties */
+.footer-left,
+.footer-middle,
+.footer-right {
   flex: 1;
+  min-width: 280px;
+}
+
+.footer-left {
   max-width: 450px;
 }
 
 .footer-middle {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
-.footer-logo {
-  font-size: 42px;
+.footer-right {
+  flex: 0 0 auto;
+}
+
+/* Titres et textes du footer */
+.footer-titre {
+  font-size: 2.2rem;
   font-weight: 900;
-  color: #000;
   margin-bottom: 40px;
   letter-spacing: 2px;
 }
 
-.footer-about h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
+footer h2,
+footer h5 {
+  font-family: 'Jost', sans-serif;
   color: #000;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.footer-about p {
-  font-size: 16px;
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+footer h5 {
+  font-size: 1.2rem;
+}
+
+footer p,
+.contact-value {
+  font-size: 1rem;
   line-height: 1.8;
   color: #333;
+  margin-bottom: 10px;
 }
 
-.footer-right {
-  flex: 0 0 auto;
-  margin-right: -200px;
-}
-
-.footer-contact h2 {
-  font-size: 24px;
+.contact-label {
   font-weight: 600;
-  margin-bottom: 25px;
+  font-size: 1rem;
   color: #000;
+  margin-bottom: 5px;
 }
 
 .contact-item {
   margin-bottom: 20px;
 }
 
-.contact-label {
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 5px;
-  font-size: 16px;
+/* Logo du footer */
+.logo_footer {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -50px 0 0 130px;
 }
 
-.contact-value {
-  color: #333;
-  font-size: 16px;
-}
-
+/* Ligne rouge du footer */
 .red-underline {
   width: 60px;
   height: 4px;
@@ -550,32 +550,20 @@ footer {
   margin-top: 10px;
 }
 
-.footer-social {
-  text-align: center;
-}
-
-.logo_footer {
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 130px;
-  margin-top: -50px;
-}
-
-
-
-.social-label {
-  font-size: 20px;
+/* Icônes des réseaux sociaux */
+.social-titre {
+  font-size: 1.25rem;
   font-weight: 600;
   color: #000;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-left: 150px;
 }
 
 .social-icons {
   display: flex;
   gap: 15px;
   justify-content: center;
+  margin-left: 70px;
 }
 
 .social-icon {
@@ -584,8 +572,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .social-icon img {
@@ -597,19 +585,23 @@ footer {
   transform: translateY(-3px);
 }
 
+/* Footer bas de page (mention légale + copyright) */
 .footer-bottom {
   background-color: #1a1a2e;
   color: #fff;
-  padding: 20px 80px;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .footer-bottom-content {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.87rem;
 }
 
 .footer-link {
@@ -626,24 +618,4 @@ footer {
 
 .copyright {
   color: #ccc;
-}
-
-.btns {
-  margin-top: 20px;
-  margin-bottom: 70px;
-  display: flex;
-  gap: 35px;
-}
-
-.texte {
-  font-family: 'Jost', sans-serif;
-  margin: 60px;
-  margin-bottom: 100px;
-  font-size: 1.1rem;
-}
-
-.titre-graph {
-  font-family: "Judson", serif;
-  font-size: 1.8rem;
-text-transform: uppercase;
 }
