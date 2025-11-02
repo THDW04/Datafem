@@ -118,7 +118,7 @@ header {
 
 /* Logo dans le header */
 .mini-logo {
-  width: 20%;
+  width: 300px;
   margin-top: -70px;
   margin-bottom: -70px;
 }
@@ -243,6 +243,8 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 35px;
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 #graph-contain {
@@ -260,36 +262,61 @@ header {
   margin: 0 10px;
   border-radius: 50px;
   border: none;
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   background-color: #84191E;
   color: aliceblue;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 1rem;
-  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
-  transition: all 0.3s ease-in-out;
-  font-family: 'Oswald', sans-serif;
-}
-
-.btns {
-  margin-top: 20px;
-  margin-bottom: 70px;
-  display: flex;
-  gap: 35px;
-}
-
-/* Animation des boutons du graphique */
-.graphique button:hover {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.486);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btns-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
+  max-width: 1050px;
+}
+
+.btns button:hover {
   transform: translateY(5px);
   background-color: #da4e55;
   color: #160001;
 }
 
-.graphique button.active {
+.btns button.active {
   background-color: #ffb6c1;
   color: #160001;
-  font-weight: bold;
+}
+
+#populaire {
+  background-color: var(--taupe);
+}
+
+#populaire:hover {
+  background-color: var(--taupe-dark);
+  transform: translateY(5px);
+}
+
+.modale {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modale-content img{
+  width: 150px;
 }
 
 /* --- SECTION TEXTE ET RECOMMANDATION --- */
@@ -444,7 +471,6 @@ header {
 /* --- FOOTER --- */
 
 footer {
-  display: none;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #ffffff;
@@ -456,14 +482,11 @@ footer {
 .footer-container {
   background-color: #ffffff;
   padding: 60px 80px 40px;
-  height: fit-content;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1400px;
+  flex-wrap: wrap;
   margin: 0 auto;
   gap: 60px;
 }
