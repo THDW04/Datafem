@@ -1,38 +1,25 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 const container = d3.select("#graph-contain");
 
-// objet des boutons et fichiers
+// mapping boutons et fichiers
 const btns = {
-    actrices: "data/actrices.json",
-    autrices: "data/autrices.json",
-    chanteuses: "data/chanteuses.json",
-    peintres: "data/peintres.json"
+    actrice: "data/actrices.json",
+    autrice: "data/autrices.json",
+    chanteuse: "data/chanteuses.json",
+    peintre: "data/peintres.json"
 };
 
-//Tableau des artistes
-let artistes = [];
-
 // écoute tous les boutons
-let buttons = document.querySelectorAll('.btns button');
-buttons.forEach((btn) => {
+document.querySelectorAll('button').forEach((btn) => {
     btn.addEventListener('click', async e => {
-        // Ajout ou suppression de la classe 'active'
-        buttons.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('button').forEach(b => b.classList.remove('active'));
         e.target.classList.add('active');
 
-        const profession = e.target.id;
-
-        // Chargement JSON artistes
-        const response = await fetch('data/cartes.json');
-        let cartes = await response.json();
-        artistes = [...cartes[profession].homme, ...cartes[profession].femme];
-
-        // Lancer le graphique
-        await graph(btns[profession]);
+        await graph(btns[e.target.id]);
     });
 });
 
-//Fonction qui affiche le graph
+//Function qui affiche le graph
 
 async function graph(jsonFile) {
 
@@ -58,8 +45,8 @@ async function graph(jsonFile) {
         .range([height - margin.bottom, margin.top]);
 
     const color = d3.scaleOrdinal()
-        .domain(["Homme", "Femme"])
-        .range(["#ff69b4", "#1f77b4"]);
+        .domain([...new Set(data.map(d => d.sexe))])
+        .range(d3.schemeCategory10);
 
     const svg = d3.create("svg")
         .attr("width", width)
@@ -72,7 +59,7 @@ async function graph(jsonFile) {
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(
             d3.axisBottom(x)
-                .tickValues(d3.range(1800, 2021, 20).map(y => new Date(y, 0, 1)))
+                .tickValues(d3.range(1800, 2021, 20).map(y => new Date(y, 0, 1))) // ⚡️ force les ticks tous les 20 ans
                 .tickFormat(d3.timeFormat("%Y"))
         )
         .selectAll("text") // styliser la taille du texte
@@ -97,7 +84,7 @@ async function graph(jsonFile) {
     // Lignes
     serie.append("path")
         .attr("fill", "none")
-        .attr("stroke", d => color(d[0])) //couleur des lignes
+        .attr("stroke", d => color(d[0]))
         .attr("stroke-width", 2)
         .attr("d", d => d3.line()
             .x(d => x(d.decennie))
@@ -118,118 +105,38 @@ async function graph(jsonFile) {
                 .attr("stroke-dashoffset", 0);
         });
 
+
     // Points
-    const circles = serie.append("g")
+    serie.append("g")
         .selectAll("circle")
         .data(d => d[1])
         .join("circle")
         .attr("cx", d => x(d.decennie))
         .attr("cy", d => y(d.count))
         .attr("r", 0)
-        .attr("fill", d => color(d.sexe));
-
-    // Animation d’apparition
-    circles.transition()
+        .attr("fill", d => color(d.sexe))
+        .transition() // Animation
         .delay((d, i) => i * 200)
         .duration(800)
         .ease(d3.easeBackOut)
-        .attr("r", 4);
+        .attr("r", 4); // apparition
 
-    const tooltip = d3.select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("background", "#333")
-        .style("color", "#fff")
-        .style("padding", "6px 10px")
-        .style("border-radius", "8px")
-        .style("font-size", "15px")
-        .style("opacity", 0)
-        .style("pointer-events", "none");
-
-    // Événements (sur les cercles)
-    circles
-        .on("mouseover", (event, d) => {
-            d3.select(event.currentTarget)
-                .transition()
-                .duration(100)
-                .attr("r", 6);
-
-            tooltip
-                .style("opacity", 1)
-                .html(`<strong>${d.count}</strong>`)
-                .style("left", `${event.pageX + 10}px`)
-                .style("top", `${event.pageY - 20}px`);
-        })
-        .on("mousemove", (event) => {
-            tooltip
-                .style("left", `${event.pageX + 10}px`)
-                .style("top", `${event.pageY - 20}px`);
-        })
-        .on("mouseout", (event, d) => {
-            d3.select(event.currentTarget)
-                .transition()
-                .duration(100)
-                .attr("r", 4);
-
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", 0);
-        });
-
-        //Affiche les images des artistes sur le graphique au clique du bouton
-    document.getElementById("populaire").addEventListener('click', () => {
-        svg.selectAll(".artiste-image")
-            .data(artistes)
-            .join("image")
-            .attr("class", "artiste-image")
-            .attr("x", d => x(new Date(d.annee)) - 40)
-            .attr("y", d => y(d.count) - 40 - 50)
-            .attr("width", 80)
-            .attr("height", 80)
-            .attr("href", d => d.photo)
-            .style("clip-path", "circle(30% at 50% 48%)")
-            .style("cursor", "pointer")
-            .attr("opacity", 0);
-
-        // Animation d'appiration
-        svg.selectAll(".artiste-image").transition()
-            .duration(1000)
-            .delay((d, i) => i * 200)
-            .attr("y", d => y(d.count) - 40)
-            .attr("opacity", 1);
-
-            //Ouvre la fenetre de l'artiste
-        svg.selectAll(".artiste-image").on("click", (e, d) => {
-            d3.select("#modale").style("display", "flex");
-            d3.select("#modale").node().innerHTML = `
-            <div class="modale-content">
-              <img src="${d.photo}" alt="${d.nom}"*>
-              <h2>${d.nom}</h2>
-              <p><em>${d.citation}</em></p>
-              <p>${d.description}</p>
-              <img src="${d.signature}" alt="signature">
-              <button id="closeModale">Fermer</button>
-            </div>`;
-
-            //Ferme la fenetre de l'artiste
-            d3.select("#closeModale").on("click", () => {
-                d3.select("#modale").style("display", "none");
-            })
-        });
-    })
+        
 
     //Légende du graph
-    svg.append("circle").attr("cx", 1050).attr("cy", 130).attr("r", 5).style("fill", "#1f77b4");
-    svg.append("circle").attr("cx", 1050).attr("cy", 160).attr("r", 5).style("fill", "#ff69b4");
-    svg.append("text").attr("x", 1070).attr("y", 130).text("Homme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
-    svg.append("text").attr("x", 1070).attr("y", 160).text("Femme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
+    svg.append("circle").attr("cx", 1050).attr("cy", 130).attr("r", 5).style("fill", "#6198bfff")
+    svg.append("circle").attr("cx", 1050).attr("cy", 160).attr("r", 5).style("fill", "#ecb3d9ff")
+    svg.append("text").attr("x", 1070).attr("y", 130).text("Hommes").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle")
+    svg.append("text").attr("x", 1070).attr("y", 160).text("Femmes").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle")
 
     // Clean avant d’insérer
     container.selectAll("*").remove();
     container.node().appendChild(svg.node());
 }
 
+
+
 // Charger un graph par défaut au démarrage
-const defaultBtn = document.querySelector('#actrices');
+const defaultBtn = document.querySelector('#actrice');
 defaultBtn.classList.add('active');
 graph("data/actrices.json");

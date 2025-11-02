@@ -5,28 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datafem</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon clair/sombre selon le thème du système -->
+  <link rel="icon" href="medias/favicon_noir.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="medias/favicon_blanc.png" media="(prefers-color-scheme: dark)">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Polices utilisées -->
+  <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/kapakana" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Animation du rideau -->
+  <!-- Animation du rideau (transition d’ouverture) -->
   <div class="curtain left" id="curtain-left"></div>
   <div class="curtain right" id="curtain-right"></div>
 
-  <!-- Écran 2 : logo + bouton entrer -->
+  <!-- Écran d’intro : logo + bouton "Entrer" -->
   <section id="logo-screen">
-    <img src="medias/logo-final.png" alt="Logo Datafem" class="logo">
-    <p>Parce que l’Histoire de l’art a été écrite au masculin, nous la réécrivons au féminin.</p>
-    <br>
+    <img src="medias/logo-final.png" alt="Logo Datafem" class="logo1">
     <button id="enter-btn">ENTRER</button>
   </section>
 
-  <!-- Écran 3 : page d'accueil -->
+  <!-- Page principale (après l’écran d’intro) -->
   <header>
+    <!-- Petit logo fixe en haut -->
     <img src="medias/logoblanc.png" alt="Logo Datafem" class="mini-logo">
+
+    <!-- Icônes de navigation rapide -->
     <div class="icons">
       <a href="#graph" class="icon icon-graphe">
         <img src="medias/graphe.png" alt="Voir le graphique">
@@ -34,7 +45,7 @@
       <a href="" class="icon icon-temps">
         <img src="medias/frise.webp" alt="Voir la frise chronologique">
       </a>
-      <a href="" class="icon icon-coeur">
+      <a href="#recommendation" class="icon icon-coeur">
         <img src="medias/recommendation.webp" alt="Voir nos recommendations">
       </a>
     </div>
@@ -42,6 +53,7 @@
 
   <main>
 
+    <!-- Section vidéo en carrousel (marilyn, freda, beyoncé) -->
     <section class="carousel">
       <div class="carousel-inner container">
         <video src="medias/marilyn.mp4" autoplay muted loop class="slide"></video>
@@ -50,38 +62,153 @@
       </div>
     </section>
 
-
+    <!-- Texte d’introduction du projet -->
     <div class="texte">
-      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.
-      </p>
-      <p>Quelques-unes ont percé le silence, devenant des symboles malgré un chemin bien plus rude que celui des
-        hommes.
+      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.</p>
+      <p>Quelques-unes ont percé le silence, devenant des symboles malgré un chemin bien plus rude que celui des hommes.
         Leur lumière a souvent été filtrée, détournée, réduite à une image qui les dépassait.</p>
-      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces
-        créatrices la place qu’elles méritent. Parce que connaître leurs histoires, c’est aussi réapprendre à regarder
-        l’Histoire autrement.</p>
+      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces créatrices la place qu’elles méritent.
+        Parce que connaître leurs histoires, c’est aussi réapprendre à regarder l’Histoire autrement.</p>
     </div>
 
+    <!-- Graphique interactif -->
     <section class="graphique" id="graph">
+      <h2 class="titre-graph">Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
       <div id="graph-contain"></div>
 
+      <!-- Boutons de filtre pour changer le type d’artiste -->
       <div class="btns">
-        <button id="actrices">Actrices</button>
-        <button id="autrices">Autrices</button>
-        <button id="chanteuses">Chanteuse</button>
-        <button id="peintres">Peintres</button>
+        <button id="actrice">Actrices</button>
+        <button id="autrice">Autrices</button>
+        <button id="chanteuse">Chanteuses</button>
+        <button id="peintre">Peintres</button>
       </div>
-
-      <button id="populaire">Voir les artistes célèbres</button>
     </section>
 
-    <div id="modale" class="modale"></div>
+    <!-- Partie "Texte et recommandations" -->
+    <!-- Section 1 : que peut-on retenir ? -->
+    <section class="section-red">
+      <h1>Que peut-on retenir ?</h1>
+      <div class="divider"></div>
+      <p>
+        À l’époque, le talent des femmes n’était pas reconnu à sa juste valeur, car la société était dominée par une vision patriarcale
+        qui reléguait les femmes à des rôles domestiques. Les hommes, détenant le pouvoir politique, culturel et économique,
+        limitaient leur accès à l’éducation, aux arts et aux sciences. Même lorsqu’elles brillaient, leurs réalisations étaient souvent
+        minimisées, oubliées ou attribuées à des hommes.
+      </p>
+    </section>
 
+    <!-- Section 2 : Pourquoi est-ce important de le savoir ? -->
+    <section class="section-black">
+      <h2>Pourquoi est-ce important de le savoir ?</h2>
+      <div class="divider"></div>
+      <p>
+        C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
+      </p>
+    </section>
+
+    <!-- Section 3 : nos recommandations -->
+    <section class="section-beige" id="recommendation">
+      <h3>Envie d’en savoir plus ? Voici quelques pistes.</h3>
+
+      <div class="cards">
+        <!-- Carte 1 : livre -->
+        <div class="card">
+          <h4>Littérature</h4>
+          <img class="petit" src="medias/livre.jpg" alt="Couverture du livre d'Angela Davis - Women, Race and Class">
+          <p>
+            <em>Women, Race & Class</em> d’Angela Davis explore comment genre, classe et race s’entrecroisent dans la lutte pour les droits des femmes aux États-Unis.
+          </p>
+          <a href="https://www.fnac.com/a16854602/Angela-Y-Davis-WOMEN-RACE-et-CLASS">Acheter le livre</a>
+        </div>
+
+        <!-- Carte 2 : film -->
+        <div class="card">
+          <h4>Film</h4>
+          <img src="medias/film.jpg" alt="Affiche du film Suffragette">
+          <p>
+            <em>Suffragette</em> retrace le combat courageux des femmes du début du XXe siècle pour le droit de vote,
+            avec des interprétations puissantes et une reconstitution historique saisissante.
+          </p>
+          <a href="https://www.allocine.fr/seance/film-222967/pres-de-116620/#shwt_date=2025-10-16">Voir au cinéma</a>
+        </div>
+
+        <!-- Carte 3 : vidéo -->
+        <div class="card center-card">
+          <h4>Vidéo</h4>
+          <img src="medias/video.png" alt="Miniature de la video - La place des femmes dans l’art">
+          <p>
+            Vidéo du Centre Pompidou sur les femmes artistes oubliées et leur rôle dans l’histoire de l’art.
+          </p>
+          <a href="https://www.youtube.com/watch?v=Jh_YT2bXbbA">Regarder la vidéo</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <script src="data.js" type="module"></script>
+  <!-- Pied de page -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+
+        <!-- Colonne gauche : logo + texte à propos -->
+        <div class="footer-left">
+          <div class="footer-titre">DATAFEM</div>
+          <div class="footer-about">
+            <h2>À propos de nous</h2>
+            <p>
+              Ce projet est né du désir de rendre visibles les femmes artistes que l'histoire a trop longtemps laissées
+              dans l'ombre. Notre objectif : rappeler que l'art au féminin fait partie intégrante de notre patrimoine culturel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne milieu : contact -->
+        <div class="footer-middle">
+          <div class="footer-contact">
+            <h2>Nous contacter</h2>
+            <div class="contact-item">
+              <div class="contact-label">Téléphone :</div>
+              <div class="contact-value">+33 08 54 32 54 32</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Email :</div>
+              <div class="contact-value">datafem@gmail.com</div>
+            </div>
+            <div class="red-underline"></div>
+          </div>
+        </div>
+
+        <!-- Colonne droite : réseaux sociaux -->
+        <div class="footer-right">
+          <div class="footer-social">
+            <img src="medias/logo_footer.png" alt="Datafem Logo" class="logo_footer">
+            <div class="social-titre">Nous suivre</div>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><img src="medias/instagram.png" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="medias/facebook.png" alt="Facebook"></a>
+              <a href="#" class="social-icon"><img src="medias/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div>
+          <a href="#" class="footer-link">Mention légales</a>
+        </div>
+        <div class="copyright">© 2025 — Datafem. Tous droits réservés.</div>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
+  <script type="module" src="data.js"></script>
 </body>
 
 </html>

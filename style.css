@@ -19,13 +19,12 @@ body {
   height: 100%;
   width: 100%;
   background: var(--background);
-
   color: #f5e9d7;
   font-family: "Georgia", serif;
   scroll-behavior: smooth;
 }
 
-/* --- Rideau --- */
+/* Animation du rideau */
 .curtain {
   position: fixed;
   top: 0;
@@ -41,26 +40,30 @@ body {
   will-change: transform;
 }
 
+/* Rideau gauche */
 .curtain.left {
   left: 0;
   transform-origin: left;
 }
 
+/* Rideau droite */
 .curtain.right {
   right: 0;
   transform-origin: right;
 }
 
+/* Animation d'ouverture rideau gauche */
 .curtain.open.left {
   transform: translateX(-105%);
 }
 
+/* Animation d'ouverture rideau droite */
 .curtain.open.right {
   transform: translateX(105%);
 }
 
+/* Supprimer animations pour utilisateurs sensibles */
 @media (prefers-reduced-motion: reduce) {
-
   .curtain,
   .curtain.open {
     transition: none !important;
@@ -69,7 +72,7 @@ body {
   }
 }
 
-/* SECTION 2 - LOGO */
+/* Écran d’intro : logo + bouton "Entrer" */
 #logo-screen {
   display: flex;
   flex-direction: column;
@@ -78,7 +81,7 @@ body {
   height: 100vh;
 }
 
-#logo-screen .logo {
+#logo-screen .logo1 {
   width: 200px;
   margin-bottom: 20px;
 }
@@ -97,34 +100,37 @@ body {
   background: var(--taupe-dark);
 }
 
+/* Masquer header, main et footer sur la page d'intro */
 header,
 main,
 footer {
   display: none;
 }
 
-/* SECTION 3 - ACCUEIL */
-/*#home {
-  display: none;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-}*/
+/* --- PAGE PRINCIPALE --- */
+
+/* -- HEADER -- */
 
 header {
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
 }
 
+/* Logo dans le header */
 .mini-logo {
-  width: 200px;
+  width: 20%;
+  margin-top: -70px;
+  margin-bottom: -70px;
 }
 
+/* Icônes du header */
 .icons {
   display: flex;
   gap: 70px;
   transform: translateX(-10%);
+  margin-top: -100px;
+  margin-bottom: -70px;
+  margin-right: 100px;
 }
 
 .icon {
@@ -134,7 +140,6 @@ header {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +149,7 @@ header {
   width: 45px;
 }
 
-/* Effets hover et clic */
+/* Animation des icônes du header */
 .icon:hover {
   background-color: #f5e9d7c7;
   animation: rotate 0.6s ease forwards;
@@ -160,7 +165,7 @@ header {
   background-color: #ffe8c5;
 }
 
-/* Scrollbar */
+/* Scrollbar personnalisée */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -174,12 +179,12 @@ header {
   background: var(--taupe-dark);
 }
 
-/* CAROUSEL */
+/* -- CARROUSEL -- */
+
 .carousel {
   display: flex;
   overflow: hidden;
   position: relative;
-
   max-height: 800px;
   width: 90%;
   margin: 0 auto 50px;
@@ -192,7 +197,6 @@ header {
   width: 300%;
   display: flex;
   transition: all 1s ease;
-
   animation: slide 20s infinite;
 }
 
@@ -203,38 +207,36 @@ header {
   object-fit: cover;
 }
 
+/* Animation du carousel (défilement des vidéos) */
 @keyframes slide {
   0% {
     left: 0;
   }
-
   50% {
     left: -100%;
   }
-
   100% {
     left: -200%;
   }
 }
 
+/* Texte d'intro */
 .texte {
-  /* height: 50vh;*/
-  width: 90%;
-  margin: auto;
-  font-family: 'Noto Sans Display', sans-serif;
-  /* font-size: 1.6rem;*/
+  font-family: 'Jost', sans-serif;
+  margin: 60px;
+  margin-bottom: 100px;
+  font-size: 1.1rem;
 }
 
-/*
-.texte p{
-  margin-top: 50px;
-}*/
+/* -- GRAPHIQUE -- */
 
-section:not(.carousel) {
-  min-height: 100vh;
+/* Titre graphique */
+.titre-graph {
+  font-family: "Judson", serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
-/* GRAPHIQUE */
 .graphique {
   display: flex;
   justify-content: center;
@@ -249,57 +251,371 @@ section:not(.carousel) {
   margin: 0 auto;
   width: fit-content;
   border-radius: 20px;
-  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.185);
+  box-shadow: 2px 2px 15px rgba(255, 139, 139, 0.609);
 }
 
+/* Boutons du graphique */
 .graphique button {
   padding: 5px 15px;
   margin: 0 10px;
-  border-radius: 15px;
+  border-radius: 50px;
   border: none;
   text-transform: uppercase;
   background-color: #84191E;
   color: aliceblue;
-  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 1rem;
-  cursor: pointer;
+  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.717);
   transition: all 0.3s ease-in-out;
+  font-family: 'Oswald', sans-serif;
 }
 
-.btns button:hover {
+.btns {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  display: flex;
+  gap: 35px;
+}
+
+/* Animation des boutons du graphique */
+.graphique button:hover {
+  cursor: pointer;
   transform: translateY(5px);
   background-color: #da4e55;
   color: #160001;
 }
 
-.btns button.active {
+.graphique button.active {
   background-color: #ffb6c1;
   color: #160001;
   font-weight: bold;
 }
 
-#populaire {
-  background-color: var(--taupe);
+/* --- SECTION TEXTE ET RECOMMANDATION --- */
+
+/* Section rouge */
+.section-red {
+  background-color: #791c17;
+  color: #fff;
+  padding: 100px 10%;
+  text-align: left;
 }
 
-#populaire:hover {
-  background-color: var(--taupe-dark);
-  transform: translateY(5px);
+.section-red h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  text-transform: uppercase;
 }
 
-.modale {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+.section-red .divider {
+  width: 80px;
+  height: 2px;
+  background-color: #fff;
+  margin: 15px 0 30px 0;
+}
+
+.section-red p::first-letter {
+  font-family: 'Kapakana', sans-serif;
+  font-size: 3.2rem;
+  line-height: 0.5;
+}
+
+.section-red p {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 90%;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+}
+
+/* Section noire */
+.section-black {
+  background-color: #111;
+  color: #fff;
+  padding: 100px 10%;
+  text-align: right;
+}
+
+.section-black h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-black .divider {
+  width: 80px;
+  height: 2px;
+  background-color: #fff;
+  margin: 15px 0 30px auto;
+}
+
+.section-black p::first-letter {
+  font-family: 'Kapakana', sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.5;
+}
+
+.section-black p {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 90%;
+  margin-left: auto;
+  text-align: right;
+  font-family: 'Jost', sans-serif;
+}
+
+/* Section beige avec recommandations */
+.section-beige {
+  background-color: #f4efe5;
+  padding: 70px 10%;
+  color: #000;
+  text-align: center;
+}
+
+.section-beige h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+/* Cartes qui contiennent les recommandations + liens vers celles-ci */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #b78c6c;
+  border-radius: 10px;
+  width: 290px;
+  height: 630px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  text-align: center;
 }
 
-.modale-content img{
-  width: 150px;
+
+.card h4 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+}
+
+.card a {
+  display: inline-block;
+  background: #791c17;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background 0.3s;
+  font-family: 'Jost', sans-serif;
+}
+
+.card a:hover {
+  background: #550f0c;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #000;
+  font-family: 'Jost', sans-serif;
+  padding: 0;
+}
+
+.footer-container {
+  background-color: #ffffff;
+  padding: 60px 80px 40px;
+  height: fit-content;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+/* Footer divisé en 3 parties */
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-left {
+  max-width: 450px;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-right {
+  flex: 0 0 auto;
+}
+
+/* Titres et textes du footer */
+.footer-titre {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+footer h2,
+footer h5 {
+  font-family: 'Jost', sans-serif;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+footer h5 {
+  font-size: 1.2rem;
+}
+
+footer p,
+.contact-value {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+/* Logo du footer */
+.logo_footer {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -50px 0 0 130px;
+}
+
+/* Ligne rouge du footer */
+.red-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #c41e3a;
+  margin-top: 10px;
+}
+
+/* Icônes des réseaux sociaux */
+.social-titre {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 150px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-left: 70px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon img {
+  width: 120%;
+  height: 120%;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer bas de page (mention légale + copyright) */
+.footer-bottom {
+  background-color: #1a1a2e;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.87rem;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+  border-right: 2px solid #fff;
+  margin-right: 20px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #ccc;
 }
