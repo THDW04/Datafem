@@ -89,6 +89,7 @@ body {
 #enter-btn {
   background: var(--taupe);
   color: white;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   cursor: pointer;

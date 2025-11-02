@@ -49,9 +49,8 @@ async function graph(jsonFile) {
     const margin = { top: 30, right: 50, bottom: 30, left: 60 };
 
     const x = d3.scaleUtc()
-        .domain([data[0].decennie, data[data.length - 1].decennie])
-        .range([margin.left, width - margin.right])
-
+        .domain([new Date("1800-01-01"), new Date("2020-01-01")])
+        .range([margin.left, width - margin.right]);
 
     const y = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.count)]).nice()
@@ -70,11 +69,7 @@ async function graph(jsonFile) {
     // Axes
     svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
-        .call(
-            d3.axisBottom(x)
-                .tickValues(d3.range(1800, 2021, 20).map(y => new Date(y, 0, 1)))
-                .tickFormat(d3.timeFormat("%Y"))
-        )
+        .call(d3.axisBottom(x))
         .selectAll("text") // styliser la taille du texte
         .style("font-size", "14px")
         .style("fill", "#fff");
@@ -203,7 +198,7 @@ async function graph(jsonFile) {
             d3.select("#modale").style("display", "flex");
             d3.select("#modale").node().innerHTML = `
             <div class="modale-content">
-              <img src="${d.photo}" alt="${d.nom}"*>
+              <img src="${d.photo}" alt="${d.nom}">
               <h2>${d.nom}</h2>
               <p><em>${d.citation}</em></p>
               <p>${d.description}</p>
