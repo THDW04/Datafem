@@ -123,7 +123,7 @@ async function graph(jsonFile) {
         .attr("r", 0)
         .attr("fill", d => color(d.sexe));
 
-    // Animation d’apparition
+    // Animation d'apparition
     circles.transition()
         .delay((d, i) => i * 200)
         .duration(800)
@@ -193,25 +193,70 @@ async function graph(jsonFile) {
             .attr("y", d => y(d.count) - 40)
             .attr("opacity", 1);
 
-            //Ouvre la fenetre de l'artiste
+        // Effet hover sur les images
+        svg.selectAll(".artiste-image")
+            .on("mouseover", function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr("width", 90)
+                    .attr("height", 90)
+                    .attr("x", x(new Date(d.annee)) - 45)
+                    .attr("y", y(d.count) - 45)
+                    .style("filter", "brightness(1.2)");
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr("width", 80)
+                    .attr("height", 80)
+                    .attr("x", x(new Date(d.annee)) - 40)
+                    .attr("y", y(d.count) - 40)
+                    .style("filter", "brightness(1)");
+            });
+
+        //Ouvre la fenetre de l'artiste
         svg.selectAll(".artiste-image").on("click", (e, d) => {
-            d3.select("#modale").style("display", "flex");
-            d3.select("#modale").node().innerHTML = `
-            <div class="modale-content">
-              <img src="${d.photo}" alt="${d.nom}">
-              <h2>${d.nom}</h2>
-              <p><em>${d.citation}</em></p>
-              <p>${d.description}</p>
-              <img src="${d.signature}" alt="signature">
-              <button id="closeModale">Fermer</button>
-            </div>`;
+            const modale = d3.select("#modale");
+            modale.style("display", "flex");
+            
+            // Création de la structure de la carte
+            modale.node().innerHTML = `
+                <div class="modale-content">
+                    <div class="modale-left">
+                        <img src="${d.photo}" alt="${d.nom}" class="modale-photo">
+                        <div class="modale-quote">${d.citation}</div>
+                    </div>
+                    <div class="modale-right">
+                        <div class="modale-header">
+                            <div>
+                                <h2 class="modale-nom">${d.nom}</h2>
+                                <img src="${d.signature}" alt="signature" class="modale-signature">
+                            </div>
+                            <div class="modale-category">${d.categorie}</div>
+                        </div>
+                        <p class="modale-description">${d.description}</p>
+                        <div class="modale-footer">
+                            <button id="closeModale">Retour au graphique</button>
+                        </div>
+                    </div>
+                </div>
+            `;
 
             //Ferme la fenetre de l'artiste
             d3.select("#closeModale").on("click", () => {
-                d3.select("#modale").style("display", "none");
-            })
+                modale.style("display", "none");
+            });
+            
+            // Fermer en cliquant en dehors de la carte
+            modale.on("click", (event) => {
+                if (event.target.id === "modale") {
+                    modale.style("display", "none");
+                }
+            });
         });
-    })
+    });
 
     //Légende du graph
     svg.append("circle").attr("cx", 1050).attr("cy", 130).attr("r", 5).style("fill", "#1f77b4");
@@ -219,7 +264,7 @@ async function graph(jsonFile) {
     svg.append("text").attr("x", 1070).attr("y", 130).text("Homme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
     svg.append("text").attr("x", 1070).attr("y", 160).text("Femme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
 
-    // Clean avant d’insérer
+    // Clean avant d'insérer
     container.selectAll("*").remove();
     container.node().appendChild(svg.node());
 }
