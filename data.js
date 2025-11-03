@@ -58,7 +58,7 @@ async function graph(jsonFile) {
 
     const color = d3.scaleOrdinal()
         .domain(["Homme", "Femme"])
-        .range(["#ff69b4", "#1f77b4"]);
+        .range(["#da4e55", "#ffe8c5"]);
 
     const svg = d3.create("svg")
         .attr("width", width)
@@ -259,8 +259,8 @@ async function graph(jsonFile) {
     });
 
     //Légende du graph
-    svg.append("circle").attr("cx", 1050).attr("cy", 130).attr("r", 5).style("fill", "#1f77b4");
-    svg.append("circle").attr("cx", 1050).attr("cy", 160).attr("r", 5).style("fill", "#ff69b4");
+    svg.append("circle").attr("cx", 1050).attr("cy", 130).attr("r", 5).style("fill", "#ffe8c5");
+    svg.append("circle").attr("cx", 1050).attr("cy", 160).attr("r", 5).style("fill", "#da4e55");
     svg.append("text").attr("x", 1070).attr("y", 130).text("Homme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
     svg.append("text").attr("x", 1070).attr("y", 160).text("Femme").style("font-size", "1.2rem").style("fill", "#fff").attr("alignment-baseline", "middle");
 
