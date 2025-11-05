@@ -23,7 +23,7 @@ body {
   width: 100%;
   background: var(--background);
   color: #f5e9d7;
-  font-family: "Georgia", serif;
+  font-family: 'Jost', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -67,6 +67,7 @@ body {
 
 /* Supprimer animations pour utilisateurs sensibles */
 @media (prefers-reduced-motion: reduce) {
+
   .curtain,
   .curtain.open {
     transition: none !important;
@@ -217,9 +218,11 @@ header {
   0% {
     left: 0;
   }
+
   50% {
     left: -100%;
   }
+
   100% {
     left: -200%;
   }
@@ -233,6 +236,7 @@ header {
   padding: 0 10px;
   font-size: 1.1rem;
 }
+
 .texte p:first-of-type::first-letter {
   font-family: 'Kapakana', sans-serif;
   font-size: 3.2rem;
@@ -248,14 +252,22 @@ header {
   text-transform: uppercase;
 }
 
+#graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
 .graphique {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 35px;
-  min-height: 100vh;
-  padding-bottom: 50px;
 }
 
 #graph-contain {
@@ -265,6 +277,15 @@ header {
   width: fit-content;
   border-radius: 20px;
   box-shadow: 2px 2px 15px rgba(255, 139, 139, 0.609);
+}
+
+.analyse {
+  max-width: 500px;
+  background-color: #d5a9b0d7;
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
 }
 
 /* Boutons du graphique */
@@ -285,7 +306,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.btns-container{
+.btns-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -329,7 +350,7 @@ header {
 }
 
 .modale-content {
-  background: linear-gradient(135deg, #791c17 0%,#791c17);
+  background: linear-gradient(135deg, #791c17 0%, #791c17);
   border-radius: 30px;
   padding: 0;
   max-width: 1100px;
@@ -584,7 +605,7 @@ header {
   width: 290px;
   height: 630px;
   padding: 30px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -820,7 +841,8 @@ footer p,
 /* --- STRUCTURE DE LA FRISE --- */
 .timeline {
   width: 100%;
-  background: var(--bg); /* noir */
+  background: var(--bg);
+  /* noir */
   padding: 50px 0;
   box-sizing: border-box;
 }
@@ -889,14 +911,16 @@ footer p,
 
 /* === CARTE 1 === */
 #card1 .frame {
-  margin-left: 670px; /* déplace le cadre */
+  margin-left: 670px;
+  /* déplace le cadre */
 }
 
 /* Lignes du cadre */
 #card1 .line.top {
   top: 0;
   left: 0;
-  width: 550px; /* longueur du trait haut */
+  width: 550px;
+  /* longueur du trait haut */
   height: 2px;
 }
 
@@ -1102,7 +1126,7 @@ footer p,
 }
 
 .modale-legales-content {
-  background: #d5a9b0; 
+  background: #d5a9b0;
   border-radius: 30px;
   padding: 50px 45px;
   max-width: 900px;

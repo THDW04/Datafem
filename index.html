@@ -13,10 +13,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Polices utilisées -->
-  <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/kapakana" rel="stylesheet">
 
@@ -44,7 +46,7 @@
       <a href="#graph" class="icon icon-graphe">
         <img src="medias/graphe.png" alt="Voir le graphique">
       </a>
-      <a href="" class="icon icon-temps">
+      <a href="#frise" class="icon icon-temps">
         <img src="medias/frise.webp" alt="Voir la frise chronologique">
       </a>
       <a href="#recommendation" class="icon icon-coeur">
@@ -66,111 +68,143 @@
 
     <!-- Texte d’introduction du projet -->
     <div class="texte">
-      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.</p>
+      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.
+      </p>
       <p>Quelques-unes ont percé le silence, devenant des symboles malgré un chemin bien plus rude que celui des hommes.
         Leur lumière a souvent été filtrée, détournée, réduite à une image qui les dépassait.</p>
-      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces créatrices la place qu’elles méritent.
+      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces
+        créatrices la place qu’elles méritent.
         Parce que connaître leurs histoires, c’est aussi réapprendre à regarder l’Histoire autrement.</p>
     </div>
 
     <!-- Graphique interactif -->
-    <section class="graphique" id="graph">
-      <h2 class="titre-graph">Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
-      <div id="graph-contain"></div>
+    <section id="graph">
 
-      <div class="btns-container">
-        <div class="btns">
-          <button id="actrices">Actrices</button>
-          <button id="autrices">Autrices</button>
-          <button id="chanteuses">Chanteuses</button>
-          <button id="peintres">Peintres</button>
+      <div class="graphique" >
+
+        <h2 class="titre-graph">Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
+
+        <div id="graph-contain"></div>
+
+        <div class="btns-container">
+
+          <div class="btns">
+            <button id="actrices">Actrices</button>
+            <button id="autrices">Autrices</button>
+            <button id="chanteuses">Chanteuses</button>
+            <button id="peintres">Peintres</button>
+          </div>
+
+          <button id="populaire">Voir les artistes célèbres</button>
+
         </div>
-        <button id="populaire">Voir les artistes célèbres</button>
+
       </div>
+
+      <div class="analyse">
+        <h3>Interprétation :</h3>
+
+        <p>La baisse du nombre d’artistes après les années 1960 ne reflète pas une diminution réelle, mais plutôt un
+          effet de notoriété.</p>
+        <p>
+          Les artistes nés plus récemment n’ont pas encore eu le temps d’acquérir la même
+          reconnaissance historique que leurs prédécesseurs.
+        </p>
+
+      </div>
+      
     </section>
 
     <div id="modale" class="modale"></div>
 
-    
-<!-- Frise Chronologique -->
 
-  <div class="timeline">
+    <!-- Frise Chronologique -->
 
-        <p class="intro">
-    L’Histoire n’a pas toujours laissé de place aux femmes, mais elles ont toujours été là, à créer et à résister.  
-    Cette frise raconte leur longue marche vers la reconnaissance.
-  </p>
+    <div class="timeline" id="frise">
 
-    <!-- === CARTE 1 === -->
-    <section class="card_timeline" id="card1">
-      <div class="frame">
-        <div class="line top"></div>
-        <div class="line bottom"></div>
-        <div class="line left"></div>
-        <div class="line right"></div>
+      <p class="intro">
+        L’Histoire n’a pas toujours laissé de place aux femmes, mais elles ont toujours été là, à créer et à résister.
+        Cette frise raconte leur longue marche vers la reconnaissance.
+      </p>
 
-        <h1 class="period">XVe–XVIe</h1>
-        <h2 class="subtitle">LES PREMIÈRES ARTISTES VISIBLES</h2>
-        <p class="descr">
-          Les femmes artistes émergent dans les cours royales et aristocratiques. Quelques peintres et musiciennes se distinguent, mais la plupart restent invisibles. L’accès aux académies et à la formation artistique leur est refusé.
-        </p>
-      </div>
-      <img class="photo" src="medias/dessin1.png" alt="XVe–XVIe">
-    </section>
+      <!-- === CARTE 1 === -->
+      <section class="card_timeline" id="card1">
+        <div class="frame">
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
 
-    <!-- === CARTE 2 === -->
-    <section class="card_timeline" id="card2">
-      <div class="frame">
-        <div class="line top"></div>
-        <div class="line bottom"></div>
-        <div class="line left"></div>
-        <div class="line right"></div>
+          <h1 class="period">XVe–XVIe</h1>
+          <h2 class="subtitle">LES PREMIÈRES ARTISTES VISIBLES</h2>
+          <p class="descr">
+            Les femmes artistes émergent dans les cours royales et aristocratiques. Quelques peintres et musiciennes se
+            distinguent, mais la plupart restent invisibles. L’accès aux académies et à la formation artistique leur est
+            refusé.
+          </p>
+        </div>
+        <img class="photo" src="medias/dessin1.png" alt="XVe–XVIe">
+      </section>
 
-        <h1 class="period">XVIIe–XVIIIe</h1>
-        <h2 class="subtitle">L'ART DANS LES SALONS</h2>
-        <p class="descr">
-          Des femmes écrivent, composent et animent des cercles littéraires, mais restent dans l’ombre. La création publique reste dominée par les hommes. Les Lumières défendent l’égalité en théorie, sans la traduire en pratique.
-        </p>
-      </div>
-      <img class="photo" src="medias/dessin2.png" alt="XVIIe–XVIIIe">
-    </section>
+      <!-- === CARTE 2 === -->
+      <section class="card_timeline" id="card2">
+        <div class="frame">
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
 
-    <!-- === CARTE 3 === -->
-    <section class="card_timeline" id="card3">
-      <div class="frame">
-        <div class="line top"></div>
-        <div class="line bottom"></div>
-        <div class="line left"></div>
-        <div class="line right"></div>
+          <h1 class="period">XVIIe–XVIIIe</h1>
+          <h2 class="subtitle">L'ART DANS LES SALONS</h2>
+          <p class="descr">
+            Des femmes écrivent, composent et animent des cercles littéraires, mais restent dans l’ombre. La création
+            publique reste dominée par les hommes. Les Lumières défendent l’égalité en théorie, sans la traduire en
+            pratique.
+          </p>
+        </div>
+        <img class="photo" src="medias/dessin2.png" alt="XVIIe–XVIIIe">
+      </section>
 
-        <h1 class="period">XIXe</h1>
-        <h2 class="subtitle">L’ÉDUCATION S’OUVRE LENTEMENT</h2>
-        <p class="descr">
-          Les révolutions industrielles et sociales permettent à certaines femmes d’accéder à l’enseignement, dont l’enseignement artistique. Certaines d’entre elles osent publier leur création mais sont  vues comme “amatrices”. Les premiers mouvements féministes amorcent le changement.
-        </p>
-      </div>
-      <img class="photo" src="medias/dessin3.png" alt="XVIIe–XVIIIe">
-    </section>
+      <!-- === CARTE 3 === -->
+      <section class="card_timeline" id="card3">
+        <div class="frame">
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
 
-    <!-- === CARTE 4 === -->
-    <section class="card_timeline" id="card4">
-      <div class="frame">
-        <div class="line top"></div>
-        <div class="line bottom"></div>
-        <div class="line bottom2"></div>
-        <div class="line left"></div>
-        <div class="line right"></div>
+          <h1 class="period">XIXe</h1>
+          <h2 class="subtitle">L’ÉDUCATION S’OUVRE LENTEMENT</h2>
+          <p class="descr">
+            Les révolutions industrielles et sociales permettent à certaines femmes d’accéder à l’enseignement, dont
+            l’enseignement artistique. Certaines d’entre elles osent publier leur création mais sont vues comme
+            “amatrices”. Les premiers mouvements féministes amorcent le changement.
+          </p>
+        </div>
+        <img class="photo" src="medias/dessin3.png" alt="XVIIe–XVIIIe">
+      </section>
 
-        <h1 class="period">1940</h1>
-        <h2 class="subtitle">LA GUERRE ET LA RÉSISTANCE</h2>
-        <p class="descr">
-          Malgré la censure et la peur, de nombreuses femmes osent créer, et deviennent des symboles de la résistance, prenant une véritable place dans la seconde guerre mondiale. Cependant leur reconnaissance disparait après la fin de la guerre.
-        </p>
-      </div>
-      <img class="photo" src="medias/dessin4.png" alt="XVIIe–XVIIIe">
-    </section>
+      <!-- === CARTE 4 === -->
+      <section class="card_timeline" id="card4">
+        <div class="frame">
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line bottom2"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
 
-  </div>
+          <h1 class="period">1940</h1>
+          <h2 class="subtitle">LA GUERRE ET LA RÉSISTANCE</h2>
+          <p class="descr">
+            Malgré la censure et la peur, de nombreuses femmes osent créer, et deviennent des symboles de la résistance,
+            prenant une véritable place dans la seconde guerre mondiale. Cependant leur reconnaissance disparait après
+            la fin de la guerre.
+          </p>
+        </div>
+        <img class="photo" src="medias/dessin4.png" alt="XVIIe–XVIIIe">
+      </section>
+
+    </div>
 
     <!-- Partie "Texte et recommandations" -->
     <!-- Section 1 : que peut-on retenir ? -->
@@ -178,7 +212,10 @@
       <h1>Que peut-on retenir ?</h1>
       <div class="divider"></div>
       <p>
-        À l'époque, le talent des femmes était rarement reconnu, car la société patriarcale les limitait à des rôles domestiques et leur fermait l’accès aux arts, à l'éducation et aux sciences. Même lorsqu’elles excellaient, leurs réussites étaient souvent ignorées ou attribuées à des hommes. Aujourd’hui, la situation a évolué, mais de nombreuses inégalités persistent encore, et le chemin vers une véritable reconnaissance reste long.
+        À l'époque, le talent des femmes était rarement reconnu, car la société patriarcale les limitait à des rôles
+        domestiques et leur fermait l’accès aux arts, à l'éducation et aux sciences. Même lorsqu’elles excellaient,
+        leurs réussites étaient souvent ignorées ou attribuées à des hommes. Aujourd’hui, la situation a évolué, mais de
+        nombreuses inégalités persistent encore, et le chemin vers une véritable reconnaissance reste long.
       </p>
     </section>
 
@@ -187,7 +224,10 @@
       <h2>Pourquoi est-ce important de le savoir ?</h2>
       <div class="divider"></div>
       <p>
-        C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
+        C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du
+        passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi
+        que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur
+        reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
       </p>
     </section>
 
@@ -201,7 +241,8 @@
           <h4>Littérature</h4>
           <img class="petit" src="medias/livre.jpg" alt="Couverture du livre d'Angela Davis - Women, Race and Class">
           <p>
-            <em>Women, Race & Class</em> d’Angela Davis explore comment genre, classe et race s’entrecroisent dans la lutte pour les droits des femmes aux États-Unis.
+            <em>Women, Race & Class</em> d’Angela Davis explore comment genre, classe et race s’entrecroisent dans la
+            lutte pour les droits des femmes aux États-Unis.
           </p>
           <a href="https://www.fnac.com/a16854602/Angela-Y-Davis-WOMEN-RACE-et-CLASS">Acheter le livre</a>
         </div>
@@ -243,7 +284,8 @@
             <h2>À propos de nous</h2>
             <p>
               Ce projet est né du désir de rendre visibles les femmes artistes que l'histoire a trop longtemps laissées
-              dans l'ombre. Notre objectif : rappeler que l'art au féminin fait partie intégrante de notre patrimoine culturel.
+              dans l'ombre. Notre objectif : rappeler que l'art au féminin fait partie intégrante de notre patrimoine
+              culturel.
             </p>
           </div>
         </div>
@@ -295,46 +337,48 @@
   <div id="modale-legales" class="modale-legales">
     <div class="modale-legales-content">
       <h2>Mentions Légales</h2>
-      
+
       <h3>Éditeur du site</h3>
       <p>
-        Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet) de l'IUT Gustave Eiffel de Champs sur Marne.
+        Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet) de
+        l'IUT Gustave Eiffel de Champs sur Marne.
       </p>
-      
+
       <h3>Directrices de la publication</h3>
       <p>
         Les directrices de la publication sont BENETEAU Lola, POHU Maëlys et TWH Nathalia.
       </p>
-      
+
       <h3>Hébergement</h3>
       <p>
         Ce site est hébergé par 02switch.
       </p>
-      
+
       <h3>Propriété intellectuelle</h3>
       <p>
         L'ensemble du contenu de ce site (textes, images, vidéos, graphiques) appartiennent à Pinterest et Pinterest.
         Toute reproduction, distribution ou utilisation identiques sans autorisation préalable est interdite.
       </p>
-      
+
       <h3>Protection des données personnelles</h3>
       <p>
-        Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, 
-        de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au +33767017040.
+        Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
+        de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au
+        +33767017040.
       </p>
-      
+
       <h3>Cookies</h3>
       <p>
-        Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement 
+        Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
         du site peuvent être utilisés.
       </p>
-      
+
       <div class="modale-legales-footer">
         <button id="close-legales">Fermer</button>
       </div>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
   <script type="module" src="data.js"></script>
 </body>

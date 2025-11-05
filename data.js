@@ -11,7 +11,6 @@ const btns = {
 
 //Tableau des artistes
 let artistes = [];
-
 // écoute tous les boutons
 let buttons = document.querySelectorAll('.btns button');
 buttons.forEach((btn) => {
@@ -133,11 +132,12 @@ async function graph(jsonFile) {
     const tooltip = d3.select("body")
         .append("div")
         .style("position", "absolute")
-        .style("background", "#333")
-        .style("color", "#fff")
+        .style("background", "#e3fff7ff")
+        .style("color", "black")
         .style("padding", "6px 10px")
         .style("border-radius", "8px")
         .style("font-size", "15px")
+        .style("font-family", "Oswald, sans-serif")
         .style("opacity", 0)
         .style("pointer-events", "none");
 
@@ -151,7 +151,7 @@ async function graph(jsonFile) {
 
             tooltip
                 .style("opacity", 1)
-                .html(`<strong>${d.count}</strong>`)
+                .html(`<p>${d.count} ${d.sexe}</p>`)
                 .style("left", `${event.pageX + 10}px`)
                 .style("top", `${event.pageY - 20}px`);
         })
@@ -171,7 +171,7 @@ async function graph(jsonFile) {
                 .style("opacity", 0);
         });
 
-        //Affiche les images des artistes sur le graphique au clique du bouton
+    //Affiche les images des artistes sur le graphique au clique du bouton
     document.getElementById("populaire").addEventListener('click', () => {
         svg.selectAll(".artiste-image")
             .data(artistes)
@@ -195,7 +195,7 @@ async function graph(jsonFile) {
 
         // Effet hover sur les images
         svg.selectAll(".artiste-image")
-            .on("mouseover", function(event, d) {
+            .on("mouseover", function (event, d) {
                 d3.select(this)
                     .transition()
                     .duration(200)
@@ -205,7 +205,7 @@ async function graph(jsonFile) {
                     .attr("y", y(d.count) - 45)
                     .style("filter", "brightness(1.2)");
             })
-            .on("mouseout", function(event, d) {
+            .on("mouseout", function (event, d) {
                 d3.select(this)
                     .transition()
                     .duration(200)
@@ -220,7 +220,7 @@ async function graph(jsonFile) {
         svg.selectAll(".artiste-image").on("click", (e, d) => {
             const modale = d3.select("#modale");
             modale.style("display", "flex");
-            
+
             // Création de la structure de la carte
             modale.node().innerHTML = `
                 <div class="modale-content">
@@ -234,7 +234,6 @@ async function graph(jsonFile) {
                                 <h2 class="modale-nom">${d.nom}</h2>
                                 <img src="${d.signature}" alt="signature" class="modale-signature">
                             </div>
-                            <div class="modale-category">${d.categorie}</div>
                         </div>
                         <p class="modale-description">${d.description}</p>
                         <div class="modale-footer">
@@ -248,7 +247,7 @@ async function graph(jsonFile) {
             d3.select("#closeModale").on("click", () => {
                 modale.style("display", "none");
             });
-            
+
             // Fermer en cliquant en dehors de la carte
             modale.on("click", (event) => {
                 if (event.target.id === "modale") {
@@ -270,6 +269,15 @@ async function graph(jsonFile) {
 }
 
 // Charger un graph par défaut au démarrage
-const defaultBtn = document.querySelector('#actrices');
-defaultBtn.classList.add('active');
-graph("data/actrices.json");
+window.addEventListener("DOMContentLoaded", async () => {
+    const defaultBtn = document.querySelector('#actrices');
+    defaultBtn.classList.add('active');
+
+    // Charger les données
+    const response = await fetch('data/cartes.json');
+    let cartes = await response.json();
+    artistes = [...cartes["actrices"].homme, ...cartes["actrices"].femme];
+    
+    // Lancer le graph par défaut
+    await graph("data/actrices.json");
+});
