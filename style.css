@@ -603,14 +603,40 @@ header {
   border: 1px solid #791c17;
   border-radius: 10px;
   width: 290px;
-  height: 630px;
+  /* REMPLACER la hauteur fixe par auto */
+  height: auto;
+  /* OU utiliser min-height au lieu de height */
+  min-height: 630px;
   padding: 30px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* CHANGER justify-content pour un meilleur contrôle */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
+}
+
+.card p {
+  font-size: 0.95rem;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  /* AJOUTER pour gérer les longs textes */
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  background: #791c17;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin-top: auto; /* Pousse le lien vers le bas */
+  font-weight: bold;
+  transition: background 0.3s;
+  font-family: 'Jost', sans-serif;
 }
 
 
@@ -625,25 +651,6 @@ header {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 0.95rem;
-  text-align: left;
-  font-family: 'Jost', sans-serif;
-}
-
-.card a {
-  display: inline-block;
-  background: #791c17;
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-  margin-top: 15px;
-  font-weight: bold;
-  transition: background 0.3s;
-  font-family: 'Jost', sans-serif;
 }
 
 .card a:hover {
@@ -1126,27 +1133,17 @@ footer p,
 }
 
 .modale-legales-content {
-  background: #d5a9b0;
+  background: #d5a9b0; 
   border-radius: 30px;
   padding: 50px 45px;
-  max-width: 900px;
+  max-width: 1000px;        
   width: 90%;
+  max-height: 80vh;         
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 8px solid #791c17;
   color: #791c17;
-}
-
-.modale-legales-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(139, 71, 71, 0.1) 0%, rgba(90, 45, 45, 0.1) 100%);
-  pointer-events: none;
 }
 
 .modale-legales-content h2 {
@@ -1186,7 +1183,7 @@ footer p,
 #close-legales {
   background: rgba(245, 233, 215, 0.15);
   color: #791c17;
-  border: 2px solid #f5e9d7;
+  border: 1px solid #070707;
   padding: 12px 40px;
   font-size: 1rem;
   font-weight: 600;
@@ -1210,11 +1207,20 @@ footer p,
   width: 8px;
 }
 
+/* La piste */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 10px;
+}
+
+
 .modale-legales-content::-webkit-scrollbar-thumb {
   background: #f5e9d7;
   border-radius: 4px;
 }
 
 .modale-legales-content::-webkit-scrollbar-thumb:hover {
-  background: #c48e8e;
+  background: #070707;
 }
