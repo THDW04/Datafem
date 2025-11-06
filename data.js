@@ -44,7 +44,7 @@ async function graph(jsonFile) {
     });
 
     //dimension du svg
-    const width = 1200, height = 750;
+    const width = 1024, height = 600;
     const margin = { top: 30, right: 50, bottom: 30, left: 60 };
 
     const x = d3.scaleUtc()
