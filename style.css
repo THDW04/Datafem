@@ -2,7 +2,7 @@
   --background: #2c0000;
   --creme: #f5e9d7;
   --rose: #d5a9b0;
-  --fushia: #da4e55;
+  --foncée: #9b3747;
   --duration: 2500ms;
   --delay: 300ms;
   --curtain-img: url('medias/curtain.png');
@@ -101,7 +101,7 @@ body {
 }
 
 #enter-btn:hover {
-  background: var(--fushia);
+  background: var(--foncée);
 }
 
 /* Masquer header, main et footer sur la page d'intro */
@@ -122,9 +122,9 @@ header {
 
 /* Logo dans le header */
 .mini-logo {
-  width: 300px;
-  margin-top: -80px;
-  margin-bottom: -70px;
+  width: 250px;
+  margin-top: -70px;
+  margin-bottom: -60px;
   margin-left: 20px;
 }
 
@@ -192,7 +192,7 @@ header {
   position: relative;
   max-height: 700px;
   width: 95%;
-  margin: -20px auto 50px;
+  margin: -10px auto 50px;
   border-radius: 10px;
   border: #f5e9d7 solid 5px;
 }
@@ -295,7 +295,7 @@ header {
 
 .btns button:hover {
   transform: translateY(5px);
-  background-color: #da4e55;
+  background-color: #9b3747;
   color: #160001;
 }
 
@@ -1107,7 +1107,6 @@ footer p,
   padding: 50px 45px;
   max-width: 900px;
   width: 90%;
-  max-height: 85vh;
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -1193,5 +1192,5 @@ footer p,
 }
 
 .modale-legales-content::-webkit-scrollbar-thumb:hover {
-  background: #da4e55;
+  background: #c48e8e;
 }
