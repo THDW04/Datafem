@@ -844,8 +844,10 @@ footer p,
 }
 
 .centrer_frise {
-  width: 100%;
+  width: 926px;
+  transform:translate(-300px);
   margin: auto;
+  position: relative;
 }
 
 /* --- UNE CARTE --- */
@@ -996,6 +998,7 @@ footer p,
 
 /* === CARTE 3 === */
 #card3 .frame {
+  position: relative;
   margin-left: 700px;
   margin-top: 110px;
   width: 500px;
@@ -1087,8 +1090,8 @@ footer p,
 }
 
 /* === Frise Responsive === */
-@media screen and (max-width: 1226px) {
-  #card1 .frame { margin-left: 400px; }
+@media screen and (max-width: 926px) {
+  #card1 .frame { margin-left: 400px; position: relative;}
   #card2 .frame { margin-left: 100px; }
   #card3 .frame { margin-left: 450px; }
   #card4 .frame { margin-left: 100px; }
@@ -1097,19 +1100,12 @@ footer p,
   #card2 .photo { left: 400px; }
   #card3 .photo { left: 280px; }
   #card4 .photo { left: 300px; }
+  .centrer_frise {
+  width: 863px;
+  transform:translate(-100px);
+}
 }
 
-@media screen and (max-width: 992px) {
-  #card1 .frame { margin-left: 300px; }
-  #card2 .frame { margin-left: 20px; }
-  #card3 .frame { margin-left: 350px; }
-  #card4 .frame { margin-left: 20px; }
-
-  #card1 .photo { left: 670px; }
-  #card2 .photo { left: 300px; }
-  #card3 .photo { left: 200px; width: 200px;}
-  #card4 .photo { left: 150px; }
-}
 
 @media screen and (max-width: 863px) {
 
@@ -1117,11 +1113,15 @@ footer p,
     display: none !important;
   }
 
+  .centrer_frise {
+width: 100%;
+  transform:translate(0px);
+
+}
+
   .frame {
     margin-left: auto !important;
     margin-right: auto !important;
-    top: auto !important;
-    left: auto !important;
     position: relative !important;
     width: 90%;
     margin-bottom: 200px; 
