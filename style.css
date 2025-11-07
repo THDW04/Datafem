@@ -854,6 +854,10 @@ footer p,
   box-sizing: border-box;
 }
 
+.centrer_frise {
+  width: 100%;
+  margin: auto;
+}
 
 /* --- UNE CARTE --- */
 .card_timeline {
