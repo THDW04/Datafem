@@ -843,6 +843,10 @@ footer p,
   box-sizing: border-box;
 }
 
+.centrer_frise {
+  width: 100%;
+  margin: auto;
+}
 
 /* --- UNE CARTE --- */
 .card_timeline {
@@ -1082,6 +1086,69 @@ footer p,
   width: 250px;
 }
 
+/* === Frise Responsive === */
+@media screen and (max-width: 1226px) {
+  #card1 .frame { margin-left: 400px; }
+  #card2 .frame { margin-left: 100px; }
+  #card3 .frame { margin-left: 450px; }
+  #card4 .frame { margin-left: 100px; }
+
+  #card1 .photo { left: 770px; }
+  #card2 .photo { left: 400px; }
+  #card3 .photo { left: 280px; }
+  #card4 .photo { left: 300px; }
+}
+
+@media screen and (max-width: 992px) {
+  #card1 .frame { margin-left: 300px; }
+  #card2 .frame { margin-left: 20px; }
+  #card3 .frame { margin-left: 350px; }
+  #card4 .frame { margin-left: 20px; }
+
+  #card1 .photo { left: 670px; }
+  #card2 .photo { left: 300px; }
+  #card3 .photo { left: 200px; width: 200px;}
+  #card4 .photo { left: 150px; }
+}
+
+@media screen and (max-width: 863px) {
+
+  .photo {
+    display: none !important;
+  }
+
+  .frame {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    top: auto !important;
+    left: auto !important;
+    position: relative !important;
+    width: 90%;
+    margin-bottom: 200px; 
+    border: solid white 3px;
+  }
+
+  .period {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .descr {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+
+/* Modale des mentions légales */
+
 .modale-content {
   background: #d5a9b0;
   border-radius: 30px;
@@ -1106,7 +1173,6 @@ footer p,
   pointer-events: none;
 }
 
-/* Modale des mentions légales */
 .modale-legales {
   display: none;
   position: fixed;
