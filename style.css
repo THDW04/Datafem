@@ -922,7 +922,6 @@ footer p,
   top: 0;
   left: 0;
   width: 550px;
-  /* longueur du trait haut */
   height: 2px;
 }
 
@@ -1089,6 +1088,123 @@ footer p,
   width: 250px;
 }
 
+/* === CARTE 5 === */
+#card5 .frame {
+  margin-left: 670px;
+  margin-top: -100px;
+}
+
+#card5 .line.top {
+  top: 0;
+  left: 100px;
+  width: 310px;
+  height: 2px;
+}
+
+#card5 .line.bottom {
+  bottom: 0;
+  left: 0;
+  width: 410px;
+  height: 2px;
+}
+
+#card5 .line.left {
+  top: 73px;
+  left: 0;
+  width: 2px;
+  height: 305px;
+}
+
+#card5 .line.right {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 378px;
+}
+
+/* === CARTE 6 === */
+#card6 .frame {
+  margin-left: 300px;
+  margin-top: -100px;
+}
+
+#card6 .line.top {
+  top: 0;
+  left: 0px;
+  width: 320px;
+  height: 2px;
+}
+
+#card6 .line.bottom {
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 2px;
+}
+
+#card6 .line.left {
+  top: 0px;
+  left: 0;
+  width: 2px;
+  height: 350px;
+}
+
+#card6 .line.right {
+  top: 70px;
+  left: 420px;
+  width: 2px;
+  height: 110px;
+}
+
+/* Image */
+#card6 .photo {
+  top: 190px;
+  left: 620px;
+  width: 250px;
+}
+
+/* === CARTE 7 === */
+#card7 .frame {
+  margin-left: 700px;
+  margin-top: -60px;
+  width: 500px;
+}
+
+#card7 .line.top {
+  top: 0;
+  left: 180px;
+  width: 320px;
+  height: 2px;
+}
+
+#card7 .line.bottom {
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 2px;
+}
+
+#card7 .line.left {
+  top: 50px;
+  left: 0;
+  width: 2px;
+  height: 300px;
+}
+
+#card7 .line.right {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 350px;
+}
+
+/* Image */
+#card7 .photo {
+  top: 100px;
+  left: 410px;
+  width: 250px;
+}
+
 /* === Frise Responsive === */
 @media screen and (max-width: 926px) {
   #card1 .frame { margin-left: 400px; position: relative;}
@@ -1144,6 +1260,18 @@ width: 100%;
   .line {
     display: none;
   }
+
+  #card7 .frame {
+  width: 90%;
+  }
+  #card2 .frame {
+  width: 90%;
+  }
+  #card3 .frame {
+  width: 90%;
+  }
+
+  
 }
 
 
