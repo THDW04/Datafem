@@ -44,8 +44,8 @@ async function graph(jsonFile) {
     });
 
     //dimension du svg
-    const width = 1024, height = 600;
-    const margin = { top: 30, right: 50, bottom: 30, left: 60 };
+    const width = 1024, height = 650;
+    const margin = { top: 30, right: 50, bottom: 50, left: 80 };
 
     const x = d3.scaleUtc()
         .domain([new Date("1800-01-01"), new Date("2020-01-01")])
@@ -73,15 +73,36 @@ async function graph(jsonFile) {
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(d3.axisBottom(x))
         .selectAll("text")
-        .style("font-size", "14px")// styliser la taille du texte
+        .style("font-size", "1rem")// styliser la taille du texte
         .style("fill", "#fff");
 
     svg.append("g")
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).tickFormat(formatEspace))
         .selectAll("text")
-        .style("font-size", "14px")// styliser la taille du texte
+        .style("font-size", "1rem")// styliser la taille du texte
+        .style("font-family", "Jost, sans-serif")
         .style("fill", "#fff");
+
+    //Légende des axes
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height-8)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "1rem")
+        .attr("fill", "#fff")
+        .style("font-family", "Jost, sans-serif")
+        .text("Années");
+
+    svg.append("text")
+        .attr("x", 80)
+        .attr("y", 13)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "1rem")
+        .attr("fill", "#fff")
+        .style("font-family", "Jost, sans-serif")
+        .text("Nombre d’artistes");
+
 
     // Grouper par sexe
     const grouped = d3.group(data, d => d.sexe);
@@ -135,8 +156,8 @@ async function graph(jsonFile) {
         .style("color", "black")
         .style("padding", "6px 10px")
         .style("border-radius", "8px")
-        .style("font-size", "15px")
-        .style("font-family", "Oswald, sans-serif")
+        .style("font-size", "1rem")
+        .style("font-family", "Jost, sans-serif")
         .style("opacity", 0)
         .style("pointer-events", "none");
 
@@ -257,10 +278,12 @@ async function graph(jsonFile) {
     });
 
     //Légende du graph
-    svg.append("line").attr("x1", 900).attr("y1", 130).attr("x2", 915).attr("y2", 130).attr("stroke", "#ffe8c5").attr("stroke-width", 2).attr("stroke-dasharray","4,4");
+    svg.append("line").attr("x1", 900).attr("y1", 130).attr("x2", 915).attr("y2", 130).attr("stroke", "#ffe8c5").attr("stroke-width", 2).attr("stroke-dasharray", "4,4");
     svg.append("line").attr("x1", 900).attr("y1", 160).attr("x2", 915).attr("y2", 160).attr("stroke", "#da4e55").attr("stroke-width", 2);
-    svg.append("text").attr("x", 920).attr("y", 130).text("Hommes").style("font-size", "1.1rem").style("fill", "#fff").attr("alignment-baseline", "middle");
-    svg.append("text").attr("x", 920).attr("y", 160).text("Femmes").style("font-size", "1.1rem").style("fill", "#fff").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 920).attr("y", 130).text("Hommes").style("font-size", "1.1rem").style("fill", "#fff").attr("alignment-baseline", "middle").style("font-family", "Jost, sans-serif")
+;
+    svg.append("text").attr("x", 920).attr("y", 160).text("Femmes").style("font-size", "1.1rem").style("fill", "#fff").attr("alignment-baseline", "middle").style("font-family", "Jost, sans-serif")
+;
 
     // Clean avant d'insérer
     container.selectAll("*").remove();
