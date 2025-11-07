@@ -252,16 +252,6 @@ header {
   text-transform: uppercase;
 }
 
-#graph {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  min-height: 100vh;
-  padding-bottom: 50px;
-}
-
 .graphique {
   display: flex;
   justify-content: center;
@@ -280,12 +270,11 @@ header {
 }
 
 .analyse {
-  max-width: 500px;
-  background-color: #d5a9b0d7;
-  color: #fff;
+  max-width: 1024px;
   padding: 20px;
   border-radius: 15px;
   font-size: 1.2rem;
+  margin: 20px auto;
 }
 
 /* Boutons du graphique */
