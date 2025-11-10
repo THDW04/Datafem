@@ -392,7 +392,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--creme);
+    color: var(--foncée);
     position: relative;
 }
 
@@ -400,7 +400,7 @@ nav {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     margin-bottom: 10px;
-    color: var(--creme);
+    color: var(--foncée);
     line-height: 1.2;
 }
 
@@ -414,15 +414,15 @@ nav {
 .modale-description {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: var(--creme);
+    color: var(--foncée);
     margin: 20px 0;
     flex-grow: 1;
 }
 
 #closeModale {
     background: rgba(245, 233, 215, 0.15);
-    color: var(--creme);
-    border: 2px solid var(--creme);
+    color: var(--foncée);
+    border: 2px solid var(--foncée);
     padding: 12px 40px;
     font-size: 1rem;
     font-weight: 600;
@@ -436,7 +436,7 @@ nav {
 
 #closeModale:hover {
     background: var(--creme);
-    color: var(--foncée);
+    border-color: var(--creme);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(245, 233, 215, 0.3);
 }
