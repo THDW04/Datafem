@@ -21,6 +21,18 @@ html {
     scroll-behavior: smooth;
 }
 
+#retour{
+  background-color: var(--creme);
+  border: solid 1px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--noir);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 /* Scrollbar personnalisée */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1157,6 +1169,10 @@ footer h3 {
     color: var(--foncée);
     margin-bottom: 15px;
     position: relative;
+}
+
+.modale-legales-content a{
+  color: var(--foncée);
 }
 
 #close-legales {
