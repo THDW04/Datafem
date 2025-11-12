@@ -2,38 +2,39 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datafem</title>
 
   <!-- Favicon clair/sombre selon le thème du système -->
   <link rel="icon" href="medias/favicon_noir.png" media="(prefers-color-scheme: light)">
   <link rel="icon" href="medias/favicon_blanc.png" media="(prefers-color-scheme: dark)">
 
+  <!-- Typographies -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Polices utilisées -->
-  <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/kapakana" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
-  <!-- Animation du rideau (transition d’ouverture) -->
-  <div class="curtain left" id="curtain-left"></div>
-  <div class="curtain right" id="curtain-right"></div>
 
-  <!-- Écran d’intro : logo + bouton "Entrer" -->
-  <section id="logo-screen">
-    <img src="medias/logo-final.png" alt="Logo Datafem" class="logo1">
-    <button id="enter-btn">ENTRER</button>
+  <section>
+    <!-- Animation du rideau (transition d’ouverture) -->
+    <div class="curtain left" id="curtain-left"></div>
+    <div class="curtain right" id="curtain-right"></div>
+
+    <!-- Écran d’intro : logo + bouton "Entrer" -->
+    <div id="logo-screen">
+      <img src="medias/logo-final.png" alt="Logo Datafem" class="logo1">
+      <button id="enter-btn">ENTRER</button>
+    </div>
   </section>
 
   <!-- Page principale (après l’écran d’intro) -->
@@ -42,7 +43,7 @@
     <img src="medias/logoblanc.png" alt="Logo Datafem" class="mini-logo">
 
     <!-- Icônes de navigation rapide -->
-    <nav class="icons">
+    <nav>
       <a href="#graph" class="icon icon-graphe">
         <img src="medias/graphe.png" alt="Voir le graphique">
       </a>
@@ -56,7 +57,6 @@
   </header>
 
   <main>
-
     <!-- Section vidéo en carrousel (marilyn, freda, beyoncé) -->
     <section class="carousel">
       <div class="carousel-inner container">
@@ -80,43 +80,37 @@
     <!-- Graphique interactif -->
     <section id="graph">
 
-      <div class="graphique" >
+      <h2>Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
 
-        <h2 class="titre-graph">Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
+      <div id="graph-contain"></div>
 
-        <div id="graph-contain"></div>
+      <div class="btns-container">
 
-        <div class="btns-container">
-
-          <div class="btns">
-            <button id="actrices">Actrices</button>
-            <button id="autrices">Autrices</button>
-            <button id="chanteuses">Chanteuses</button>
-            <button id="peintres">Peintres</button>
-          </div>
-
-          <button id="populaire">Voir les artistes célèbres</button>
-
+        <div class="btns">
+          <button id="actrices">Actrices</button>
+          <button id="autrices">Autrices</button>
+          <button id="chanteuses">Chanteuses</button>
+          <button id="peintres">Peintres</button>
         </div>
 
+        <button id="populaire">Voir les artistes célèbres</button>
+
       </div>
+
 
       <div class="analyse">
         <h3>Interprétation :</h3>
 
         <p>La baisse du nombre d’artistes après 1940 - 1960 ne reflète pas une diminution réelle, mais plutôt un
-          effet de notoriété.</p>
-        <p>
+          effet de notoriété.
           Les artistes nés plus récemment n’ont pas encore eu le temps d’acquérir la même
           reconnaissance historique que leurs prédécesseurs.
         </p>
 
       </div>
-      
+
+      <section id="modale" class="modale"></section>
     </section>
-
-    <div id="modale" class="modale"></div>
-
 
     <!-- Frise Chronologique -->
 
@@ -127,118 +121,179 @@
         Cette frise raconte leur longue marche vers la reconnaissance.
       </p>
 
-      <!-- === CARTE 1 === -->
-      <section class="card_timeline" id="card1">
-        <div class="frame">
-          <div class="line top"></div>
-          <div class="line bottom"></div>
-          <div class="line left"></div>
-          <div class="line right"></div>
+      <div class="centrer_frise">
 
-          <h1 class="period">XVe–XVIe</h1>
-          <h2 class="subtitle">LES PREMIÈRES ARTISTES VISIBLES</h2>
-          <p class="descr">
-            Les femmes artistes émergent dans les cours royales et aristocratiques. Quelques peintres et musiciennes se
-            distinguent, mais la plupart restent invisibles. L’accès aux académies et à la formation artistique leur est
-            refusé.
-          </p>
-        </div>
-        <img class="photo" src="medias/dessin1.png" alt="XVe–XVIe">
-      </section>
+        <!-- === CARTE 1 === -->
+        <section class="card_timeline" id="card1">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
 
-      <!-- === CARTE 2 === -->
-      <section class="card_timeline" id="card2">
-        <div class="frame">
-          <div class="line top"></div>
-          <div class="line bottom"></div>
-          <div class="line left"></div>
-          <div class="line right"></div>
+            <h1 class="period">XVe–XVIe</h1>
+            <h2 class="subtitle">LES PREMIÈRES ARTISTES VISIBLES</h2>
+            <p class="descr">
+              Les femmes artistes émergent dans les cours royales et aristocratiques. Quelques peintres et musiciennes
+              se
+              distinguent, mais la plupart restent invisibles. L’accès aux académies et à la formation artistique leur
+              est
+              refusé.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin1.png" alt="XVe–XVIe">
+        </section>
 
-          <h1 class="period">XVIIe–XVIIIe</h1>
-          <h2 class="subtitle">L'ART DANS LES SALONS</h2>
-          <p class="descr">
-            Des femmes écrivent, composent et animent des cercles littéraires, mais restent dans l’ombre. La création
-            publique reste dominée par les hommes. Les Lumières défendent l’égalité en théorie, sans la traduire en
-            pratique.
-          </p>
-        </div>
-        <img class="photo" src="medias/dessin2.png" alt="XVIIe–XVIIIe">
-      </section>
+        <!-- === CARTE 2 === -->
+        <section class="card_timeline" id="card2">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
 
-      <!-- === CARTE 3 === -->
-      <section class="card_timeline" id="card3">
-        <div class="frame">
-          <div class="line top"></div>
-          <div class="line bottom"></div>
-          <div class="line left"></div>
-          <div class="line right"></div>
+            <h1 class="period">XVIIe–XVIIIe</h1>
+            <h2 class="subtitle">L'ART DANS LES SALONS</h2>
+            <p class="descr">
+              Des femmes écrivent, composent et animent des cercles littéraires, mais restent dans l’ombre. La création
+              publique reste dominée par les hommes. Les Lumières défendent l’égalité en théorie, sans la traduire en
+              pratique.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin2.png" alt="XVIIe–XVIIIe">
+        </section>
 
-          <h1 class="period">XIXe</h1>
-          <h2 class="subtitle">L’ÉDUCATION S’OUVRE LENTEMENT</h2>
-          <p class="descr">
-            Les révolutions industrielles et sociales permettent à certaines femmes d’accéder à l’enseignement, dont
-            l’enseignement artistique. Certaines d’entre elles osent publier leur création mais sont vues comme
-            “amatrices”. Les premiers mouvements féministes amorcent le changement.
-          </p>
-        </div>
-        <img class="photo" src="medias/dessin3.png" alt="XVIIe–XVIIIe">
-      </section>
+        <!-- === CARTE 3 === -->
+        <section class="card_timeline" id="card3">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
 
-      <!-- === CARTE 4 === -->
-      <section class="card_timeline" id="card4">
-        <div class="frame">
-          <div class="line top"></div>
-          <div class="line bottom"></div>
-          <div class="line bottom2"></div>
-          <div class="line left"></div>
-          <div class="line right"></div>
+            <h1 class="period">XIXe</h1>
+            <h2 class="subtitle">L’ÉDUCATION S’OUVRE LENTEMENT</h2>
+            <p class="descr">
+              Les révolutions industrielles et sociales permettent à certaines femmes d’accéder à l’enseignement, dont
+              l’enseignement artistique. Certaines d’entre elles osent publier leur création mais sont vues comme
+              “amatrices”. Les premiers mouvements féministes amorcent le changement.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin3.png" alt="XVIIe–XVIIIe">
+        </section>
 
-          <h1 class="period">1940</h1>
-          <h2 class="subtitle">LA GUERRE ET LA RÉSISTANCE</h2>
-          <p class="descr">
-            Malgré la censure et la peur, de nombreuses femmes osent créer, et deviennent des symboles de la résistance,
-            prenant une véritable place dans la seconde guerre mondiale. Cependant leur reconnaissance disparait après
-            la fin de la guerre.
-          </p>
-        </div>
-        <img class="photo" src="medias/dessin4.png" alt="XVIIe–XVIIIe">
-      </section>
+        <!-- === CARTE 4 === -->
+        <section class="card_timeline" id="card4">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line bottom2"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
 
+            <h1 class="period">1940</h1>
+            <h2 class="subtitle">LA GUERRE ET LA RÉSISTANCE</h2>
+            <p class="descr">
+              Malgré la censure et la peur, de nombreuses femmes osent créer, et deviennent des symboles de la
+              résistance,
+              prenant une véritable place dans la seconde guerre mondiale. Cependant leur reconnaissance disparait après
+              la fin de la guerre.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin4.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 5 === -->
+        <section class="card_timeline" id="card5">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">1960</h1>
+            <h2 class="subtitle">L’IMAGE AVANT L’AUTONOMIE</h2>
+            <p class="descr">
+              Cinéma, chanson, mode : avec l’arrivée de la télévision et de l’image, les femmes deviennent des icônes
+              populaires. Pourtant, leur contrôle sur leurs œuvres reste limité. Les stéréotypes de la femme au foyer et
+              l’industrie audiovisuelle dominée par les hommes, freinent toute émancipation artistique réelle.
+            </p>
+          </div>
+        </section>
+
+        <!-- === CARTE 6 === -->
+        <section class="card_timeline" id="card6">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">1980</h1>
+            <h2 class="subtitle">POP, POUVOIR ET CONTRADICTIONS</h2>
+            <p class="descr">
+              Les artistes femmes envahissent la scène internationale grâce aux médias et à MTV. La visibilité explose,
+              mais souvent au prix d’une hypersexualisation. Les discours féministes persistent face au conservatisme
+              politique et à l’industrie du spectacle.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin5.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 7 === -->
+        <section class="card_timeline" id="card7">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">2000</h1>
+            <h2 class="subtitle">INTERNET ET ÉMANCIPATION</h2>
+            <p class="descr">
+              Avec l’arrivée d’internet, les femmes s’autoproduisent, diffusent, dénoncent le sexisme. Les réseaux
+              sociaux amplifient leur parole et leur visibilité. Pourtant, les postes de direction dans le milieu
+              artistique restent majoritairement masculins, et les femmes continuent d’être moins bien rémunérées —
+              encore aujourd’hui.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin6.png" alt="XVIIe–XVIIIe">
+        </section>
+
+      </div>
     </div>
-
     <!-- Partie "Texte et recommandations" -->
-    <!-- Section 1 : que peut-on retenir ? -->
-    <section class="section-red">
-      <h1>Que peut-on retenir ?</h1>
-      <div class="divider"></div>
-      <p>
-        À l'époque, le talent des femmes était rarement reconnu, car la société patriarcale les limitait à des rôles
-        domestiques et leur fermait l’accès aux arts, à l'éducation et aux sciences. Même lorsqu’elles excellaient,
-        leurs réussites étaient souvent ignorées ou attribuées à des hommes. Aujourd’hui, la situation a évolué, mais de
-        nombreuses inégalités persistent encore, et le chemin vers une véritable reconnaissance reste long.
-      </p>
+    <section class="contexte">
+      <div class="section-red texte">
+        <h2>Que peut-on retenir ?</h2>
+        <div class="divider"></div>
+        <p>
+          À l'époque, le talent des femmes était rarement reconnu, car la société patriarcale les limitait à des rôles
+          domestiques et leur fermait l’accès aux arts, à l'éducation et aux sciences. Même lorsqu’elles excellaient,
+          leurs réussites étaient souvent ignorées ou attribuées à des hommes. Aujourd’hui, la situation a évolué, mais
+          de
+          nombreuses inégalités persistent encore, et le chemin vers une véritable reconnaissance reste long.
+        </p>
+      </div>
+      <div class="section-rose texte">
+        <h2>Pourquoi est-ce important de le savoir ?</h2>
+        <div class="divider"></div>
+        <p>
+          C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du
+          passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi
+          que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur
+          reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
+        </p>
+      </div>
     </section>
 
-    <!-- Section 2 : Pourquoi est-ce important de le savoir ? -->
-    <section class="section-black">
-      <h2>Pourquoi est-ce important de le savoir ?</h2>
-      <div class="divider"></div>
-      <p>
-        C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du
-        passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi
-        que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur
-        reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
-      </p>
-    </section>
-
-    <!-- Section 3 : nos recommandations -->
     <section class="section-beige" id="recommendation">
-      <h3>Envie d’en savoir plus ? Voici quelques pistes.</h3>
+      <h2>Envie d’en savoir plus ? Voici quelques pistes.</h2>
 
       <div class="cards">
         <!-- Carte 1 : livre -->
         <div class="card">
-          <h4>Littérature</h4>
+          <h3>Littérature</h3>
           <img class="petit" src="medias/livre.jpg" alt="Couverture du livre d'Angela Davis - Women, Race and Class">
           <p>
             <em>Women, Race & Class</em> d’Angela Davis explore comment genre, classe et race s’entrecroisent dans la
@@ -249,7 +304,7 @@
 
         <!-- Carte 2 : film -->
         <div class="card">
-          <h4>Film</h4>
+          <h3>Film</h3>
           <img src="medias/film.jpg" alt="Affiche du film Suffragette">
           <p>
             <em>Suffragette</em> retrace le combat courageux des femmes du début du XXe siècle pour le droit de vote,
@@ -260,7 +315,7 @@
 
         <!-- Carte 3 : vidéo -->
         <div class="card">
-          <h4>Vidéo</h4>
+          <h3>Vidéo</h3>
           <img src="medias/video (2).png" alt="Miniature de la video - La place des femmes dans l’art">
           <p>
             Vidéo du Centre Pompidou sur les femmes artistes oubliées et leur rôle dans l’histoire de l’art.
@@ -270,18 +325,62 @@
       </div>
     </section>
 
+    <section class="modale-mentions">
+      <div class="modale-legales-content">
+        <h2>Mentions Légales</h2>
+
+        <h3>Éditeur du site</h3>
+        <p>
+          Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet)
+          de
+          l'IUT Gustave Eiffel de Champs sur Marne.
+        </p>
+
+        <h3>Directrices de la publication</h3>
+        <p>
+          Les directrices de la publication sont BENETEAU Lola, POHU Maëlys et VILASSE Nathalia.
+        </p>
+
+        <h3>Hébergement</h3>
+        <p>
+          Ce site est hébergé par 02switch.
+        </p>
+
+        <h3>Propriété intellectuelle</h3>
+        <p>
+          L'ensemble du contenu de ce site (textes, images, vidéos, graphiques) appartiennent à Pinterest et Pinterest.
+          Toute reproduction, distribution ou utilisation identiques sans autorisation préalable est interdite.
+        </p>
+
+        <h3>Protection des données personnelles</h3>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
+          de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au
+          +33767017040.
+        </p>
+
+        <h3>Cookies</h3>
+        <p>
+          Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
+          du site peuvent être utilisés.
+        </p>
+
+        <button id="close-legales">Fermer</button>
+      </div>
+    </section>
+
+    <a href="#" id="retour" title="Retour en haut de page"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
   </main>
 
-  <!-- Pied de page -->
   <footer>
     <div class="footer-container">
       <div class="footer-content">
 
         <!-- Colonne gauche : logo + texte à propos -->
         <div class="footer-left">
-          <div class="footer-titre">DATAFEM</div>
+          <h2>DATAFEM</h2>
           <div class="footer-about">
-            <h2>À propos de nous</h2>
+            <h3>À propos de nous</h3>
             <p>
               Ce projet est né du désir de rendre visibles les femmes artistes que l'histoire a trop longtemps laissées
               dans l'ombre. Notre objectif : rappeler que l'art au féminin fait partie intégrante de notre patrimoine
@@ -295,12 +394,12 @@
           <div class="footer-contact">
             <h2>Nous contacter</h2>
             <div class="contact-item">
-              <div class="contact-label">Téléphone :</div>
-              <div class="contact-value"> +33767017040 </div>
+              <p class="contact-label">Téléphone :</p>
+              <p class="contact-value"> +33 7 67 01 70 40 </p>
             </div>
             <div class="contact-item">
-              <div class="contact-label">Email :</div>
-              <div class="contact-value">datafem@gmail.com</div>
+              <p class="contact-label">Email :</p>
+              <p class="contact-value">datafem@gmail.com</p>
             </div>
             <div class="red-underline"></div>
           </div>
@@ -310,7 +409,7 @@
         <div class="footer-right">
           <div class="footer-social">
             <img src="medias/logo_footer.png" alt="Datafem Logo" class="logo_footer">
-            <div class="social-titre">Nous suivre</div>
+            <h3 class="social-titre">Nous suivre</h3>
             <div class="social-icons">
               <a href="#" class="social-icon"><img src="medias/instagram.png" alt="Instagram"></a>
               <a href="#" class="social-icon"><img src="medias/facebook.png" alt="Facebook"></a>
@@ -321,9 +420,6 @@
 
       </div>
     </div>
-
-    <!-- Bas de page -->
-    <div class="footer-bottom">
       <div class="footer-bottom-content">
         <div>
           <a href="javascript:void(0);" class="footer-link" id="btn-legales">Mentions légales et crédits</a>
@@ -815,10 +911,17 @@
       </div>
     </div>
   </div>
-
-
+   <!-- Bas de page -->
+    <div class="footer-bottom">
   <script src="script.js"></script>
+=======
+      <button id="mentionsLegales">Mentions légales</button>
+
+      <p class="copyright">© 2025 – Datafem. Tous droits réservés.</p>
+    </div>
+  </footer>
   <script type="module" src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

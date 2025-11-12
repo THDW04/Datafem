@@ -1,4 +1,3 @@
-
 // Étape 1 : l'animation du rideau
 document.addEventListener('DOMContentLoaded', () => {
   const left = document.getElementById('curtain-left');
@@ -20,38 +19,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (enterBtn) {
     enterBtn.addEventListener('click', async () => {
       document.getElementById('logo-screen').style.display = 'none';
+      document.querySelector('header').style.display = 'flex';
       document.querySelector('main').style.display = 'block';
       document.querySelector('footer').style.display = 'flex';
-      document.querySelector('header').style.display = 'flex';
     });
   }
 });
 
 // Modale des mentions légales - avec délégation d'événements
-document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', function(e) {
-    // Ouvrir la modale
-    if (e.target.id === 'btn-legales' || e.target.closest('#btn-legales')) {
-      e.preventDefault();
-      const modale = document.getElementById('modale-legales');
-      if (modale) {
-        modale.style.display = 'flex';
-      }
-    }
-    
-    // Fermer avec le bouton
-    if (e.target.id === 'close-legales') {
-      const modale = document.getElementById('modale-legales');
-      if (modale) {
-        modale.style.display = 'none';
-      }
-    }
-    
-    // Fermer en cliquant à l'extérieur
-    if (e.target.id === 'modale-legales') {
-      e.target.style.display = 'none';
-    }
-  });
+let modale = document.querySelector('.modale-mentions');
+let btnMentions = document.getElementById('mentionsLegales');
+
+btnMentions.addEventListener('click', () => {
+  modale.style.display = "flex";
+});
+
+document.getElementById('close-legales').addEventListener('click', () => {
+  modale.style.display = "none";
+});
+
+// Fermer en cliquant en dehors du contenu
+window.addEventListener('click', (e) => {
+  if (e.target === modale) {
+    modale.style.display = "none";
+  }
 });
 
 // Animation de la frise chronologique
