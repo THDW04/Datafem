@@ -1224,3 +1224,45 @@ footer p,
 .modale-legales-content::-webkit-scrollbar-thumb:hover {
   background: #070707;
 }
+/* --- Styles pour la navigation par onglets (Tabs) --- */
+.tabs-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(121, 28, 23, 0.2);
+  overflow-x: auto;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  color: #791c17;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.tab-button:hover {
+  color: #9b3747;
+}
+
+.tab-button.active {
+  color: #791c17;
+  font-weight: 600;
+  border-bottom: 3px solid #791c17;
+}
+
+/* Cache le contenu des onglets par défaut */
+.tab-content {
+  display: none; 
+}
+
+/* Affiche l'onglet actif */
+.tab-content.active {
+  display: block;
+}
