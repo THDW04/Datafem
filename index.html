@@ -326,9 +326,15 @@
     </section>
 
     <section class="modale-mentions">
-      <div class="modale-legales-content">
-        <h2>Mentions Légales</h2>
+          <div class="modale-legales-content">
 
+      <div class="tabs-nav">
+        <button class="tab-button active" data-tab="tab-legales">Mentions Légales</button>
+        <button class="tab-button" data-tab="tab-credits">Crédits</button>
+      </div>
+
+      <div id="tab-legales" class="tab-content active">
+        <h2>Mentions Légales</h2>
         <h3>Éditeur du site</h3>
         <p>
           Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet)
@@ -364,9 +370,512 @@
           Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
           du site peuvent être utilisés.
         </p>
-
-        <button id="close-legales">Fermer</button>
       </div>
+
+      <div id="tab-credits" class="tab-content">
+        <h3>Crédits</h3>
+        <p>
+          Ce tableau récapitule les sources et les droits d'auteur pour l'ensemble des images et clips vidéo utilisés
+          sur le site.
+        </p>
+
+        <div class="credits-data-container">
+          <table class="credits-table">
+            <thead>
+              <tr>
+                <th>Lien de l'image</th>
+                <th>Personnalité</th>
+                <th>Photographe/Auteur de l'Œuvre</th>
+                <th>Les Droits d'Auteur</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="6" class="section-divider"></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.lapoesie.org/auteur/victor-hugo/" target="_blank">https://www.lapoesie.org</a>
+                </td>
+                <td>Victor Hugo</td>
+                <td>Étienne Carjat</td>
+                <td>Domaine Public (Photo prise 1876)</td>
+                <td>1876</td>
+              </tr>
+              <tr>
+                <td><a
+                    href="https://www.independent.co.uk/arts-entertainment/books/features/what-is-sensational-by-charles-dickens-a-spectacular-polemic-from-the-great-man-of-letters-10386310.html"
+                    target="_blank">https://www.indepencil.com</a></td>
+                <td>Charles Dickens</td>
+                <td>John and Charles Watkins</td>
+                <td>Domaine Public (Photo prise 1860)</td>
+                <td>1860</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.britannica.com/biography/Jane-Austen"
+                    target="_blank">https://www.britannica.com</a></td>
+                <td>Jane Austen</td>
+                <td>Cassandra Austen (Original c. 1810)</td>
+                <td>Domaine Public (Dessin/Gravure très ancien)</td>
+                <td>1810</td>
+              </tr>
+              <tr>
+                <td><a href="https://fineartamerica.com/featured/self-portrait-claude-monet.html"
+                    target="_blank">https://fineartamerica.com</a></td>
+                <td>Claude Monet</td>
+                <td>Claude Monet</td>
+                <td>Domaine Public</td>
+                <td>1886</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.vintag.es/2017/12/30-gorgeous-portraits-of-georgia.html#google_vignette"
+                    target="_blank">https://www.vintage.es</a></td>
+                <td>Georgia O'Keeffe</td>
+                <td>Alfred Stieglitz</td>
+                <td>Domaine Public</td>
+                <td>1937</td>
+              </tr>
+              <tr>
+                <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_1945_(cropped).jpg"
+                    target="_blank">https://commons.wikimedia.org</a></td>
+                <td>Albert Camus</td>
+                <td>Studio Harcourt</td>
+                <td>Domaine Public Probable</td>
+                <td>1945</td>
+              </tr>
+
+              <tr>
+                <td colspan="6" class="section-divider"></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.britannica.com/biography/Edith-Piaf"
+                    target="_blank">https://www.britannica.com</a></td>
+                <td>Édith Piaf</td>
+                <td>Inconnu/Agence d'archive</td>
+                <td>Actifs (Jusqu'au 1er janv. 2034 en France)</td>
+                <td>1940</td>
+              </tr>
+              <tr>
+                <td><a href="https://co.pinterest.com/pin/783907878919052452/" target="_blank">https://i.pinimg.com</a>
+                </td>
+                <td>Charlie Chaplin</td>
+                <td>Inconnu/Studio</td>
+                <td>Actifs (Jusqu'au 1er janv. 2078 en France)</td>
+                <td>1920</td>
+              </tr>
+              <tr>
+                <td><a
+                    href="https://www.gettyimages.ie/bot-wall?returnUrl=%2Fphotos%2Fagatha-christie-portrait&language=en-gb"
+                    target="_blank">https://www.gettyimages.fr</a></td>
+                <td>Agatha Christie</td>
+                <td>Inconnu/Agence d'archive</td>
+                <td>Actifs (Jusqu'au 1er janv. 2046 en France)</td>
+                <td>1944</td>
+              </tr>
+              <tr>
+                <td><a href="https://serlesa.com.mx/elvis-presley/" target="_blank">https://eedersa.com</a></td>
+                <td>Elvis Presley</td>
+                <td>Inconnu/RCA/Agence</td>
+                <td>Actifs (Jusqu'au 1er janv. 2048 en France)</td>
+                <td>1956</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.newyorker.com/magazine/1957/11/09/marlon-brando-profile-truman-capote"
+                    target="_blank">https://www.newyorker.com</a></td>
+                <td>Marlon Brando</td>
+                <td>Inconnu/Photographe de Studio</td>
+                <td>Actifs (Date d'expiration dépend du photographe inconnu)</td>
+                <td>1957</td>
+              </tr>
+              <tr>
+                <td><a href="https://culturafotografica.com.br/galeria-andy-warhol/"
+                    target="_blank">https://cultura.fotografar.com</a></td>
+                <td>Andy Warhol</td>
+                <td>Andy Warhol</td>
+                <td>Actifs (Jusqu'au 1er janv. 2058 en France)</td>
+                <td>1986</td>
+              </tr>
+              <tr>
+                <td><a
+                    href="https://d46t91e071bc73d7v56g.investara.co.in/a0x1/?cid=90c1136c29a1f24c19b3&extclickid=5c1d39daddf023787d219fb271a96b13&t1=18060043&t2=3228700&tsid=79&clickid=d46t91e071bc73d7v56g&cost=0.810000&domain=connectedflownow.com&lp_key=176259ab3f2250e104d7b8813d1a78e9e0f3514353&list=8&scenario=2&img=1"
+                    target="_blank">https://i.dm46fe9f071bbc.com</a></td>
+                <td>George Michael</td>
+                <td>Brian Aris</td>
+                <td>Actifs (Jusqu'au 1er janv. 2087 en France)</td>
+                <td>1987</td>
+              </tr>
+
+              <tr>
+                <td colspan="6" class="section-divider"></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.singulart.com/blog/en/2023/12/11/the-wounded-deer-by-frida-kahlo/"
+                    target="_blank">https://www.singleart.com</a></td>
+                <td>Frida Kahlo</td>
+                <td>Nickolas Murray</td>
+                <td>Actifs (Jusqu'au 1er janv. 2036 en France)</td>
+                <td>1940</td>
+              </tr>
+              <tr>
+                <td><a href="https://dglsports.ca/product/bob-marley/" target="_blank">https://ggglsports.com</a></td>
+                <td>Bob Marley</td>
+                <td>Inconnu / Agence</td>
+                <td>Actifs (Jusqu'au 1er janv. 2052 en France)</td>
+                <td>1970</td>
+              </tr>
+              <tr>
+                <td><a href="https://fr.pinterest.com/pin/864128247225718143/" target="_blank">https://i.pinimg.com</a>
+                </td>
+                <td>Michael Jackson</td>
+                <td>Garry Gross</td>
+                <td>Actifs (Date d'expiration dépend du photographe)</td>
+                <td>1990</td>
+              </tr>
+              <tr>
+                <td><a href="https://fr.pinterest.com/?show_error=true" target="_blank">https://i.pinimg.com</a></td>
+                <td>Whitney Houston</td>
+                <td>Inconnu / Agence</td>
+                <td>Actifs (Date d'expiration dépend du photographe)</td>
+                <td>2005</td>
+              </tr>
+              <tr>
+                <td><a href="https://in.pinterest.com/pin/745416175815657377/" target="_blank">https://i.pinimg.com</a>
+                </td>
+                <td>Salvador Dalí</td>
+                <td>Rijaile Jan (Illustration de 2013)</td>
+                <td>Actifs (Illustrateur vivant)</td>
+                <td>1980</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.lipstickalley.com/threads/young-robert-de-niro.1638497/"
+                    target="_blank">https://www.lipstickdailymakeup.com</a></td>
+                <td>Robert De Niro</td>
+                <td>Inconnu / Agence</td>
+                <td>Actifs (Date d'expiration dépend du photographe)</td>
+                <td>1973</td>
+              </tr>
+              <tr>
+                <td><a href="https://artslife.com/2017/07/25/gala-e-asta-a-st-tropez-per-la-di-caprio-foundation/"
+                    target="_blank">https://artslife.com</a></td>
+                <td>Leonardo DiCaprio</td>
+                <td>Inconnu / Agence</td>
+                <td>Actifs (Date d'expiration dépend du photographe)</td>
+                <td>2004</td>
+              </tr>
+              <tr>
+                <td><a href="https://celebmafia.com/beyonce-knowles-01-02-2024-3973685/"
+                    target="_blank">https://celebsmafia.com</a></td>
+                <td>Beyoncé</td>
+                <td>Campbell Addy</td>
+                <td>Actifs (Photographe vivant)</td>
+                <td>2019</td>
+              </tr>
+              <tr>
+                <td><a href="https://cel-bio.blogspot.com/2016/09/tom-hanks.html"
+                    target="_blank">https://oel-bio.blogspot.com</a></td>
+                <td>Tom Hanks</td>
+                <td>Agence de presse</td>
+                <td>Actifs (Date d'expiration dépend de l'agence)</td>
+                <td>2020</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="credits-data-container">
+        <table class="credits-table signatures-table">
+          <thead>
+            <tr>
+              <th>Titre de l'Œuvre</th>
+              <th>Nom de l'artiste</th>
+              <th>Année de création</th>
+              <th>Détenteur des droits</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frida Kahlo</td>
+              <td>2019</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg</a></td>
+            </tr>
+            <tr>
+              <td>George Sand</td>
+              <td>1857</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg</a>
+              </td>
+            </tr>
+            <tr>
+              <td>George O'Keeffe</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>Tom Hanks</td>
+              <td>1995</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Whitney Houston</td>
+              <td>1987</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Victor Hugo</td>
+              <td>1201</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Michael Jackson</td>
+              <td>2009</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Jane Austen</td>
+              <td>1817</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Yayoi Kusama</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td><a href="https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama"
+                  target="_blank">https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama</a></td>
+            </tr>
+            <tr>
+              <td>Léon TOLSTOI</td>
+              <td>1901</td>
+              <td>Domaine Public</td>
+              <td><a
+                  href="https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image"
+                  target="_blank">https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Madonna</td>
+              <td>2008</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Madonna_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Madonna_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Mariah Carey</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>Marilyn Monroe</td>
+              <td>1947</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Millie Bobby Brown</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>George Orwell</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Pablo Picasso</td>
+              <td>2007</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Julia Roberts</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>J.K. Rowling</td>
+              <td>2010</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png</a></td>
+            </tr>
+            <tr>
+              <td>Jenny Saville</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg</a></td>
+            </tr>
+            <tr>
+              <td>Scarlett Johansson</td>
+              <td>2010</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Mary Shelley</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>Simone de Beauvoir</td>
+              <td>1974</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Frank Sinatra</td>
+              <td>2019</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Meryl Streep</td>
+              <td>2003</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Tamara de Lempicka</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+              <td>non précisée</td>
+            </tr>
+            <tr>
+              <td>Virginia Woolf</td>
+              <td>1924</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Andy Warhol</td>
+              <td>non précisée</td>
+              <td>Domaine public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Beyoncé</td>
+              <td>2009</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Bob Marley</td>
+              <td>2025</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Marlon Brando</td>
+              <td>2020</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Albert Camus</td>
+              <td>1950</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Charlie Chaplin</td>
+              <td>2011</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg</a></td>
+            </tr>
+            <tr>
+              <td>Charles Dickens</td>
+              <td>non précisée</td>
+              <td>Domaine public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Salvador Dalí</td>
+              <td>2019</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Claude Monet</td>
+              <td>non précisée</td>
+              <td>Domaine public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Robert De Niro</td>
+              <td>2024</td>
+              <td>Domaine Public</td>
+              <td><a
+                  href="https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Leonardo DiCaprio</td>
+              <td>2024</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png</a></td>
+            </tr>
+            <tr>
+              <td>Édith Piaf</td>
+              <td>2019</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg</a></td>
+            </tr>
+            <tr>
+              <td>Elvis Presley</td>
+              <td>2011</td>
+              <td>Domaine Public</td>
+              <td><a href="https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg"
+                  target="_blank">https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+      <button id="close-legales">Fermer</button>
+    </div>
+
     </section>
 
     <a href="#" id="retour" title="Retour en haut de page"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
@@ -420,506 +929,13 @@
 
       </div>
     </div>
-      <div class="footer-bottom-content">
-        <div>
-          <a href="javascript:void(0);" class="footer-link" id="btn-legales">Mentions légales et crédits</a>
-        </div>
-        <div class="copyright">© 2025 – Datafem. Tous droits réservés.</div>
-      </div>
-    </div>
-  </footer>
-
-    <div id="modale-legales" class="modale-legales">
-    <div class="modale-legales-content">
-      
-      <div class="tabs-nav">
-        <button class="tab-button active" data-tab="tab-legales">Mentions Légales</button>
-        <button class="tab-button" data-tab="tab-credits">Crédits</button>
-      </div>
-
-      <div id="tab-legales" class="tab-content active">
-        <h2>Mentions Légales</h2>
-        <h3>Éditeur du site</h3>
-        <p>
-          Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet) de
-          l'IUT Gustave Eiffel de Champs sur Marne.
-        </p>
-
-        <h3>Directrices de la publication</h3>
-        <p>
-          Les directrices de la publication sont BENETEAU Lola, POHU Maëlys et VILASSE Nathalia.
-        </p>
-
-        <h3>Hébergement</h3>
-        <p>
-          Ce site est hébergé par 02switch.
-        </p>
-
-        <h3>Propriété intellectuelle</h3>
-        <p>
-          L'ensemble du contenu de ce site (textes, images, vidéos, graphiques) appartiennent à Pinterest et Pinterest.
-          Toute reproduction, distribution ou utilisation identiques sans autorisation préalable est interdite.
-        </p>
-
-        <h3>Protection des données personnelles</h3>
-        <p>
-          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
-          de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au
-          +33767017040.
-        </p>
-
-        <h3>Cookies</h3>
-        <p>
-          Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
-          du site peuvent être utilisés.
-        </p>
-      </div>
-
-      <div id="tab-credits" class="tab-content">
-        <h2>Crédits</h2>
-        <p>
-            Ce tableau récapitule les sources et les droits d'auteur pour l'ensemble des images et clips vidéo utilisés sur le site.
-        </p>
-        
-        <div class="credits-data-container">
-            <table class="credits-table">
-                <thead>
-                    <tr>
-                        <th>Lien de l'image</th>
-                        <th>Personnalité</th>
-                        <th>Photographe/Auteur de l'Œuvre</th>
-                        <th>Les Droits d'Auteur</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td colspan="6" class="section-divider"></td></tr>
-                    <tr>
-                        <td><a href="https://www.lapoesie.org/auteur/victor-hugo/" target="_blank">https://www.lapoesie.org</a></td>
-                        <td>Victor Hugo</td>
-                        <td>Étienne Carjat</td>
-                        <td>Domaine Public (Photo prise 1876)</td>
-                        <td>1876</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.independent.co.uk/arts-entertainment/books/features/what-is-sensational-by-charles-dickens-a-spectacular-polemic-from-the-great-man-of-letters-10386310.html" target="_blank">https://www.indepencil.com</a></td>
-                        <td>Charles Dickens</td>
-                        <td>John and Charles Watkins</td>
-                        <td>Domaine Public (Photo prise 1860)</td>
-                        <td>1860</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.britannica.com/biography/Jane-Austen" target="_blank">https://www.britannica.com</a></td>
-                        <td>Jane Austen</td>
-                        <td>Cassandra Austen (Original c. 1810)</td>
-                        <td>Domaine Public (Dessin/Gravure très ancien)</td>
-                        <td>1810</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://fineartamerica.com/featured/self-portrait-claude-monet.html" target="_blank">https://fineartamerica.com</a></td>
-                        <td>Claude Monet</td>
-                        <td>Claude Monet</td>
-                        <td>Domaine Public</td>
-                        <td>1886</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.vintag.es/2017/12/30-gorgeous-portraits-of-georgia.html#google_vignette" target="_blank">https://www.vintage.es</a></td>
-                        <td>Georgia O'Keeffe</td>
-                        <td>Alfred Stieglitz</td>
-                        <td>Domaine Public</td>
-                        <td>1937</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_1945_(cropped).jpg" target="_blank">https://commons.wikimedia.org</a></td>
-                        <td>Albert Camus</td>
-                        <td>Studio Harcourt</td>
-                        <td>Domaine Public Probable</td>
-                        <td>1945</td>
-                    </tr>
-                    
-                    <tr><td colspan="6" class="section-divider"></td></tr>
-                    <tr>
-                        <td><a href="https://www.britannica.com/biography/Edith-Piaf" target="_blank">https://www.britannica.com</a></td>
-                        <td>Édith Piaf</td>
-                        <td>Inconnu/Agence d'archive</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2034 en France)</td>
-                        <td>1940</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://co.pinterest.com/pin/783907878919052452/" target="_blank">https://i.pinimg.com</a></td>
-                        <td>Charlie Chaplin</td>
-                        <td>Inconnu/Studio</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2078 en France)</td>
-                        <td>1920</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.gettyimages.ie/bot-wall?returnUrl=%2Fphotos%2Fagatha-christie-portrait&language=en-gb" target="_blank">https://www.gettyimages.fr</a></td>
-                        <td>Agatha Christie</td>
-                        <td>Inconnu/Agence d'archive</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2046 en France)</td>
-                        <td>1944</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://serlesa.com.mx/elvis-presley/" target="_blank">https://eedersa.com</a></td>
-                        <td>Elvis Presley</td>
-                        <td>Inconnu/RCA/Agence</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2048 en France)</td>
-                        <td>1956</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.newyorker.com/magazine/1957/11/09/marlon-brando-profile-truman-capote" target="_blank">https://www.newyorker.com</a></td>
-                        <td>Marlon Brando</td>
-                        <td>Inconnu/Photographe de Studio</td>
-                        <td>Actifs (Date d'expiration dépend du photographe inconnu)</td>
-                        <td>1957</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://culturafotografica.com.br/galeria-andy-warhol/" target="_blank">https://cultura.fotografar.com</a></td>
-                        <td>Andy Warhol</td>
-                        <td>Andy Warhol</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2058 en France)</td>
-                        <td>1986</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://d46t91e071bc73d7v56g.investara.co.in/a0x1/?cid=90c1136c29a1f24c19b3&extclickid=5c1d39daddf023787d219fb271a96b13&t1=18060043&t2=3228700&tsid=79&clickid=d46t91e071bc73d7v56g&cost=0.810000&domain=connectedflownow.com&lp_key=176259ab3f2250e104d7b8813d1a78e9e0f3514353&list=8&scenario=2&img=1" target="_blank">https://i.dm46fe9f071bbc.com</a></td>
-                        <td>George Michael</td>
-                        <td>Brian Aris</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2087 en France)</td>
-                        <td>1987</td>
-                    </tr>
-
-                    <tr><td colspan="6" class="section-divider"></td></tr>
-                    <tr>
-                        <td><a href="https://www.singulart.com/blog/en/2023/12/11/the-wounded-deer-by-frida-kahlo/" target="_blank">https://www.singleart.com</a></td>
-                        <td>Frida Kahlo</td>
-                        <td>Nickolas Murray</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2036 en France)</td>
-                        <td>1940</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://dglsports.ca/product/bob-marley/" target="_blank">https://ggglsports.com</a></td>
-                        <td>Bob Marley</td>
-                        <td>Inconnu / Agence</td>
-                        <td>Actifs (Jusqu'au 1er janv. 2052 en France)</td>
-                        <td>1970</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://fr.pinterest.com/pin/864128247225718143/" target="_blank">https://i.pinimg.com</a></td>
-                        <td>Michael Jackson</td>
-                        <td>Garry Gross</td>
-                        <td>Actifs (Date d'expiration dépend du photographe)</td>
-                        <td>1990</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://fr.pinterest.com/?show_error=true" target="_blank">https://i.pinimg.com</a></td>
-                        <td>Whitney Houston</td>
-                        <td>Inconnu / Agence</td>
-                        <td>Actifs (Date d'expiration dépend du photographe)</td>
-                        <td>2005</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://in.pinterest.com/pin/745416175815657377/" target="_blank">https://i.pinimg.com</a></td>
-                        <td>Salvador Dalí</td>
-                        <td>Rijaile Jan (Illustration de 2013)</td>
-                        <td>Actifs (Illustrateur vivant)</td>
-                        <td>1980</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.lipstickalley.com/threads/young-robert-de-niro.1638497/" target="_blank">https://www.lipstickdailymakeup.com</a></td>
-                        <td>Robert De Niro</td>
-                        <td>Inconnu / Agence</td>
-                        <td>Actifs (Date d'expiration dépend du photographe)</td>
-                        <td>1973</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://artslife.com/2017/07/25/gala-e-asta-a-st-tropez-per-la-di-caprio-foundation/" target="_blank">https://artslife.com</a></td>
-                        <td>Leonardo DiCaprio</td>
-                        <td>Inconnu / Agence</td>
-                        <td>Actifs (Date d'expiration dépend du photographe)</td>
-                        <td>2004</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://celebmafia.com/beyonce-knowles-01-02-2024-3973685/" target="_blank">https://celebsmafia.com</a></td>
-                        <td>Beyoncé</td>
-                        <td>Campbell Addy</td>
-                        <td>Actifs (Photographe vivant)</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://cel-bio.blogspot.com/2016/09/tom-hanks.html" target="_blank">https://oel-bio.blogspot.com</a></td>
-                        <td>Tom Hanks</td>
-                        <td>Agence de presse</td>
-                        <td>Actifs (Date d'expiration dépend de l'agence)</td>
-                        <td>2020</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-      </div>
-      <div class="credits-data-container">
-            <table class="credits-table signatures-table">
-                <thead>
-                    <tr>
-                        <th>Titre de l'Œuvre</th>
-                        <th>Nom de l'artiste</th>
-                        <th>Année de création</th>
-                        <th>Détenteur des droits</th>
-                        <th>Source</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Frida Kahlo</td>
-                        <td>2019</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>George Sand</td>
-                        <td>1857</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg</a></td>
-                    </tr>
-                    <tr>
-                        <td>George O'Keeffe</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>Tom Hanks</td>
-                        <td>1995</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Whitney Houston</td>
-                        <td>1987</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Victor Hugo</td>
-                        <td>1201</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Michael Jackson</td>
-                        <td>2009</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jane Austen</td>
-                        <td>1817</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Yayoi Kusama</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td><a href="https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama" target="_blank">https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama</a></td>
-                    </tr>
-                    <tr>
-                        <td>Léon TOLSTOI</td>
-                        <td>1901</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image" target="_blank">https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image</a></td>
-                    </tr>
-                    <tr>
-                        <td>Madonna</td>
-                        <td>2008</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Madonna_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Madonna_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Mariah Carey</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>Marilyn Monroe</td>
-                        <td>1947</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Millie Bobby Brown</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>George Orwell</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Pablo Picasso</td>
-                        <td>2007</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Julia Roberts</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>J.K. Rowling</td>
-                        <td>2010</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png" target="_blank">https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jenny Saville</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Scarlett Johansson</td>
-                        <td>2010</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Mary Shelley</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>Simone de Beauvoir</td>
-                        <td>1974</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Frank Sinatra</td>
-                        <td>2019</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Meryl Streep</td>
-                        <td>2003</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Tamara de Lempicka</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                        <td>non précisée</td>
-                    </tr>
-                    <tr>
-                        <td>Virginia Woolf</td>
-                        <td>1924</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Andy Warhol</td>
-                        <td>non précisée</td>
-                        <td>Domaine public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Beyoncé</td>
-                        <td>2009</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Bob Marley</td>
-                        <td>2025</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Marlon Brando</td>
-                        <td>2020</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Albert Camus</td>
-                        <td>1950</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Charlie Chaplin</td>
-                        <td>2011</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Charles Dickens</td>
-                        <td>non précisée</td>
-                        <td>Domaine public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Salvador Dalí</td>
-                        <td>2019</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Claude Monet</td>
-                        <td>non précisée</td>
-                        <td>Domaine public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Robert De Niro</td>
-                        <td>2024</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png" target="_blank">https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png</a></td>
-                    </tr>
-                    <tr>
-                        <td>Leonardo DiCaprio</td>
-                        <td>2024</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png" target="_blank">https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png</a></td>
-                    </tr>
-                    <tr>
-                        <td>Édith Piaf</td>
-                        <td>2019</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg</a></td>
-                    </tr>
-                    <tr>
-                        <td>Elvis Presley</td>
-                        <td>2011</td>
-                        <td>Domaine Public</td>
-                        <td><a href="https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-      </div>
-      <div class="modale-legales-footer">
-        <button id="close-legales">Fermer</button>
-      </div>
-    </div>
-  </div>
-   <!-- Bas de page -->
     <div class="footer-bottom">
-  <script src="script.js"></script>
-=======
-      <button id="mentionsLegales">Mentions légales</button>
-
+      <button id="mentionsLegales">Mentions légales et Crédits</button>
       <p class="copyright">© 2025 – Datafem. Tous droits réservés.</p>
     </div>
+    </div>
   </footer>
+
   <script type="module" src="data.js"></script>
   <script src="script.js"></script>
 </body>
