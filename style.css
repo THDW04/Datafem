@@ -610,7 +610,7 @@ nav {
 .period {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 4rem;
-  color: #930007;
+  color: #ac0009;
   margin: 0 0 10px 0;
 }
 
@@ -1278,3 +1278,7 @@ th, td {
   text-align: left;
 }
 
+.super {
+    font-size: 0.5em;
+    vertical-align: super;
+  }
