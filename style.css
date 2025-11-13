@@ -1140,7 +1140,7 @@ footer h3 {
 .modale-legales-content {
     background: var(--rose);
     border-radius: 30px;
-    padding: 50px 45px;
+    padding: 50px 45px 30px 45px;
     max-width: 1200px;
     width: 90%;
     height: 90vh;
@@ -1189,8 +1189,7 @@ footer h3 {
     letter-spacing: 1px;
     font-family: 'Jost', sans-serif;
     display: block;
-    margin: 0 auto;
-}
+    margin: 30px auto 0 auto;}
 
 #close-legales:hover {
     background: var(--creme);
@@ -1262,3 +1261,20 @@ footer h3 {
 .tab-content.active {
   display: block;
 }
+
+/* Tableaux */
+.credits-data-container{
+  margin-bottom:50px ;
+}
+
+.credits-data-container table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid var(--foncée);
+  padding: 12px;
+  text-align: left;
+}
+
