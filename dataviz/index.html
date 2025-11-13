@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datafem</title>
+
+  <!-- Favicon clair/sombre selon le thème du système -->
+  <link rel="icon" href="medias/favicon_noir.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="medias/favicon_blanc.png" media="(prefers-color-scheme: dark)">
+
+  <!-- Typographies -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/kapakana" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <section>
+    <!-- Animation du rideau (transition d’ouverture) -->
+    <div class="curtain left" id="curtain-left"></div>
+    <div class="curtain right" id="curtain-right"></div>
+
+    <!-- Écran d’intro : logo + bouton "Entrer" -->
+    <div id="logo-screen">
+      <img src="medias/logo-final.png" alt="Logo Datafem" class="logo1">
+      <button id="enter-btn">ENTRER</button>
+    </div>
+  </section>
+
+  <!-- Page principale (après l’écran d’intro) -->
+  <header>
+    <!-- Petit logo fixe en haut -->
+    <img src="medias/logoblanc.png" alt="Logo Datafem" class="mini-logo">
+
+    <!-- Icônes de navigation rapide -->
+    <nav>
+      <a href="#graph" class="icon icon-graphe">
+        <img src="medias/graphe.png" alt="Voir le graphique">
+      </a>
+      <a href="#frise" class="icon icon-temps">
+        <img src="medias/frise.webp" alt="Voir la frise chronologique">
+      </a>
+      <a href="#recommendation" class="icon icon-coeur">
+        <img src="medias/recommendation.webp" alt="Voir nos recommendations">
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section vidéo en carrousel (marilyn, freda, beyoncé) -->
+    <section class="carousel">
+      <div class="carousel-inner container">
+        <video src="medias/marilyn.mp4" autoplay muted loop class="slide"></video>
+        <video src="medias/freda.mp4" autoplay muted loop class="slide"></video>
+        <video src="medias/beyonce.mp4" autoplay muted loop class="slide"></video>
+      </div>
+    </section>
+
+    <!-- Texte d’introduction du projet -->
+    <div class="texte">
+      <p>Pendant des siècles, des femmes ont créé, innové, bouleversé l’art… mais leurs noms ont été effacés ou volés.
+      </p>
+      <p>Quelques-unes ont percé le silence, devenant des symboles malgré un chemin bien plus rude que celui des hommes.
+        Leur lumière a souvent été filtrée, détournée, réduite à une image qui les dépassait.</p>
+      <p>Ce site est là pour rendre visible ce qui a été caché, rétablir des vérités oubliées et redonner à ces
+        créatrices la place qu’elles méritent.
+        Parce que connaître leurs histoires, c’est aussi réapprendre à regarder l’Histoire autrement.</p>
+    </div>
+
+    <!-- Graphique interactif -->
+    <section id="graph">
+
+      <h2>Évolution du nombre de femmes et d’hommes artistes au fil des années</h2>
+
+      <div id="graph-contain"></div>
+
+      <div class="btns-container">
+
+        <div class="btns">
+          <button id="actrices">Actrices</button>
+          <button id="autrices">Autrices</button>
+          <button id="chanteuses">Chanteuses</button>
+          <button id="peintres">Peintres</button>
+        </div>
+
+        <button id="populaire">Voir les artistes célèbres</button>
+
+      </div>
+
+
+      <div class="analyse">
+        <h3>Interprétation :</h3>
+
+        <p>La baisse du nombre d’artistes après 1940 - 1960 ne reflète pas une diminution réelle, mais plutôt un
+          effet de notoriété.
+          Les artistes nés plus récemment n’ont pas encore eu le temps d’acquérir la même
+          reconnaissance historique que leurs prédécesseurs.
+        </p>
+
+      </div>
+
+      <section id="modale" class="modale"></section>
+    </section>
+
+    <!-- Frise Chronologique -->
+
+    <div class="timeline" id="frise">
+
+      <p class="intro">
+        L’Histoire n’a pas toujours laissé de place aux femmes, mais elles ont toujours été là, à créer et à résister.
+        Cette frise raconte leur longue marche vers la reconnaissance.
+      </p>
+
+      <div class="centrer_frise">
+
+        <!-- === CARTE 1 === -->
+        <section class="card_timeline" id="card1">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">XVe–XVIe</h1>
+            <h2 class="subtitle">LES PREMIÈRES ARTISTES VISIBLES</h2>
+            <p class="descr">
+              Les femmes artistes émergent dans les cours royales et aristocratiques. Quelques peintres et musiciennes
+              se
+              distinguent, mais la plupart restent invisibles. L’accès aux académies et à la formation artistique leur
+              est
+              refusé.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin1.png" alt="XVe–XVIe">
+        </section>
+
+        <!-- === CARTE 2 === -->
+        <section class="card_timeline" id="card2">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">XVIIe–XVIIIe</h1>
+            <h2 class="subtitle">L'ART DANS LES SALONS</h2>
+            <p class="descr">
+              Des femmes écrivent, composent et animent des cercles littéraires, mais restent dans l’ombre. La création
+              publique reste dominée par les hommes. Les Lumières défendent l’égalité en théorie, sans la traduire en
+              pratique.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin2.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 3 === -->
+        <section class="card_timeline" id="card3">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">XIXe</h1>
+            <h2 class="subtitle">L’ÉDUCATION S’OUVRE LENTEMENT</h2>
+            <p class="descr">
+              Les révolutions industrielles et sociales permettent à certaines femmes d’accéder à l’enseignement, dont
+              l’enseignement artistique. Certaines d’entre elles osent publier leur création mais sont vues comme
+              “amatrices”. Les premiers mouvements féministes amorcent le changement.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin3.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 4 === -->
+        <section class="card_timeline" id="card4">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line bottom2"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">1940</h1>
+            <h2 class="subtitle">LA GUERRE ET LA RÉSISTANCE</h2>
+            <p class="descr">
+              Malgré la censure et la peur, de nombreuses femmes osent créer, et deviennent des symboles de la
+              résistance,
+              prenant une véritable place dans la seconde guerre mondiale. Cependant leur reconnaissance disparait après
+              la fin de la guerre.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin4.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 5 === -->
+        <section class="card_timeline" id="card5">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">1960</h1>
+            <h2 class="subtitle">L’IMAGE AVANT L’AUTONOMIE</h2>
+            <p class="descr">
+              Cinéma, chanson, mode : avec l’arrivée de la télévision et de l’image, les femmes deviennent des icônes
+              populaires. Pourtant, leur contrôle sur leurs œuvres reste limité. Les stéréotypes de la femme au foyer et
+              l’industrie audiovisuelle dominée par les hommes, freinent toute émancipation artistique réelle.
+            </p>
+          </div>
+        </section>
+
+        <!-- === CARTE 6 === -->
+        <section class="card_timeline" id="card6">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">1980</h1>
+            <h2 class="subtitle">POP, POUVOIR ET CONTRADICTIONS</h2>
+            <p class="descr">
+              Les artistes femmes envahissent la scène internationale grâce aux médias et à MTV. La visibilité explose,
+              mais souvent au prix d’une hypersexualisation. Les discours féministes persistent face au conservatisme
+              politique et à l’industrie du spectacle.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin5.png" alt="XVIIe–XVIIIe">
+        </section>
+
+        <!-- === CARTE 7 === -->
+        <section class="card_timeline" id="card7">
+          <div class="frame">
+            <div class="line top"></div>
+            <div class="line bottom"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+
+            <h1 class="period">2000</h1>
+            <h2 class="subtitle">INTERNET ET ÉMANCIPATION</h2>
+            <p class="descr">
+              Avec l’arrivée d’internet, les femmes s’autoproduisent, diffusent, dénoncent le sexisme. Les réseaux
+              sociaux amplifient leur parole et leur visibilité. Pourtant, les postes de direction dans le milieu
+              artistique restent majoritairement masculins, et les femmes continuent d’être moins bien rémunérées —
+              encore aujourd’hui.
+            </p>
+          </div>
+          <img class="photo" src="medias/dessin6.png" alt="XVIIe–XVIIIe">
+        </section>
+
+      </div>
+    </div>
+    <!-- Partie "Texte et recommandations" -->
+    <section class="contexte">
+      <div class="section-red texte">
+        <h2>Que peut-on retenir ?</h2>
+        <div class="divider"></div>
+        <p>
+          À l'époque, le talent des femmes était rarement reconnu, car la société patriarcale les limitait à des rôles
+          domestiques et leur fermait l’accès aux arts, à l'éducation et aux sciences. Même lorsqu’elles excellaient,
+          leurs réussites étaient souvent ignorées ou attribuées à des hommes. Aujourd’hui, la situation a évolué, mais
+          de
+          nombreuses inégalités persistent encore, et le chemin vers une véritable reconnaissance reste long.
+        </p>
+      </div>
+      <div class="section-rose texte">
+        <h2>Pourquoi est-ce important de le savoir ?</h2>
+        <div class="divider"></div>
+        <p>
+          C’est important de le savoir, surtout quand on est une femme, car cela permet de comprendre les injustices du
+          passé et de réaliser combien il a fallu de luttes pour obtenir plus d’égalité aujourd’hui. Cela rappelle aussi
+          que les femmes ont toujours eu du talent et des capacités, même si elles étaient invisibilisées, et que leur
+          reconnaissance actuelle est le fruit d’un long combat qu’il faut continuer à faire vivre.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-beige" id="recommendation">
+      <h2>Envie d’en savoir plus ? Voici quelques pistes.</h2>
+
+      <div class="cards">
+        <!-- Carte 1 : livre -->
+        <div class="card">
+          <h3>Littérature</h3>
+          <img class="petit" src="medias/livre.jpg" alt="Couverture du livre d'Angela Davis - Women, Race and Class">
+          <p>
+            <em>Women, Race & Class</em> d’Angela Davis explore comment genre, classe et race s’entrecroisent dans la
+            lutte pour les droits des femmes aux États-Unis.
+          </p>
+          <a href="https://www.fnac.com/a16854602/Angela-Y-Davis-WOMEN-RACE-et-CLASS">Acheter le livre</a>
+        </div>
+
+        <!-- Carte 2 : film -->
+        <div class="card">
+          <h3>Film</h3>
+          <img src="medias/film.jpg" alt="Affiche du film Suffragette">
+          <p>
+            <em>Suffragette</em> retrace le combat courageux des femmes du début du XXe siècle pour le droit de vote,
+            avec des interprétations puissantes et une reconstitution historique saisissante.
+          </p>
+          <a href="https://www.allocine.fr/seance/film-222967/pres-de-116620/#shwt_date=2025-10-16">Voir au cinéma</a>
+        </div>
+
+        <!-- Carte 3 : vidéo -->
+        <div class="card">
+          <h3>Vidéo</h3>
+          <img src="medias/video (2).png" alt="Miniature de la video - La place des femmes dans l’art">
+          <p>
+            Vidéo du Centre Pompidou sur les femmes artistes oubliées et leur rôle dans l’histoire de l’art.
+          </p>
+          <a href="https://www.youtube.com/watch?v=Jh_YT2bXbbA">Regarder la vidéo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="modale-mentions">
+      <div class="modale-legales-content">
+        <h2>Mentions Légales</h2>
+
+        <h3>Éditeur du site</h3>
+        <p>
+          Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet)
+          de
+          l'IUT Gustave Eiffel de Champs sur Marne.
+        </p>
+
+        <h3>Directrices de la publication</h3>
+        <p>
+          Les directrices de la publication sont BENETEAU Lola, POHU Maëlys et VILASSE Nathalia.
+        </p>
+
+        <h3>Hébergement</h3>
+        <p>
+          Ce site est hébergé par 02switch.
+        </p>
+
+        <h3>Propriété intellectuelle</h3>
+        <p>
+          L'ensemble du contenu de ce site (textes, images, vidéos, graphiques) appartiennent à Pinterest et Pinterest.
+          Toute reproduction, distribution ou utilisation identiques sans autorisation préalable est interdite.
+        </p>
+
+        <h3>Protection des données personnelles</h3>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
+          de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au
+          +33767017040.
+        </p>
+
+        <h3>Cookies</h3>
+        <p>
+          Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
+          du site peuvent être utilisés.
+        </p>
+
+        <button id="close-legales">Fermer</button>
+      </div>
+    </section>
+
+    <a href="#" id="retour" title="Retour en haut de page"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+
+        <!-- Colonne gauche : logo + texte à propos -->
+        <div class="footer-left">
+          <h2>DATAFEM</h2>
+          <div class="footer-about">
+            <h3>À propos de nous</h3>
+            <p>
+              Ce projet est né du désir de rendre visibles les femmes artistes que l'histoire a trop longtemps laissées
+              dans l'ombre. Notre objectif : rappeler que l'art au féminin fait partie intégrante de notre patrimoine
+              culturel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne milieu : contact -->
+        <div class="footer-middle">
+          <div class="footer-contact">
+            <h2>Nous contacter</h2>
+            <div class="contact-item">
+              <p class="contact-label">Téléphone :</p>
+              <p class="contact-value"> +33 7 67 01 70 40 </p>
+            </div>
+            <div class="contact-item">
+              <p class="contact-label">Email :</p>
+              <p class="contact-value">datafem@gmail.com</p>
+            </div>
+            <div class="red-underline"></div>
+          </div>
+        </div>
+
+        <!-- Colonne droite : réseaux sociaux -->
+        <div class="footer-right">
+          <div class="footer-social">
+            <img src="medias/logo_footer.png" alt="Datafem Logo" class="logo_footer">
+            <h3 class="social-titre">Nous suivre</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><img src="medias/instagram.png" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="medias/facebook.png" alt="Facebook"></a>
+              <a href="#" class="social-icon"><img src="medias/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+      <div class="footer-bottom-content">
+        <div>
+          <a href="javascript:void(0);" class="footer-link" id="btn-legales">Mentions légales et crédits</a>
+        </div>
+        <div class="copyright">© 2025 – Datafem. Tous droits réservés.</div>
+      </div>
+    </div>
+  </footer>
+
+    <div id="modale-legales" class="modale-legales">
+    <div class="modale-legales-content">
+      
+      <div class="tabs-nav">
+        <button class="tab-button active" data-tab="tab-legales">Mentions Légales</button>
+        <button class="tab-button" data-tab="tab-credits">Crédits</button>
+      </div>
+
+      <div id="tab-legales" class="tab-content active">
+        <h2>Mentions Légales</h2>
+        <h3>Éditeur du site</h3>
+        <p>
+          Le site Datafem est édité par un groupe d'élèves de la formation MMI (métiers du multimédia et de l'internet) de
+          l'IUT Gustave Eiffel de Champs sur Marne.
+        </p>
+
+        <h3>Directrices de la publication</h3>
+        <p>
+          Les directrices de la publication sont BENETEAU Lola, POHU Maëlys et VILASSE Nathalia.
+        </p>
+
+        <h3>Hébergement</h3>
+        <p>
+          Ce site est hébergé par 02switch.
+        </p>
+
+        <h3>Propriété intellectuelle</h3>
+        <p>
+          L'ensemble du contenu de ce site (textes, images, vidéos, graphiques) appartiennent à Pinterest et Pinterest.
+          Toute reproduction, distribution ou utilisation identiques sans autorisation préalable est interdite.
+        </p>
+
+        <h3>Protection des données personnelles</h3>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
+          de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous au
+          +33767017040.
+        </p>
+
+        <h3>Cookies</h3>
+        <p>
+          Ce site n'utilise pas de cookies de suivi. Seuls des cookies techniques nécessaires au bon fonctionnement
+          du site peuvent être utilisés.
+        </p>
+      </div>
+
+      <div id="tab-credits" class="tab-content">
+        <h2>Crédits</h2>
+        <p>
+            Ce tableau récapitule les sources et les droits d'auteur pour l'ensemble des images et clips vidéo utilisés sur le site.
+        </p>
+        
+        <div class="credits-data-container">
+            <table class="credits-table">
+                <thead>
+                    <tr>
+                        <th>Lien de l'image</th>
+                        <th>Personnalité</th>
+                        <th>Photographe/Auteur de l'Œuvre</th>
+                        <th>Les Droits d'Auteur</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="6" class="section-divider"></td></tr>
+                    <tr>
+                        <td><a href="https://www.lapoesie.org/auteur/victor-hugo/" target="_blank">https://www.lapoesie.org</a></td>
+                        <td>Victor Hugo</td>
+                        <td>Étienne Carjat</td>
+                        <td>Domaine Public (Photo prise 1876)</td>
+                        <td>1876</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.independent.co.uk/arts-entertainment/books/features/what-is-sensational-by-charles-dickens-a-spectacular-polemic-from-the-great-man-of-letters-10386310.html" target="_blank">https://www.indepencil.com</a></td>
+                        <td>Charles Dickens</td>
+                        <td>John and Charles Watkins</td>
+                        <td>Domaine Public (Photo prise 1860)</td>
+                        <td>1860</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.britannica.com/biography/Jane-Austen" target="_blank">https://www.britannica.com</a></td>
+                        <td>Jane Austen</td>
+                        <td>Cassandra Austen (Original c. 1810)</td>
+                        <td>Domaine Public (Dessin/Gravure très ancien)</td>
+                        <td>1810</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://fineartamerica.com/featured/self-portrait-claude-monet.html" target="_blank">https://fineartamerica.com</a></td>
+                        <td>Claude Monet</td>
+                        <td>Claude Monet</td>
+                        <td>Domaine Public</td>
+                        <td>1886</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.vintag.es/2017/12/30-gorgeous-portraits-of-georgia.html#google_vignette" target="_blank">https://www.vintage.es</a></td>
+                        <td>Georgia O'Keeffe</td>
+                        <td>Alfred Stieglitz</td>
+                        <td>Domaine Public</td>
+                        <td>1937</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_1945_(cropped).jpg" target="_blank">https://commons.wikimedia.org</a></td>
+                        <td>Albert Camus</td>
+                        <td>Studio Harcourt</td>
+                        <td>Domaine Public Probable</td>
+                        <td>1945</td>
+                    </tr>
+                    
+                    <tr><td colspan="6" class="section-divider"></td></tr>
+                    <tr>
+                        <td><a href="https://www.britannica.com/biography/Edith-Piaf" target="_blank">https://www.britannica.com</a></td>
+                        <td>Édith Piaf</td>
+                        <td>Inconnu/Agence d'archive</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2034 en France)</td>
+                        <td>1940</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://co.pinterest.com/pin/783907878919052452/" target="_blank">https://i.pinimg.com</a></td>
+                        <td>Charlie Chaplin</td>
+                        <td>Inconnu/Studio</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2078 en France)</td>
+                        <td>1920</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.gettyimages.ie/bot-wall?returnUrl=%2Fphotos%2Fagatha-christie-portrait&language=en-gb" target="_blank">https://www.gettyimages.fr</a></td>
+                        <td>Agatha Christie</td>
+                        <td>Inconnu/Agence d'archive</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2046 en France)</td>
+                        <td>1944</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://serlesa.com.mx/elvis-presley/" target="_blank">https://eedersa.com</a></td>
+                        <td>Elvis Presley</td>
+                        <td>Inconnu/RCA/Agence</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2048 en France)</td>
+                        <td>1956</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.newyorker.com/magazine/1957/11/09/marlon-brando-profile-truman-capote" target="_blank">https://www.newyorker.com</a></td>
+                        <td>Marlon Brando</td>
+                        <td>Inconnu/Photographe de Studio</td>
+                        <td>Actifs (Date d'expiration dépend du photographe inconnu)</td>
+                        <td>1957</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://culturafotografica.com.br/galeria-andy-warhol/" target="_blank">https://cultura.fotografar.com</a></td>
+                        <td>Andy Warhol</td>
+                        <td>Andy Warhol</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2058 en France)</td>
+                        <td>1986</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://d46t91e071bc73d7v56g.investara.co.in/a0x1/?cid=90c1136c29a1f24c19b3&extclickid=5c1d39daddf023787d219fb271a96b13&t1=18060043&t2=3228700&tsid=79&clickid=d46t91e071bc73d7v56g&cost=0.810000&domain=connectedflownow.com&lp_key=176259ab3f2250e104d7b8813d1a78e9e0f3514353&list=8&scenario=2&img=1" target="_blank">https://i.dm46fe9f071bbc.com</a></td>
+                        <td>George Michael</td>
+                        <td>Brian Aris</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2087 en France)</td>
+                        <td>1987</td>
+                    </tr>
+
+                    <tr><td colspan="6" class="section-divider"></td></tr>
+                    <tr>
+                        <td><a href="https://www.singulart.com/blog/en/2023/12/11/the-wounded-deer-by-frida-kahlo/" target="_blank">https://www.singleart.com</a></td>
+                        <td>Frida Kahlo</td>
+                        <td>Nickolas Murray</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2036 en France)</td>
+                        <td>1940</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://dglsports.ca/product/bob-marley/" target="_blank">https://ggglsports.com</a></td>
+                        <td>Bob Marley</td>
+                        <td>Inconnu / Agence</td>
+                        <td>Actifs (Jusqu'au 1er janv. 2052 en France)</td>
+                        <td>1970</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://fr.pinterest.com/pin/864128247225718143/" target="_blank">https://i.pinimg.com</a></td>
+                        <td>Michael Jackson</td>
+                        <td>Garry Gross</td>
+                        <td>Actifs (Date d'expiration dépend du photographe)</td>
+                        <td>1990</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://fr.pinterest.com/?show_error=true" target="_blank">https://i.pinimg.com</a></td>
+                        <td>Whitney Houston</td>
+                        <td>Inconnu / Agence</td>
+                        <td>Actifs (Date d'expiration dépend du photographe)</td>
+                        <td>2005</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://in.pinterest.com/pin/745416175815657377/" target="_blank">https://i.pinimg.com</a></td>
+                        <td>Salvador Dalí</td>
+                        <td>Rijaile Jan (Illustration de 2013)</td>
+                        <td>Actifs (Illustrateur vivant)</td>
+                        <td>1980</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.lipstickalley.com/threads/young-robert-de-niro.1638497/" target="_blank">https://www.lipstickdailymakeup.com</a></td>
+                        <td>Robert De Niro</td>
+                        <td>Inconnu / Agence</td>
+                        <td>Actifs (Date d'expiration dépend du photographe)</td>
+                        <td>1973</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://artslife.com/2017/07/25/gala-e-asta-a-st-tropez-per-la-di-caprio-foundation/" target="_blank">https://artslife.com</a></td>
+                        <td>Leonardo DiCaprio</td>
+                        <td>Inconnu / Agence</td>
+                        <td>Actifs (Date d'expiration dépend du photographe)</td>
+                        <td>2004</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://celebmafia.com/beyonce-knowles-01-02-2024-3973685/" target="_blank">https://celebsmafia.com</a></td>
+                        <td>Beyoncé</td>
+                        <td>Campbell Addy</td>
+                        <td>Actifs (Photographe vivant)</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://cel-bio.blogspot.com/2016/09/tom-hanks.html" target="_blank">https://oel-bio.blogspot.com</a></td>
+                        <td>Tom Hanks</td>
+                        <td>Agence de presse</td>
+                        <td>Actifs (Date d'expiration dépend de l'agence)</td>
+                        <td>2020</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="credits-data-container">
+            <table class="credits-table signatures-table">
+                <thead>
+                    <tr>
+                        <th>Nom de l'artiste</th>
+                        <th>Année</th>
+                        <th>Détenteur des droits</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frida Kahlo</td>
+                        <td>2019</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Frida_Kahlo_Signature_firma.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>George Sand</td>
+                        <td>1857</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:George_Sand_(1804-1876)_signature_1857.jpg</a></td>
+                    </tr>
+                    <tr>
+                        <td>George O'Keeffe</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>Tom Hanks</td>
+                        <td>1995</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Tom_Hanks_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Whitney Houston</td>
+                        <td>1987</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Whitney_Houston_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Victor Hugo</td>
+                        <td>1201</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Victor_Hugo_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Michael Jackson</td>
+                        <td>2009</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Michael_Jackson_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Austen</td>
+                        <td>1817</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Jane_Austen_signature_from_her_will.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Yayoi Kusama</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td><a href="https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama" target="_blank">https://commons.wikimedia.org/w/index.php?category=Yayoi_Kusama</a></td>
+                    </tr>
+                    <tr>
+                        <td>Léon TOLSTOI</td>
+                        <td>1901</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image" target="_blank">https://commons.wikimedia.org/w/index.php?search=L%C3%A9on+Tolsto%C3%AF+Signature&title=Special%3AMediaSearch&go=Go&type=image</a></td>
+                    </tr>
+                    <tr>
+                        <td>Madonna</td>
+                        <td>2008</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Madonna_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Madonna_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mariah Carey</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>Marilyn Monroe</td>
+                        <td>1947</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Marilyn_Monroe_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Millie Bobby Brown</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>George Orwell</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Orwell_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pablo Picasso</td>
+                        <td>2007</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Picasso_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Julia Roberts</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>J.K. Rowling</td>
+                        <td>2010</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png" target="_blank">https://commons.wikimedia.org/wiki/File:JKRowlingsignature.png</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jenny Saville</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Jenny_Saville_Signature.jpg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Scarlett Johansson</td>
+                        <td>2010</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Scarlett_Johanssons27k_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mary Shelley</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>Simone de Beauvoir</td>
+                        <td>1974</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Simone_de_Beauvoir_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Frank Sinatra</td>
+                        <td>2019</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Frank_Sinatra_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Meryl Streep</td>
+                        <td>2003</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Meryl_Streep_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tamara de Lempicka</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                        <td>non précisée</td>
+                    </tr>
+                    <tr>
+                        <td>Virginia Woolf</td>
+                        <td>1924</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Virginia_Woolf_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Andy Warhol</td>
+                        <td>non précisée</td>
+                        <td>Domaine public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Andy_Warhol_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Beyoncé</td>
+                        <td>2009</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Marley</td>
+                        <td>2025</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Bob_Marley_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Marlon Brando</td>
+                        <td>2020</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Marlon_Brando_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Albert Camus</td>
+                        <td>1950</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Albert_Camus_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Charlie Chaplin</td>
+                        <td>2011</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Firma_de_Charles_Chaplin.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Charles Dickens</td>
+                        <td>non précisée</td>
+                        <td>Domaine public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Charles_Dickens_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Salvador Dalí</td>
+                        <td>2019</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Salvador_Dalí_signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Claude Monet</td>
+                        <td>non précisée</td>
+                        <td>Domaine public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Monet,_Claude,_1840-1926_03_Signature.jpg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Robert De Niro</td>
+                        <td>2024</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png" target="_blank">https://commons.wikimedia.org/wiki/File:Unterschrift_Robert_De_Niro_(Autogramm)_US-amerikanischer_Schauspieler.png</a></td>
+                    </tr>
+                    <tr>
+                        <td>Leonardo DiCaprio</td>
+                        <td>2024</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png" target="_blank">https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_Signature.png</a></td>
+                    </tr>
+                    <tr>
+                        <td>Édith Piaf</td>
+                        <td>2019</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Edith_Piaf_Signature.svg</a></td>
+                    </tr>
+                    <tr>
+                        <td>Elvis Presley</td>
+                        <td>2011</td>
+                        <td>Domaine Public</td>
+                        <td><a href="https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Elvis_Presley_Signature.svg</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="modale-legales-footer">
+        <button id="close-legales">Fermer</button>
+      </div>
+    </div>
+  </div>
+   <!-- Bas de page -->
+    <div class="footer-bottom">
+  <script src="script.js"></script>
+=======
+      <button id="mentionsLegales">Mentions légales</button>
+
+      <p class="copyright">© 2025 – Datafem. Tous droits réservés.</p>
+    </div>
+  </footer>
+  <script type="module" src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
