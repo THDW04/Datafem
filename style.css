@@ -1137,30 +1137,57 @@ footer h3 {
 }
 
 /* Modale des mentions légales */
+.modale-mentions{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
 .modale-legales-content {
-    background: var(--rose);
-    border-radius: 30px;
-    padding: 50px 45px 30px 45px;
-    max-width: 1200px;
-    width: 90%;
-    height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    position: relative;
-    border: 8px solid var(--foncée);
-    color: var(--foncée);
+  background: var(--rose);
+  padding: 50px 45px 30px 45px;
+  overflow-y: auto;
+  width: 100%;
+  height: 90vh;
+  margin-top: auto;
+  position: relative;
+  border-top: 8px solid var(--foncée);
+  color: var(--foncée);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+
+/* Animation d'apparition de la modale */
+.modale-mentions.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modale-mentions.show .modale-legales-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modale-mentions.hide .modale-legales-content {
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .modale-legales-content h2,
 .modale-legales-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Jost', serif;
     margin-bottom: 20px;
     color: var(--foncée);
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .modale-legales-content h2{
-    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
 }
 
 .modale-legales-content p {
@@ -1169,6 +1196,14 @@ footer h3 {
     color: var(--foncée);
     margin-bottom: 15px;
     position: relative;
+}
+
+.modale-legales-content ul{
+  margin-left: 50px;
+}
+
+.modale-legales-contents li{
+  margin-bottom: 8px;
 }
 
 .modale-legales-content a{

@@ -46,17 +46,20 @@ let modale = document.querySelector('.modale-mentions');
 let btnMentions = document.getElementById('mentionsLegales');
 
 btnMentions.addEventListener('click', () => {
-  modale.style.display = "flex";
+  modale.classList.remove('hide');
+  modale.classList.add('show');
 });
 
 document.getElementById('close-legales').addEventListener('click', () => {
-  modale.style.display = "none";
+  modale.classList.add('hide');
+  setTimeout(() => modale.classList.remove('show', 'hide'), 500);
 });
 
 // Fermer en cliquant en dehors du contenu
 window.addEventListener('click', (e) => {
   if (e.target === modale) {
-    modale.style.display = "none";
+    modale.classList.add('hide');
+    setTimeout(() => modale.classList.remove('show', 'hide'), 500);
   }
 });
 
