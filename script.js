@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Animation de la frise chronologique
+const cards = document.querySelectorAll('.card_timeline');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2
+});
+cards.forEach(card => observer.observe(card));
+
 // Modale des mentions légales - avec délégation d'événements
 let modale = document.querySelector('.modale-mentions');
 let btnMentions = document.getElementById('mentionsLegales');
@@ -45,20 +60,6 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// Animation de la frise chronologique
-const cards = document.querySelectorAll('.card_timeline');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.2
-});
-cards.forEach(card => observer.observe(card));
 
 document.addEventListener('DOMContentLoaded', () => {
     // GESTIONNAIRE D'ONGLETS (TABS)
@@ -83,21 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Gestion de l'ouverture/fermeture de la modale (à conserver)
-    const btnLegales = document.getElementById('btn-legales'); 
-    const modaleLegales = document.getElementById('modale-legales');
-    const closeLegalesBtn = document.getElementById('close-legales');
-
-    if (btnLegales) {
-        btnLegales.addEventListener('click', () => {
-            modaleLegales.style.display = 'flex';
-        });
-    }
-
-    if (closeLegalesBtn) {
-        closeLegalesBtn.addEventListener('click', () => {
-            modaleLegales.style.display = 'none';
-        });
-    }
 });
